@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contenedores y eventos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --color-paper:   #f5f5f5;
+      --color-ink:     #2d3142;
+      --color-muted:   #4f5d75;
+      --color-accent:  #bf4520;
+      --font-sans:     'Geist', system-ui, sans-serif;
+      --font-serif:    'Instrument Serif', 'Noto Serif', serif;
+      --font-mono:     'Geist Mono', ui-monospace, monospace;
+    }
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-paper);
+      color: var(--color-ink);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+    }
+    .frame { max-width: 1360px; width: 100%; min-width: 0; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 2.4vw + 0.75rem, 2rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: var(--color-ink);
+      margin-bottom: 0.4rem;
+    }
+    .sub { font-size: 0.9rem; color: var(--color-muted); margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 1280px; display: block; }
+    @media print {
+      .diagram-container { overflow-x: visible; }
+      svg { min-width: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Arquitectura · C4 nivel 2</p>
+    <h1>Contenedores y eventos</h1>
+    <p class="sub">Cada evento baja de su publicador al bus y sube a su suscriptor; las llamadas HTTP son síncronas.</p>
+    <div class="diagram-container">
+      <svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="contenedores-title contenedores-desc">
+        <title id="contenedores-title">Contenedores y eventos</title>
+        <desc id="contenedores-desc">Los ocho microservicios de la Plataforma RSP y el bus NATS JetStream: la pasarela llama por HTTP a autenticación, captura de voz y traducción a señas, y los eventos voice.audio.chunk, voice.text.transcribed, nlp.gloss.sequence, signs.gesture.plan y actuator.state recorren el bus de captura a actuadores y vuelven a la pasarela, mientras telemetría escucha todos los asuntos.</desc>
+        <defs>
+          <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+          <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#bf4520"/></marker>
+          <marker id="arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2e5aa8"/></marker>
+        </defs>
+        <rect width="100%" height="100%" fill="#f5f5f5"/>
+        <!-- Flechas (antes que los nodos) -->
+        <line x1="1000" y1="88" x2="920" y2="88" stroke="#2e5aa8" stroke-width="1.2" marker-end="url(#arrow-link)"/>
+        <path d="M 1024,128 V 152 Q 1024,160 1016,160 H 148 Q 140,160 140,168 V 200" fill="none" stroke="#2e5aa8" stroke-width="1.2" marker-end="url(#arrow-link)"/>
+        <path d="M 1056,128 V 168 Q 1056,176 1048,176 H 868 Q 860,176 860,184 V 200" fill="none" stroke="#2e5aa8" stroke-width="1.2" marker-end="url(#arrow-link)"/>
+        <path d="M 200,288 V 408 Q 200,416 208,416 H 312 Q 320,416 320,408 V 288" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <path d="M 440,288 V 408 Q 440,416 448,416 H 552 Q 560,416 560,408 V 288" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <path d="M 680,288 V 408 Q 680,416 688,416 H 792 Q 800,416 800,408 V 288" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <path d="M 920,288 V 408 Q 920,416 928,416 H 1032 Q 1040,416 1040,408 V 288" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <path d="M 1120,288 V 408 Q 1120,416 1128,416 H 1212 Q 1220,416 1220,408 V 128" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <line x1="80" y1="288" x2="80" y2="376" stroke="#4f5d75" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
+        <line x1="640" y1="440" x2="640" y2="504" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <!-- Etiquetas de flechas -->
+        <rect x="938" y="68" width="44" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="960" y="77" fill="#2e5aa8" font-size="8" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">TOKENS</text>
+        <rect x="360" y="140" width="80" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="400" y="149" fill="#2e5aa8" font-size="8" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">AUDIO · TEXTO</text>
+        <rect x="1064" y="140" width="72" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="1100" y="149" fill="#2e5aa8" font-size="8" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">VOCABULARIO</text>
+        <rect x="88" y="326" width="80" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="128" y="335" fill="#5a6580" font-size="8" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">TEXTO ESCRITO</text>
+        <rect x="648" y="466" width="72" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="684" y="475" fill="#5a6580" font-size="8" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">TODO ASUNTO</text>
+        <!-- Nodos -->
+        <!-- Nodo: Autenticación -->
+        <rect x="720" y="48" width="200" height="80" rx="6" fill="#f5f5f5"/>
+        <rect x="720" y="48" width="200" height="80" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="728" y="56" width="32" height="12" rx="2" fill="transparent" stroke="rgba(45,49,66,0.40)" stroke-width="0.8"/>
+        <text x="744" y="65" fill="#2d3142" font-size="7" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.08em">auth</text>
+        <rect x="880" y="56" width="32" height="12" rx="2" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="0.8"/>
+        <ellipse cx="888" cy="59.5" rx="3.5" ry="1.5" fill="none" stroke="#4f5d75" stroke-width="0.8"/>
+        <path d="M 884.5,59.5 V 64.5 A 3.5,1.5 0 0 0 891.5,64.5 V 59.5" fill="none" stroke="#4f5d75" stroke-width="0.8"/>
+        <text x="902" y="65" fill="#4f5d75" font-size="7" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.08em">BD</text>
+        <text x="820" y="88" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle">Autenticación</text>
+        <text x="820" y="104" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle">emite tokens</text>
+        <!-- Nodo: Pasarela -->
+        <rect x="1000" y="48" width="240" height="80" rx="6" fill="#f5f5f5"/>
+        <rect x="1000" y="48" width="240" height="80" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="1008" y="56" width="44" height="12" rx="2" fill="transparent" stroke="rgba(45,49,66,0.40)" stroke-width="0.8"/>
+        <text x="1030" y="65" fill="#2d3142" font-size="7" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.08em">gateway</text>
+        <text x="1120" y="88" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle">Pasarela</text>
+        <text x="1120" y="104" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle">:8000 · JWT · SSE</text>
+        <text x="1120" y="118" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle">reenvía el estado por SSE</text>
+        <!-- Nodo: Captura de voz -->
+        <rect x="40" y="200" width="200" height="88" rx="6" fill="#f5f5f5"/>
+        <rect x="40" y="200" width="200" height="88" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="48" y="208" width="76" height="12" rx="2" fill="transparent" stroke="rgba(45,49,66,0.40)" stroke-width="0.8"/>
+        <text x="86" y="217" fill="#2d3142" font-size="7" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.08em">voice-capture</text>
+        <text x="140" y="240" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle">Captura de voz</text>
+        <text x="140" y="256" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle">recibe audio o texto</text>
+        <!-- Nodo: Reconocimiento -->
+        <rect x="280" y="200" width="200" height="88" rx="6" fill="#f5f5f5"/>
+        <rect x="280" y="200" width="200" height="88" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="288" y="208" width="24" height="12" rx="2" fill="transparent" stroke="rgba(45,49,66,0.40)" stroke-width="0.8"/>
+        <text x="300" y="217" fill="#2d3142" font-size="7" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.08em">stt</text>
+        <text x="380" y="240" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle">Reconocimiento</text>
+        <text x="380" y="256" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle">faster-whisper</text>
+        <text x="380" y="270" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle">openai-whisper · kichwa</text>
+        <!-- Nodo: Procesamiento lingüístico -->
+        <rect x="520" y="200" width="200" height="88" rx="6" fill="#f5f5f5"/>
+        <rect x="520" y="200" width="200" height="88" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="528" y="208" width="24" height="12" rx="2" fill="transparent" stroke="rgba(45,49,66,0.40)" stroke-width="0.8"/>
+        <text x="540" y="217" fill="#2d3142" font-size="7" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.08em">nlp</text>
+        <rect x="680" y="208" width="32" height="12" rx="2" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="0.8"/>
+        <ellipse cx="688" cy="211.5" rx="3.5" ry="1.5" fill="none" stroke="#4f5d75" stroke-width="0.8"/>
+        <path d="M 684.5,211.5 V 216.5 A 3.5,1.5 0 0 0 691.5,216.5 V 211.5" fill="none" stroke="#4f5d75" stroke-width="0.8"/>
+        <text x="702" y="217" fill="#4f5d75" font-size="7" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.08em">BD</text>
+        <text x="620" y="240" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle">Procesamiento lingüístico</text>
+        <text x="620" y="256" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle">texto → glosas</text>
+        <!-- Nodo: Traducción a señas -->
+        <rect x="760" y="200" width="200" height="88" rx="6" fill="#f5f5f5"/>
+        <rect x="760" y="200" width="200" height="88" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="768" y="208" width="88" height="12" rx="2" fill="transparent" stroke="rgba(45,49,66,0.40)" stroke-width="0.8"/>
+        <text x="812" y="217" fill="#2d3142" font-size="7" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.08em">sign-translation</text>
+        <rect x="920" y="208" width="32" height="12" rx="2" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="0.8"/>
+        <ellipse cx="928" cy="211.5" rx="3.5" ry="1.5" fill="none" stroke="#4f5d75" stroke-width="0.8"/>
+        <path d="M 924.5,211.5 V 216.5 A 3.5,1.5 0 0 0 931.5,216.5 V 211.5" fill="none" stroke="#4f5d75" stroke-width="0.8"/>
+        <text x="942" y="217" fill="#4f5d75" font-size="7" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.08em">BD</text>
+        <text x="860" y="240" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle">Traducción a señas</text>
+        <text x="860" y="256" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle">glosas → plan de gestos</text>
+        <text x="860" y="270" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle">vocabulario de señas</text>
+        <!-- Nodo: Control de actuadores -->
+        <rect x="1000" y="200" width="200" height="88" rx="6" fill="#f5f5f5"/>
+        <rect x="1000" y="200" width="200" height="88" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="1008" y="208" width="88" height="12" rx="2" fill="transparent" stroke="rgba(45,49,66,0.40)" stroke-width="0.8"/>
+        <text x="1052" y="217" fill="#2d3142" font-size="7" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.08em">actuator-control</text>
+        <rect x="1160" y="208" width="32" height="12" rx="2" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="0.8"/>
+        <ellipse cx="1168" cy="211.5" rx="3.5" ry="1.5" fill="none" stroke="#4f5d75" stroke-width="0.8"/>
+        <path d="M 1164.5,211.5 V 216.5 A 3.5,1.5 0 0 0 1171.5,216.5 V 211.5" fill="none" stroke="#4f5d75" stroke-width="0.8"/>
+        <text x="1182" y="217" fill="#4f5d75" font-size="7" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.08em">BD</text>
+        <text x="1100" y="240" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle">Control de actuadores</text>
+        <text x="1100" y="256" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle">límites de servos</text>
+        <text x="1100" y="270" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle">driver simulador / serie</text>
+        <!-- Nodo: Telemetría -->
+        <rect x="540" y="504" width="200" height="80" rx="6" fill="#f5f5f5"/>
+        <rect x="540" y="504" width="200" height="80" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="548" y="512" width="56" height="12" rx="2" fill="transparent" stroke="rgba(45,49,66,0.40)" stroke-width="0.8"/>
+        <text x="576" y="521" fill="#2d3142" font-size="7" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.08em">telemetry</text>
+        <rect x="700" y="512" width="32" height="12" rx="2" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="0.8"/>
+        <ellipse cx="708" cy="515.5" rx="3.5" ry="1.5" fill="none" stroke="#4f5d75" stroke-width="0.8"/>
+        <path d="M 704.5,515.5 V 520.5 A 3.5,1.5 0 0 0 711.5,520.5 V 515.5" fill="none" stroke="#4f5d75" stroke-width="0.8"/>
+        <text x="722" y="521" fill="#4f5d75" font-size="7" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.08em">BD</text>
+        <text x="640" y="544" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, sans-serif" text-anchor="middle">Telemetría</text>
+        <text x="640" y="560" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle">trazas y /metrics</text>
+        <text x="640" y="574" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle">suscrita a todos los asuntos</text>
+        <!-- Bus: NATS JetStream (foco) -->
+        <rect x="40" y="376" width="1200" height="64" rx="6" fill="#f5f5f5"/>
+        <rect x="40" y="376" width="1200" height="64" rx="6" fill="rgba(191,69,32,0.08)" stroke="#bf4520" stroke-width="1.2"/>
+        <text x="56" y="404" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', system-ui, sans-serif">NATS JetStream</text>
+        <text x="56" y="420" fill="#bf4520" font-size="9" font-family="'Geist Mono', ui-monospace, monospace">bus de eventos</text>
+        <rect x="192" y="392" width="136" height="32" rx="4" fill="#ffffff" stroke="rgba(191,69,32,0.35)" stroke-width="0.8"/>
+        <text x="260" y="405" fill="#2d3142" font-size="8" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.02em">voice.audio.chunk</text>
+        <text x="260" y="417" fill="#5a6580" font-size="7" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle">durable · antigüedad ≤ 30 s</text>
+        <rect x="436" y="392" width="128" height="32" rx="4" fill="#ffffff" stroke="rgba(191,69,32,0.35)" stroke-width="0.8"/>
+        <text x="500" y="405" fill="#2d3142" font-size="8" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.02em">voice.text.transcribed</text>
+        <text x="500" y="417" fill="#5a6580" font-size="7" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle">+ texto escrito de captura</text>
+        <rect x="686" y="392" width="108" height="32" rx="4" fill="#ffffff" stroke="rgba(191,69,32,0.35)" stroke-width="0.8"/>
+        <text x="740" y="411" fill="#2d3142" font-size="8" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.02em">nlp.gloss.sequence</text>
+        <rect x="926" y="392" width="108" height="32" rx="4" fill="#ffffff" stroke="rgba(191,69,32,0.35)" stroke-width="0.8"/>
+        <text x="980" y="411" fill="#2d3142" font-size="8" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.02em">signs.gesture.plan</text>
+        <rect x="1122" y="392" width="88" height="32" rx="4" fill="#ffffff" stroke="rgba(191,69,32,0.35)" stroke-width="0.8"/>
+        <text x="1166" y="405" fill="#2d3142" font-size="8" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.02em">actuator.state</text>
+        <text x="1166" y="417" fill="#5a6580" font-size="7" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle">→ pasarela</text>
+        <line x1="40" y1="624" x2="1240" y2="624" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+        <text x="40" y="640" fill="#4f5d75" font-size="8" font-family="'Geist Mono', ui-monospace, monospace" letter-spacing="0.18em">LEYENDA</text>
+        <rect x="40" y="656" width="14" height="10" rx="2" fill="rgba(191,69,32,0.08)" stroke="#bf4520" stroke-width="1"/>
+        <text x="60" y="664" fill="#4f5d75" font-size="8.5" font-family="'Geist', system-ui, sans-serif">Bus de eventos (foco)</text>
+        <rect x="187" y="656" width="14" height="10" rx="2" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <text x="207" y="664" fill="#4f5d75" font-size="8.5" font-family="'Geist', system-ui, sans-serif">Microservicio</text>
+        <rect x="296" y="655" width="32" height="12" rx="2" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="0.8"/>
+        <ellipse cx="304" cy="658.5" rx="3.5" ry="1.5" fill="none" stroke="#4f5d75" stroke-width="0.8"/>
+        <path d="M 300.5,658.5 V 663.5 A 3.5,1.5 0 0 0 307.5,663.5 V 658.5" fill="none" stroke="#4f5d75" stroke-width="0.8"/>
+        <text x="318" y="664" fill="#4f5d75" font-size="7" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.08em">BD</text>
+        <text x="336" y="664" fill="#4f5d75" font-size="8.5" font-family="'Geist', system-ui, sans-serif">Base de datos propia, en red privada con su servicio</text>
+        <line x1="611" y1="661" x2="639" y2="661" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <text x="647" y="664" fill="#4f5d75" font-size="8.5" font-family="'Geist', system-ui, sans-serif">Evento: publica → bus → suscribe</text>
+        <line x1="827" y1="661" x2="855" y2="661" stroke="#2e5aa8" stroke-width="1.2" marker-end="url(#arrow-link)"/>
+        <text x="863" y="664" fill="#4f5d75" font-size="8.5" font-family="'Geist', system-ui, sans-serif">HTTP síncrono</text>
+        <line x1="952" y1="661" x2="980" y2="661" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)" stroke-dasharray="5,4"/>
+        <text x="988" y="664" fill="#4f5d75" font-size="8.5" font-family="'Geist', system-ui, sans-serif">Texto escrito</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

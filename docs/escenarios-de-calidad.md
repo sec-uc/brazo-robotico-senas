@@ -1,4 +1,4 @@
-# Escenarios de calidad (Fase 5 — plan de evaluación)
+# Escenarios de calidad
 
 Formato de seis partes (Bass, Clements & Kazman). Cada escenario tiene un método de medición reproducible con los scripts del repositorio. Línea base as‑is = sistema heredado (`kichwa-app-api` + `robot_conection_app`); cuando el as‑is no permite medir, se indica.
 
@@ -17,20 +17,6 @@ Formato de seis partes (Bass, Clements & Kazman). Cada escenario tiene un métod
 | QA‑11 | Mantenibilidad (estructural) | — | — | Código | — | Módulos pequeños y cohesionados | Ningún módulo > 400 líneas (as‑is: 2 057 y 2 076); 0 servicios que importen código de otro servicio | `wc -l`, `grep import` |
 | QA‑12 | Fiabilidad | Usuario | Palabra sin seña ni letras | Traducción a señas | Operación | El plan se ejecuta con lo conocido y se registra la brecha | `unknown_glosses` en telemetría; sesión `done` | e2e_demo con "xyz123" |
 
-## Resultado preliminar (prototipo, simulador, 2026‑09‑12, n = 30)
+## Resultados
 
-| Métrica | Valor |
-|---|---|
-| Latencia de software captured→accepted | media 5,6 ms · mediana 5 · p95 6 · sd 1,0 |
-| Por etapa (mediana) | captura→STT 1 ms · STT→PLN 2 · PLN→señas 1 · señas→actuador 1 |
-| Latencia mecánica por seña | 2 863 ms (15 servos × 150 ms + 600 ms de sostén) |
-| Sesiones fallidas | 0 / 30 |
-
-Interpretación: la sobrecarga de la arquitectura distribuida (5 saltos por NATS) es ~0,2 % del tiempo total; el cuello de botella es mecánico (protocolo serial con 150 ms por servo), lo que orienta el trabajo futuro hacia el firmware, no hacia la arquitectura.
-
-## Amenazas a la validez (a desarrollar en la tesis)
-
-- **Constructo**: la latencia de software con `echo` excluye la inferencia de ML; QA‑01 con Whisper es la medida realista.
-- **Interna**: un solo host; la latencia de red entre hosts no está representada.
-- **Externa**: un solo robot y un solo vocabulario; la generalización a otros robots se argumenta por la arquitectura de referencia, no por experimentos.
-- **Conclusión**: n = 30 por escenario; usar pruebas no paramétricas (Mann‑Whitney) al comparar as‑is vs to‑be.
+Los resultados de cada escenario, con sus gráficas y los límites de la evaluación, están en [evaluacion.md](evaluacion.md).

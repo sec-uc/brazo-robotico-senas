@@ -1,171 +1,151 @@
-# Arquitectura de referencia — Robot Signs Platform (RSP)
+# Arquitectura
 
-Documento de arquitectura (estructura arc42 abreviada) de la **arquitectura de referencia basada en microservicios para sistemas robóticos de traducción de voz a lengua de señas**, y de su instancia concreta: el prototipo de este repositorio, aplicado al brazo robótico de la Universidad Católica de Cuenca.
+Documento de arquitectura de la plataforma, con estructura arc42 abreviada. Distingue dos niveles:
 
-> Arquitectura de referencia ≠ arquitectura concreta. La primera (§4–§6) es abstracta y reutilizable por cualquier robot asistivo que traduzca voz a gestos; la segunda (§7) es la instancia que se evalúa en la tesis. Cada decisión está registrada en `docs/adr/`.
+- **La arquitectura de referencia (§4 a §6):** servicios por capacidad, contratos de eventos y decisiones, aplicables a otros robots que traduzcan voz a señas.
+- **La instancia (§7):** el prototipo de este repositorio, desplegado para un brazo robótico de 15 servomotores. La referencia se ha validado en una sola instancia; su reutilización en otros robots es una hipótesis.
 
-## 1. Introducción y objetivos
+Cada decisión está registrada en [`adr/`](adr/).
 
-**Objetivo:** desacoplar las etapas del pipeline voz → gesto para que cada una pueda sustituirse, escalarse y observarse de forma independiente, corrigiendo los problemas P1–P11 detectados en el sistema heredado (`docs-tesis/01-analisis-as-is-y-diagnostico.md`).
+## Contenido
 
-**Atributos de calidad prioritarios** (ISO/IEC 25010), en orden:
+1. [Objetivos y atributos de calidad](#1-objetivos-y-atributos-de-calidad)
+2. [Restricciones](#2-restricciones)
+3. [Contexto](#3-contexto)
+4. [Contenedores](#4-contenedores)
+5. [Ejecución de una sesión](#5-ejecución-de-una-sesión)
+6. [Conceptos transversales](#6-conceptos-transversales)
+7. [Despliegue de la instancia](#7-despliegue-de-la-instancia)
+8. [De la arquitectura anterior a la propuesta](#8-de-la-arquitectura-anterior-a-la-propuesta)
+9. [Decisiones de arquitectura](#9-decisiones-de-arquitectura)
+10. [Riesgos y deuda técnica](#10-riesgos-y-deuda-técnica)
+11. [Glosario](#11-glosario)
+
+## 1. Objetivos y atributos de calidad
+
+El objetivo es separar las etapas de la cadena voz → seña para que cada una pueda sustituirse, escalarse y observarse por separado. Los atributos de calidad, en orden de prioridad:
 
 | Prioridad | Atributo | Por qué importa en este dominio |
 |---|---|---|
-| 1 | Modificabilidad | Motores de STT/traducción y hardware cambian más rápido que el sistema |
-| 2 | Rendimiento (latencia) | Una conversación tolera ~1 s de retardo; más rompe la interacción |
-| 3 | Interoperabilidad | Clientes heterogéneos (móvil, web, kiosco) y hardware heterogéneo (Arduino hoy, ROS 2 mañana) |
-| 4 | Observabilidad / analizabilidad | Sin telemetría no hay evaluación ni diagnóstico en campo |
-| 5 | Disponibilidad | Un fallo en ML no debe dejar el robot inerte |
-| 6 | Seguridad | Secretos fuera de los clientes; acceso autenticado a actuadores |
+| 1 | Modificabilidad | Los motores de reconocimiento, el vocabulario y el hardware cambian a ritmos distintos |
+| 2 | Rendimiento (latencia) | Una conversación tolera alrededor de un segundo de retardo |
+| 3 | Interoperabilidad | Clientes y hardware heterogéneos |
+| 4 | Observabilidad | Sin mediciones no hay evaluación ni diagnóstico en campo |
+| 5 | Disponibilidad | Un fallo del reconocimiento no debe dejar el robot inerte |
+| 6 | Seguridad | Secretos fuera de los clientes y acceso autenticado a los actuadores |
+
+Los doce escenarios que concretan estos atributos están en [escenarios-de-calidad.md](escenarios-de-calidad.md).
 
 ## 2. Restricciones
 
-- Hardware existente: brazo de 15 servos con firmware Arduino y protocolo serial sin ACK (no modificable a corto plazo).
-- Despliegue objetivo: mini‑PC/laptop junto al robot (edge), con Docker; sin dependencia de nube salvo proveedores opcionales.
-- Equipo pequeño; lenguaje único (Python) para reducir fricción (ADR‑001).
-- El vocabulario de señas lo mantiene personal no técnico.
+- Brazo existente de 15 servos con *firmware* serie sin confirmación de ejecución, que no puede modificarse a corto plazo.
+- Despliegue en un equipo junto al robot, con Docker y sin dependencia de la nube salvo proveedores opcionales.
+- Equipo pequeño y un único lenguaje, Python ([ADR-001](adr/ADR-001-estilo-microservicios-python.md)).
+- El vocabulario de señas lo mantienen personas no técnicas.
 
-## 3. Contexto (C4 nivel 1, to‑be)
+## 3. Contexto
 
-```mermaid
-C4Context
-    title Contexto — Robot Signs Platform
-    Person(usuario, "Usuario oyente", "habla en español/kichwa")
-    Person(receptor, "Persona sorda", "observa las señas")
-    Person(linguista, "Equipo lingüístico", "mantiene el vocabulario de señas")
-    System(rsp, "Robot Signs Platform", "Traduce voz a señas ejecutadas por un robot")
-    System_Ext(cliente, "Clientes", "App móvil Flutter, web, kiosco")
-    System_Ext(brazo, "Brazo robótico", "Arduino / ROS 2")
-    System_Ext(stt_ext, "Proveedores externos opcionales", "Google Translate, STT en nube")
-    Rel(usuario, cliente, "habla / escribe")
-    Rel(cliente, rsp, "HTTPS + SSE vía API Gateway")
-    Rel(linguista, rsp, "CRUD de señas (API)")
-    Rel(rsp, brazo, "comandos de servos")
-    Rel(brazo, receptor, "ejecuta señas")
-    Rel(rsp, stt_ext, "opcional")
-```
+<p align="center"><img src="img/contexto.png" alt="Contexto del sistema" width="100%"></p>
 
-## 4. Vista de contenedores (C4 nivel 2) — la arquitectura de referencia
+La persona usuaria habla o escribe en un cliente (la aplicación de la tableta), que envía el audio o el texto a la plataforma por HTTPS y recibe por SSE el plan de gestos. El cliente reenvía los ángulos al brazo por USB serie. El equipo lingüístico mantiene el vocabulario por la API, y el monitoreo lee las métricas de todos los servicios.
 
-```mermaid
-C4Container
-    title Contenedores — arquitectura de referencia
-    Container(gw, "API Gateway", "FastAPI", "Entrada única, JWT, enrutamiento, SSE por sesión")
-    Container(auth, "Autenticación", "FastAPI + JWT", "Emite/valida tokens")
-    Container(cap, "Captura de voz", "FastAPI + ffmpeg", "Normaliza audio → voice.audio.chunk")
-    Container(stt, "Speech-to-Text", "FastAPI + proveedor (echo/whisper/kichwa)", "→ voice.text.transcribed")
-    Container(nlp, "Proc. lenguaje natural", "FastAPI", "Traducción qu→es, glosado → nlp.gloss.sequence")
-    Container(signs, "Traducción a señas", "FastAPI + SQLite", "Glosa → plan de gestos; CRUD vocabulario → signs.gesture.plan")
-    Container(act, "Control de actuadores", "FastAPI + driver (simulator/serial)", "Ejecuta gestos, límites físicos → actuator.state")
-    Container(tel, "Telemetría", "FastAPI + SQLite", "Línea de tiempo por sesión, latencias, métricas")
-    Container(mon, "Monitoreo", "Prometheus + Grafana", "Scraping /metrics, tableros, alertas")
-    ContainerQueue(bus, "Bus de eventos", "NATS", "pub/sub, colas de trabajo")
-    Rel(gw, auth, "verifica")
-    Rel(gw, cap, "HTTP")
-    Rel(cap, bus, "publica")
-    Rel(bus, stt, "consume (queue stt)")
-    Rel(stt, bus, "publica")
-    Rel(bus, nlp, "consume (queue nlp)")
-    Rel(nlp, bus, "publica")
-    Rel(bus, signs, "consume (queue signs)")
-    Rel(signs, bus, "publica")
-    Rel(bus, act, "consume")
-    Rel(act, bus, "publica estado")
-    Rel(bus, tel, "observa todo")
-    Rel(bus, gw, "estado → SSE")
-    Rel(mon, gw, "scrape /metrics (todos)")
-```
+## 4. Contenedores
+
+<p align="center"><img src="img/contenedores.png" alt="Contenedores y eventos" width="100%"></p>
 
 ### 4.1 Catálogo de servicios
 
-| Servicio | Responsabilidad única | Consume | Produce | Datos propios | Escala |
-|---|---|---|---|---|---|
-| API Gateway | Frontera: auth, enrutamiento, SSE, salud agregada | HTTP clientes; `actuator.>`, `nlp.>`, `signs.>` | HTTP | — | horizontal |
-| Autenticación | Identidad y tokens | HTTP | JWT | usuarios (env / IdP) | horizontal |
-| Captura de voz | Ingesta y normalización de audio/texto | HTTP | `voice.audio.chunk` | — | horizontal |
-| Speech‑to‑Text | Audio → texto (proveedor intercambiable) | `voice.audio.chunk` (queue `stt`) | `voice.text.transcribed` | caché de modelos | horizontal por cola |
-| PLN | Traducción y glosado | `voice.text.transcribed` (queue `nlp`) | `nlp.gloss.sequence` | diccionarios | horizontal |
-| Traducción a señas | Glosa → gestos; vocabulario | `nlp.gloss.sequence` (queue `signs`) | `signs.gesture.plan` | BD de señas | horizontal |
-| Control de actuadores | Ejecución segura en hardware | `signs.gesture.plan` | `actuator.state` | modelo del hardware | 1 por robot |
-| Telemetría | Registro y medición | todos los asuntos | métricas, API | BD de eventos | 1 (o particionado) |
-| Monitoreo | Tableros y alertas | `/metrics` | — | series temporales | — |
+| Servicio | Responsabilidad | Consume | Publica | Datos propios |
+|---|---|---|---|---|
+| Pasarela (`gateway`) | Frontera: autenticación, enrutamiento, SSE por sesión, salud agregada | HTTP de los clientes; `actuator.state` | HTTP, SSE | — |
+| Autenticación (`auth`) | Identidad y emisión de tokens | HTTP | JWT | Usuarios (PostgreSQL) |
+| Captura de voz (`voice-capture`) | Ingesta y normalización de audio o texto | HTTP | `voice.audio.chunk`, `voice.text.transcribed` | — |
+| Reconocimiento (`stt`) | Audio → texto, con proveedor intercambiable | `voice.audio.chunk` | `voice.text.transcribed` | Caché de modelos |
+| Procesamiento lingüístico (`nlp`) | Traducción kichwa–español y glosado | `voice.text.transcribed` | `nlp.gloss.sequence` | Diccionario (PostgreSQL) |
+| Traducción a señas (`sign-translation`) | Glosas → plan de gestos; vocabulario | `nlp.gloss.sequence` | `signs.gesture.plan` | Señas (PostgreSQL) |
+| Control de actuadores (`actuator-control`) | Ejecución segura: límites y *drivers* | `signs.gesture.plan` | `actuator.state` | Modelo del hardware (PostgreSQL) |
+| Telemetría (`telemetry`) | Trazas por sesión, latencias y métricas | Todos los asuntos | API, `/metrics` | Eventos (PostgreSQL) |
 
-**Regla de oro de la referencia:** un servicio es dueño de exactamente un tipo de conocimiento (el hardware, el vocabulario, el motor de voz…) y lo expone solo a través de su contrato. El conocimiento del hardware, por ejemplo, existe únicamente en Control de actuadores (antes estaba copiado en tres archivos).
+**Regla de la referencia:** cada servicio es dueño de un único tipo de conocimiento —el hardware, el vocabulario, el motor de voz— y lo expone solo a través de su contrato. Las únicas llamadas síncronas entre servicios son las de la pasarela y una consulta opcional del reconocimiento al vocabulario ([ADR-004](adr/ADR-004-contratos-primero.md)).
 
-## 5. Vista de tiempo de ejecución
+### 4.2 Contratos de eventos
 
-```mermaid
-sequenceDiagram
-    participant C as Cliente
-    participant G as Gateway
-    participant V as Captura
-    participant B as NATS
-    participant S as STT
-    participant N as PLN
-    participant T as Señas
-    participant A as Actuadores
-    participant M as Telemetría
-    C->>G: POST /v1/sessions/{id}/audio (JWT)
-    C->>G: GET /v1/sessions/{id}/events (SSE)
-    G->>V: proxy
-    V->>B: voice.audio.chunk {trace.captured}
-    B->>S: (queue stt)
-    S->>B: voice.text.transcribed {trace.transcribed}
-    B->>N: (queue nlp)
-    N->>B: nlp.gloss.sequence {trace.glossed}
-    B->>T: (queue signs)
-    T->>B: signs.gesture.plan {trace.planned}
-    B->>A: 
-    A->>B: actuator.state accepted / executing×n / done
-    B->>M: todos los eventos → línea de tiempo y latencias
-    B->>G: actuator.state → SSE
-    G-->>C: event: actuator.state {status: done}
-```
+| Asunto | Productor | Consumidores | Notas |
+|---|---|---|---|
+| `voice.audio.chunk` | Captura de voz | Reconocimiento | Persistido en JetStream, antigüedad máxima de 30 s ([ADR-010](adr/ADR-010-ingreso-durable.md)) |
+| `voice.text.transcribed` | Reconocimiento; Captura (texto escrito) | Procesamiento lingüístico | El texto escrito no pasa por el reconocimiento |
+| `nlp.gloss.sequence` | Procesamiento lingüístico | Traducción a señas | Secuencia de glosas |
+| `signs.gesture.plan` | Traducción a señas | Control de actuadores | Gestos con sus 15 ángulos |
+| `actuator.state` | Control de actuadores | Pasarela | `accepted`, `executing`, `done`, `failed` |
+| `telemetry.event` | Cualquier servicio | Telemetría | Eventos de diagnóstico |
 
-Cada evento arrastra `trace` (marcas de tiempo por etapa): la latencia end‑to‑end y por etapa se obtiene sin instrumentación adicional ni relojes sincronizados entre máquinas (todas las marcas las pone el productor; con varios hosts se requiere NTP, ver amenazas a la validez).
+La especificación completa está en [`contracts/asyncapi.yaml`](../contracts/asyncapi.yaml).
+
+## 5. Ejecución de una sesión
+
+<p align="center"><img src="img/secuencia-voz.png" alt="Secuencia de una sesión de voz" width="100%"></p>
+
+Cada evento arrastra una traza acumulada con siete marcas de tiempo (`captured`, `transcribed`, `glossed`, `planned`, `accepted`, `executing`, `done`) ([ADR-003](adr/ADR-003-pipeline-por-eventos-y-trazas.md), [ADR-012](adr/ADR-012-traza-acumulativa.md)). La latencia de extremo a extremo y por etapa se obtiene del propio evento final, sin instrumentación externa. En un solo equipo no hace falta sincronizar relojes; con varios, se requiere NTP.
 
 ## 6. Conceptos transversales
 
-- **Contratos primero** (`libs/rsp_common/events.py`, `contracts/asyncapi.yaml`): los esquemas Pydantic son el contrato; un cambio incompatible exige nuevo asunto versionado (`voice.text.transcribed.v2`).
-- **Colas de trabajo NATS** para las etapas pesadas (STT): `STT_REPLICAS=3` reparte la carga sin cambios de código.
-- **Salud y métricas uniformes**: todo servicio expone `/health` y `/metrics` (Prometheus) a través de `rsp_common.service.Service`.
-- **Seguridad en el borde**: solo el gateway se publica; JWT HS256 en el prototipo, sustituible por OIDC (Keycloak) sin tocar servicios.
-- **Degradación controlada**: si STT cae, los eventos quedan en NATS y el resto sigue vivo; el gateway informa `degraded`. Modo texto permite operar sin STT.
-- **Proveedores como estrategia**: STT (`echo|whisper|kichwa`), traducción (`none|google|dictionary`), actuador (`simulator|serial`). Añadir uno = una clase.
+- **Contratos primero.** Los esquemas Pydantic de [`libs/rsp_common`](../libs/rsp_common) son el contrato; un cambio incompatible exige un asunto versionado.
+- **Colas de trabajo.** Las etapas consumen con un grupo de cola; añadir réplicas del reconocimiento no requiere cambiar código ([ADR-009](adr/ADR-009-consumo-concurrente.md)).
+- **Salud y métricas uniformes.** Todo servicio expone `/health` y `/metrics` a través del servicio base común.
+- **Seguridad en el borde.** Solo la pasarela es alcanzable desde la red; JWT con roles ([ADR-006](adr/ADR-006-seguridad-en-el-borde.md), [ADR-011](adr/ADR-011-autorizacion-por-rol.md)).
+- **Degradación controlada.** Si el reconocimiento cae, el modo texto sigue operativo y el audio recibido se conserva durante 30 s.
+- **Proveedores como estrategia.** Reconocimiento, traducción y *driver* del actuador se eligen por configuración ([ADR-007](adr/ADR-007-proveedores-como-estrategia.md)).
+- **Datos por servicio.** Cada servicio con estado tiene su base de datos en una red privada ([ADR-014](adr/ADR-014-base-de-datos-por-servicio.md)).
 
-## 7. Vista de despliegue (instancia)
+## 7. Despliegue de la instancia
 
-```mermaid
-flowchart LR
-  subgraph Edge["Mini-PC junto al robot (Docker Compose)"]
-    nats[(NATS)]
-    gw[gateway :8080] --- auth
-    cap[voice-capture] --- nats
-    stt[stt ×N] --- nats
-    nlp --- nats
-    signs[sign-translation<br/>signs.db] --- nats
-    act[actuator-control] --- nats
-    tel[telemetry<br/>telemetry.db] --- nats
-    prom[Prometheus :9090] --> graf[Grafana :3000]
-  end
-  app[App Flutter / Web] -->|HTTPS+SSE| gw
-  act -->|USB serial 9600| arduino[Arduino → 15 servos]
-```
+<p align="center"><img src="img/despliegue.png" alt="Despliegue en un solo equipo" width="100%"></p>
 
-## 8. Decisiones de arquitectura
+La instancia se despliega con Docker Compose en un solo equipo: 16 contenedores, que son los ocho servicios, el bus, Prometheus, Grafana y cinco bases PostgreSQL. La configuración y la operación se describen en [operacion.md](operacion.md).
 
-Ver `docs/adr/` (ADR‑001 … ADR‑008). Las más determinantes: microservicios con un solo lenguaje (001), NATS como bus (002), pipeline por eventos con `trace` (003/004), un único dueño del hardware (005), gateway como frontera de seguridad (006).
+## 8. De la arquitectura anterior a la propuesta
 
-## 9. Riesgos y deuda técnica
+<p align="center"><img src="img/antes-despues.png" alt="De la arquitectura anterior a la propuesta" width="100%"></p>
 
-| Riesgo | Mitigación |
+El sistema anterior concentraba la orquestación en la aplicación móvil y el reconocimiento en un único proceso de API. La propuesta traza las fronteras por capacidad del dominio y no por tecnología.
+
+## 9. Decisiones de arquitectura
+
+| ADR | Decisión |
 |---|---|
-| Protocolo serial sin ACK: "done" significa "enviado", no "ejecutado" | Telemetría lo marca como `driver=serial`; trabajo futuro: firmware con ACK/lectura de posición |
-| SQLite por servicio no soporta réplicas concurrentes del mismo servicio | Suficiente para un robot; migrar a PostgreSQL si se replica Señas/Telemetría |
-| Whisper en CPU puede superar 1 s | `STT_REPLICAS`, modelos `base/tiny`, o GPU; medir en QA‑01 |
-| Reglas de glosado simplificadas | Explicitado como fuera de alcance; el contrato permite sustituir el PLN por un modelo completo de LSEC |
+| [001](adr/ADR-001-estilo-microservicios-python.md) | Microservicios con un único lenguaje (Python) |
+| [002](adr/ADR-002-bus-de-eventos-nats.md) | NATS como bus de eventos |
+| [003](adr/ADR-003-pipeline-por-eventos-y-trazas.md) | Cadena asíncrona por eventos con trazas de tiempo |
+| [004](adr/ADR-004-contratos-primero.md) | Contratos de eventos como dependencia entre servicios |
+| [005](adr/ADR-005-unico-dueno-del-hardware.md) | Control de actuadores como único dueño del modelo del hardware |
+| [006](adr/ADR-006-seguridad-en-el-borde.md) | Pasarela como frontera de seguridad |
+| [007](adr/ADR-007-proveedores-como-estrategia.md) | Proveedores intercambiables |
+| [008](adr/ADR-008-vocabulario-de-senas-como-servicio.md) | Vocabulario de señas como servicio |
+| [009](adr/ADR-009-consumo-concurrente.md) | Consumo concurrente e inferencia fuera del bucle de eventos |
+| [010](adr/ADR-010-ingreso-durable.md) | Ingreso de audio durable |
+| [011](adr/ADR-011-autorizacion-por-rol.md) | Autorización por rol |
+| [012](adr/ADR-012-traza-acumulativa.md) | Traza acumulativa en todos los eventos |
+| [013](adr/ADR-013-sesgo-por-vocabulario.md) | Tope de salida del reconocimiento |
+| [014](adr/ADR-014-base-de-datos-por-servicio.md) | Base de datos por servicio |
 
-## 10. Glosario
+Las ADR 009 a 013 surgieron de la evaluación.
 
-**Glosa**: etiqueta en mayúsculas que nombra una seña. **Dactilología**: deletreo con el alfabeto manual. **Plan de gestos**: secuencia ordenada de posiciones objetivo de servos. **Trace**: marcas de tiempo por etapa que viajan dentro de cada evento.
+## 10. Riesgos y deuda técnica
+
+| Riesgo | Mitigación o estado |
+|---|---|
+| El protocolo serie no confirma la ejecución: `done` significa «enviado», no «ejecutado» | Trabajo futuro: *firmware* con confirmación o lectura de posición |
+| La reutilización de la referencia se ha probado en una sola instancia | Una segunda instancia o una evaluación por expertos |
+| En un solo equipo, las réplicas del reconocimiento compiten por la CPU | Repartir réplicas en varios nodos o usar GPU |
+| Las reglas de glosado son simples y el vocabulario no está validado por intérpretes | Fuera del alcance de la arquitectura; el contrato permite sustituir el procesamiento lingüístico |
+| Los dueños de las sesiones se guardan en memoria de la pasarela | Persistirlos si la pasarela se replica |
+
+## 11. Glosario
+
+| Término | Definición |
+|---|---|
+| Glosa | Etiqueta en mayúsculas que nombra una seña del vocabulario |
+| Deletreo (dactilología) | Representación de una palabra letra a letra con el alfabeto manual |
+| Plan de gestos | Secuencia ordenada de posiciones objetivo de los servos |
+| Traza | Marcas de tiempo por etapa que viajan dentro de cada evento |
+| Vista previa (`dry_run`) | Sesión que produce y acepta el plan sin mover el brazo |

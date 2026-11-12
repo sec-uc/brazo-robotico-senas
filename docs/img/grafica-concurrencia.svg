@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="grafica-concurrencia-title grafica-concurrencia-desc" id="grafica-concurrencia-root">
+        <title id="grafica-concurrencia-title">Rendimiento con sesiones de texto simultáneas</title>
+        <desc id="grafica-concurrencia-desc">Gráfico de líneas con las sesiones de texto completadas por segundo para 1, 2, 4, 8, 16 y 32 sesiones simultáneas, antes y después de la ADR-009, medido en un solo equipo y sin fallos en ninguna de las dos series.</desc>
+  <defs>
+      <style>@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500;600&amp;family=Noto+Serif:ital@0;1&amp;family=Noto+Sans+KR:wght@400;500;600&amp;family=Noto+Serif+KR:wght@400&amp;family=Noto+Sans+TC:wght@400;500;600&amp;family=Noto+Serif+TC:wght@400&amp;display=swap');
+      #grafica-concurrencia-root { --color-paper:   #f5f5f5;
+      --color-ink:     #2d3142;
+      --color-muted:   #4f5d75;
+      --color-accent:  #bf4520;
+      --font-sans:     'Geist', system-ui, sans-serif;
+      --font-serif:    'Instrument Serif', 'Noto Serif', serif;
+      --font-mono:     'Geist Mono', ui-monospace, monospace; }
+      #grafica-concurrencia-root { font-family: var(--font-sans); color: var(--color-ink); }
+      #grafica-concurrencia-root .diagram-container { width: 100%; overflow-x: auto; }
+      @media print {
+#grafica-concurrencia-root .diagram-container { overflow-x: visible; }
+}</style>
+  </defs>
+        <rect width="100%" height="100%" fill="#f5f5f5"/>
+        <text transform="rotate(-90 64 320)" x="64" y="320" fill="#4f5d75" font-size="7" font-family="'Geist Mono', ui-monospace, monospace" letter-spacing="0.14em" text-anchor="middle">SESIONES COMPLETADAS POR SEGUNDO</text>
+        <text x="112" y="571" fill="#4f5d75" font-size="8" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="end">0</text>
+        <line x1="120" y1="468.8" x2="1200" y2="468.8" stroke="#2d3142" stroke-width="0.8" stroke-opacity="0.08"/>
+        <text x="112" y="471.8" fill="#4f5d75" font-size="8" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="end">100</text>
+        <line x1="120" y1="369.6" x2="1200" y2="369.6" stroke="#2d3142" stroke-width="0.8" stroke-opacity="0.08"/>
+        <text x="112" y="372.6" fill="#4f5d75" font-size="8" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="end">200</text>
+        <line x1="120" y1="270.4" x2="1200" y2="270.4" stroke="#2d3142" stroke-width="0.8" stroke-opacity="0.08"/>
+        <text x="112" y="273.4" fill="#4f5d75" font-size="8" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="end">300</text>
+        <line x1="120" y1="171.2" x2="1200" y2="171.2" stroke="#2d3142" stroke-width="0.8" stroke-opacity="0.08"/>
+        <text x="112" y="174.2" fill="#4f5d75" font-size="8" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="end">400</text>
+        <line x1="120" y1="72" x2="1200" y2="72" stroke="#2d3142" stroke-width="0.8" stroke-opacity="0.08"/>
+        <text x="112" y="75" fill="#4f5d75" font-size="8" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="end">500</text>
+        <line x1="120" y1="72" x2="120" y2="568" stroke="#2d3142" stroke-width="1" stroke-opacity="0.25"/>
+        <line x1="120" y1="568" x2="1200" y2="568" stroke="#2d3142" stroke-width="1" stroke-opacity="0.25"/>
+        <text x="160" y="588" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle">1</text>
+        <text x="360" y="588" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle">2</text>
+        <text x="560" y="588" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle">4</text>
+        <text x="760" y="588" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle">8</text>
+        <text x="960" y="588" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle">16</text>
+        <text x="1160" y="588" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle">32</text>
+        <text x="660" y="612" fill="#4f5d75" font-size="7" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.14em">SESIONES DE TEXTO SIMULTÁNEAS (ESCALA LOG₂)</text>
+        <polyline points="160,504.5 360,404.3 560,308.1 760,193 960,233.7 1160,166.2" fill="none" stroke="#7c8f6f" stroke-width="1.6" stroke-linejoin="round" stroke-dasharray="6,4"/>
+        <circle cx="160" cy="504.5" r="3.5" fill="#f5f5f5" stroke="#7c8f6f" stroke-width="1.5"/>
+        <circle cx="360" cy="404.3" r="3.5" fill="#f5f5f5" stroke="#7c8f6f" stroke-width="1.5"/>
+        <circle cx="560" cy="308.1" r="3.5" fill="#f5f5f5" stroke="#7c8f6f" stroke-width="1.5"/>
+        <circle cx="760" cy="193" r="3.5" fill="#f5f5f5" stroke="#7c8f6f" stroke-width="1.5"/>
+        <circle cx="960" cy="233.7" r="3.5" fill="#f5f5f5" stroke="#7c8f6f" stroke-width="1.5"/>
+        <circle cx="1160" cy="166.2" r="3.5" fill="#f5f5f5" stroke="#7c8f6f" stroke-width="1.5"/>
+        <polyline points="160,449 360,380.5 560,288.3 760,183.1 960,148.4 1160,213.9" fill="none" stroke="#bf4520" stroke-width="2" stroke-linejoin="round"/>
+        <circle cx="160" cy="449" r="4.5" fill="#bf4520" stroke="#2d3142" stroke-width="1"/>
+        <circle cx="360" cy="380.5" r="4.5" fill="#bf4520" stroke="#2d3142" stroke-width="1"/>
+        <circle cx="560" cy="288.3" r="4.5" fill="#bf4520" stroke="#2d3142" stroke-width="1"/>
+        <circle cx="760" cy="183.1" r="4.5" fill="#bf4520" stroke="#2d3142" stroke-width="1"/>
+        <circle cx="960" cy="148.4" r="4.5" fill="#bf4520" stroke="#2d3142" stroke-width="1"/>
+        <circle cx="1160" cy="213.9" r="4.5" fill="#bf4520" stroke="#2d3142" stroke-width="1"/>
+        <rect x="146" y="426" width="28" height="15" rx="2" fill="#f5f5f5"/><text x="160" y="437" fill="#bf4520" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" font-weight="600" letter-spacing="0.06em">120</text>
+        <rect x="148" y="515.5" width="24" height="15" rx="2" fill="#f5f5f5"/><text x="160" y="526.5" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">64</text>
+        <rect x="346" y="357.5" width="28" height="15" rx="2" fill="#f5f5f5"/><text x="360" y="368.5" fill="#bf4520" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" font-weight="600" letter-spacing="0.06em">189</text>
+        <rect x="346" y="415.3" width="28" height="15" rx="2" fill="#f5f5f5"/><text x="360" y="426.3" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">165</text>
+        <rect x="546" y="265.3" width="28" height="15" rx="2" fill="#f5f5f5"/><text x="560" y="276.3" fill="#bf4520" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" font-weight="600" letter-spacing="0.06em">282</text>
+        <rect x="546" y="319.1" width="28" height="15" rx="2" fill="#f5f5f5"/><text x="560" y="330.1" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">262</text>
+        <rect x="746" y="160.1" width="28" height="15" rx="2" fill="#f5f5f5"/><text x="760" y="171.1" fill="#bf4520" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" font-weight="600" letter-spacing="0.06em">388</text>
+        <rect x="746" y="204" width="28" height="15" rx="2" fill="#f5f5f5"/><text x="760" y="215" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">378</text>
+        <rect x="946" y="125.4" width="28" height="15" rx="2" fill="#f5f5f5"/><text x="960" y="136.4" fill="#bf4520" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" font-weight="600" letter-spacing="0.06em">423</text>
+        <rect x="946" y="244.7" width="28" height="15" rx="2" fill="#f5f5f5"/><text x="960" y="255.7" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">337</text>
+        <rect x="1146" y="143.2" width="28" height="15" rx="2" fill="#f5f5f5"/><text x="1160" y="154.2" fill="#4f5d75" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">405</text>
+        <rect x="1146" y="224.9" width="28" height="15" rx="2" fill="#f5f5f5"/><text x="1160" y="235.9" fill="#bf4520" font-size="9" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="middle" font-weight="600" letter-spacing="0.06em">357</text>
+        <line x1="40" y1="652" x2="1240" y2="652" stroke="#2d3142" stroke-width="0.8" stroke-opacity="0.10"/><text x="40" y="670" fill="#4f5d75" font-size="8" font-family="'Geist Mono', ui-monospace, monospace" letter-spacing="0.18em">LEYENDA</text>
+        <line x1="40" y1="687" x2="64" y2="687" stroke="#bf4520" stroke-width="2"/><circle cx="52" cy="687" r="4.5" fill="#bf4520" stroke="#2d3142" stroke-width="1"/>
+        <text x="72" y="691" fill="#4f5d75" font-size="8.5" font-family="'Geist', system-ui, sans-serif">Después de la ADR-009 (1fd015d)</text>
+        <line x1="264" y1="687" x2="288" y2="687" stroke="#7c8f6f" stroke-width="1.6" stroke-dasharray="6,4"/><circle cx="276" cy="687" r="3.5" fill="#f5f5f5" stroke="#7c8f6f" stroke-width="1.5"/>
+        <text x="296" y="691" fill="#4f5d75" font-size="8.5" font-family="'Geist', system-ui, sans-serif">Antes de la ADR-009 (e467743)</text>
+        <text x="1240" y="691" fill="#4f5d75" font-size="8" font-family="'Geist Mono', ui-monospace, monospace" text-anchor="end">Un solo equipo · 0 fallos en ambas series</text>
+      </svg>
