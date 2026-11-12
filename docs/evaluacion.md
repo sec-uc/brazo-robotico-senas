@@ -13,12 +13,12 @@ Resultados de los doce escenarios de calidad definidos en [escenarios-de-calidad
 
 ## 1. Resumen por escenario
 
-De los doce escenarios, siete se cumplieron, tres se cumplieron parcialmente y dos no se cumplieron.
+De los doce escenarios, siete se cumplieron, tres se cumplieron parcialmente, uno no se cumplió y uno no pudo evaluarse en su medida de respuesta.
 
 | ID | Atributo | Resultado | Veredicto |
 |---|---|---|---|
 | QA-01 | Rendimiento | Texto: p95 de 2 ms. Voz: p95 de 584 ms (IC 95 % 544–635), 604 ms con 300 sesiones. Con el mismo código de reconocimiento, +66 ms frente a la arquitectura anterior, equivalente dentro de ±200 ms | Cumple |
-| QA-02 | Rendimiento | En el brazo real, envío de cada configuración en 1 106 ms (mediana) frente a 1 008 ms del envío servo a servo anterior: +10 % | No cumple |
+| QA-02 | Rendimiento | En el brazo real, envío de cada configuración en 1 106 ms (mediana) frente a 1 008 ms del envío servo a servo anterior (+10 %). El envío anterior manda el ángulo final de cada servo de una vez y termina mientras el brazo aún se mueve a saltos; la trayectoria suave reparte el envío a lo largo del movimiento. La medida compara envíos, no la duración de la seña | No evaluable |
 | QA-03 | Modificabilidad | Motor de reconocimiento nuevo: 3 archivos de un servicio (+43 líneas), frente a 10 archivos en dos unidades; el límite era 2 archivos | No cumple |
 | QA-04 | Modificabilidad | 10 señas añadidas por API en 25 ms; 0 recompilaciones y 0 despliegues | Cumple |
 | QA-05 | Modificabilidad | *Driver* nuevo del brazo: 2 archivos del servicio (+32/−3); límites del hardware en 1 archivo, frente a 3 | Cumple |
@@ -68,7 +68,7 @@ La [ADR-009](adr/ADR-009-consumo-concurrente.md) hizo concurrente el consumo del
 
 - **Un solo equipo.** No incluye la latencia de red entre nodos.
 - **Corpus sintético.** 60 grabaciones de 20 expresiones con tres voces sintéticas en español; no incluye kichwa ni hablantes reales.
-- **Brazo real.** Se midió el envío de cada configuración, no su ejecución física, porque el protocolo serie no la confirma.
+- **Brazo real.** Se midió el envío de cada configuración, no su ejecución física, porque el protocolo serie no la confirma. Por eso QA-02 no puede evaluarse: comparar tiempos de envío entre un perfil de saltos y uno suave no dice cuál termina antes la seña; hace falta medir el movimiento, por ejemplo con vídeo de alta velocidad.
 - **Vocabulario.** La mayoría de las señas no está validada por intérpretes; la evaluación mide atributos del software, no la calidad de la traducción ni su utilidad para la comunidad sorda.
 - **Una instancia.** La arquitectura de referencia se evaluó en un solo robot; su reutilización en otros es una hipótesis.
 - **Sin comparación con un monolito modular.** Los resultados no aíslan el efecto del estilo de microservicios: la mayoría de los escenarios dependen de dónde se trazan las fronteras y no del número de procesos.
