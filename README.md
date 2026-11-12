@@ -1,6 +1,6 @@
 # Robot Signs Platform (RSP)
 
-> Material de réplica del artículo «Diseño de una arquitectura de referencia basada en microservicios para sistemas robóticos de traducción de voz a lengua de señas» (Wachapa Yankur y Timbi Sisalima, Universidad Politécnica Salesiana). Código bajo licencia MIT (`LICENSE`); datos y resultados propios bajo CC BY 4.0 (`LICENSE-DATA.md`). Este repositorio no incluye los datos del proyecto PICCG24-16 de la Universidad Católica de Cuenca ni los audios del corpus: ver `data/README.md`.
+> Material de réplica del artículo «Diseño de una arquitectura de referencia basada en microservicios para sistemas robóticos de traducción de voz a lengua de señas» (Wachapa Yankur y Timbi Sisalima, Universidad Politécnica Salesiana). Código bajo licencia MIT (`LICENSE`); datos y resultados propios bajo CC BY 4.0 (`LICENSE-DATA.md`).
 
 Prototipo de la **arquitectura de referencia basada en microservicios para sistemas robóticos de traducción automática de voz a lengua de señas**, instanciada sobre el brazo robótico de la Universidad Católica de Cuenca. Sustituye a los repositorios heredados `kichwa-app-api` y `robot_conection_app`.
 

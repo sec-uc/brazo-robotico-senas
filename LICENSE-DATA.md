@@ -13,6 +13,5 @@ Se puede compartir y adaptar el material para cualquier fin, siempre que se cite
 
 El código (`services/`, `libs/`, `scripts/` y archivos de configuración) se rige por `LICENSE` (MIT).
 
-**Excluido de esta licencia:** los datos del proyecto PICCG24-16 de la Universidad Católica de Cuenca
-(vocabulario de señas, diccionario kichwa–español y sus imágenes), que no se incluyen, y los audios
-del corpus, que se regeneran con voces de macOS sujetas a la licencia de Apple (ver `data/README.md`).
+Los audios del corpus no se incluyen: se regeneran con voces de macOS sujetas a la licencia de Apple
+(ver `data/README.md`).

@@ -10,10 +10,9 @@
 
 ## Lo que no se incluye
 
-- **Vocabulario de señas** (173 señas) y **diccionario kichwa–español** del proyecto de investigación
-  PICCG24-16 de la Universidad Católica de Cuenca, que pertenecen al proyecto. Con ellos se obtuvieron
-  los resultados del artículo; se pueden solicitar al proyecto. Para usarlos, basta con sustituir los
-  dos archivos de ejemplo por los originales (mismo formato).
+- **Vocabulario de señas y diccionario kichwa–español originales.** Con ellos se obtuvieron los
+  resultados del artículo; para usarlos, basta con sustituir los dos archivos de ejemplo por los
+  originales (mismo formato).
 - **Audios del corpus.** Se generaron con las voces del sistema de macOS (Paulina, Mónica y Eddy), cuya
   licencia no permite redistribuirlos. `scripts/generate_audio_corpus.sh` los regenera en macOS a
   partir de los manifiestos; el formato y la duración coinciden con los originales, pero el contenido
