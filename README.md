@@ -113,7 +113,7 @@ Este repositorio es una instantánea, sin historial, del repositorio de desarrol
 - `data/signs_seed.json` y `data/kichwa_dictionary.json` son datos de ejemplo sintéticos, no los del proyecto. La plataforma arranca y las pruebas pasan con ellos, pero los resultados de exactitud y de QA-12 del artículo requieren los datos originales.
 - Las dos pruebas que comprobaban el tamaño de esos datos (`test_seed_file_is_valid` y `test_gloss_and_dictionary_endpoints`) se ajustaron al tamaño de los de ejemplo.
 - Los audios del corpus se regeneran con `scripts/generate_audio_corpus.sh` (macOS); `data/audio_sha256.txt` da las sumas de los originales.
-- Incluye un endurecimiento posterior a la evaluación: la clave de firma (`AUTH_SECRET`, 32 bytes o más) y los usuarios (`AUTH_USERS`) son obligatorios en `.env` (ver `.env.example`), cada sesión ---y su telemetría--- solo la usa o la consulta quien la creó (o un admin), la lista de sesiones es solo para admin, el texto dicho ya no se registra a nivel INFO y la clave del traductor externo viaja en cabecera.
+- Incluye un endurecimiento posterior a la evaluación: la clave de firma (`AUTH_SECRET`, 32 bytes o más), el token del bus (`BUS_TOKEN`) y los usuarios (`AUTH_USERS`) son obligatorios en `.env` (ver `.env.example`), cada sesión ---y su telemetría--- solo la usa o la consulta quien la creó (o un admin), la lista de sesiones es solo para admin, el texto dicho ya no se registra a nivel INFO y la clave del traductor externo viaja en cabecera.
 - El proveedor `kichwa` del reconocimiento y la línea base de la arquitectura actual necesitan `kichwa-app-api`, que no es público.
 
 Prototipo de investigación: no está pensado para producción.

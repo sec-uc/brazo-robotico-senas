@@ -28,7 +28,7 @@ DC="docker compose -f docker-compose.yml -f docker-compose.native.yml"
 $DC up -d --build >/dev/null
 $DC stop stt >/dev/null
 BUS_TOKEN=${BUS_TOKEN:-$(grep -E '^BUS_TOKEN=' .env 2>/dev/null | cut -d= -f2- || true)}
-export BUS_TOKEN=${BUS_TOKEN:-dev-bus-token-change-me}
+export BUS_TOKEN=${BUS_TOKEN:?defina BUS_TOKEN en .env}
 
 echo "==== STT nativo con el proveedor kichwa (pipeline de la API actual)"
 # los dos paquetes se llaman `app` y el del STT es de espacio de nombres (sin __init__.py), así que el

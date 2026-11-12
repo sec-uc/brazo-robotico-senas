@@ -10,7 +10,7 @@ x-common: &common
   environment: &common-env
     # el bus exige credencial (BUS_TOKEN): estar en la red de contenedores no basta para publicar
     NATS_URL: nats://nats:4222
-    BUS_TOKEN: ${BUS_TOKEN:-dev-bus-token-change-me}   # aparte de la URL, que se escribe en los registros
+    BUS_TOKEN: ${BUS_TOKEN:?defina BUS_TOKEN en .env}   # aparte de la URL, que se escribe en los registros
     AUTH_ENABLED: ${AUTH_ENABLED:-true}
     LOG_LEVEL: ${LOG_LEVEL:-INFO}
     # ADR-010: el audio que llega con el STT caído espera en JetStream (máx. 30 s) en lugar de perderse
@@ -42,7 +42,7 @@ services:
   # ------------------------------------------------------------ infraestructura
   nats:
     image: nats:2.10-alpine
-    command: ["-js", "-m", "8222", "--auth", "${BUS_TOKEN:-dev-bus-token-change-me}"]
+    command: ["-js", "-m", "8222", "--auth", "${BUS_TOKEN:?defina BUS_TOKEN en .env}"]
     # sin puertos publicados: el bus no es alcanzable desde fuera de la red de contenedores.
     # Para un servicio nativo (brazo USB en macOS): -f docker-compose.native.yml
     networks: [rsp]

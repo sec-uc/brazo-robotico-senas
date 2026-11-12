@@ -21,7 +21,7 @@ if [ ! -d "$ROOT/.venv" ]; then
   "$ROOT/.venv/bin/pip" install -q -e "$ROOT/libs/rsp_common" -r "$ROOT/services/actuator-control/requirements.txt"
 fi
 BUS_TOKEN="${BUS_TOKEN:-$(grep -E '^BUS_TOKEN=' "$ROOT/.env" 2>/dev/null | cut -d= -f2- || true)}"
-export BUS_TOKEN="${BUS_TOKEN:-dev-bus-token-change-me}"
+export BUS_TOKEN="${BUS_TOKEN:?defina BUS_TOKEN (ver .env.example)}"
 export NATS_URL="${NATS_URL:-nats://127.0.0.1:4222}"
 export AUTH_SECRET="${AUTH_SECRET:-$(grep -E '^AUTH_SECRET=' "$ROOT/.env" 2>/dev/null | cut -d= -f2- || echo dev-secret-change-me)}"
 export INTER_COMMAND_MS="${INTER_COMMAND_MS:-150}"
