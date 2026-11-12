@@ -36,7 +36,15 @@ La comparación ejecuta en ambas arquitecturas el mismo código de reconocimient
 
 <p align="center"><img src="img/grafica-replicacion.png" alt="Diferencia de latencia entre arquitecturas" width="100%"></p>
 
-La propuesta fue 66 ms más lenta en la mediana de las diferencias pareadas (IC 95 % 59–78 ms; IC 90 % 59–77 ms), dentro del margen de equivalencia de ±200 ms. Las cinco repeticiones dieron por separado entre 55 y 68 ms, y la comparación inicial, +68 ms. Ese costo corresponde a la subida HTTP, la normalización del audio, su paso por el bus y las etapas de glosado, plan y aceptación. La equivalencia se refiere a la latencia típica (mediana), no a las colas.
+La propuesta fue 66 ms más lenta en la mediana de las diferencias pareadas (IC 95 % 59–78 ms; IC 90 % 59–77 ms), dentro del margen de equivalencia de ±200 ms. Las cinco repeticiones dieron por separado entre 55 y 68 ms, y la comparación inicial, +68 ms. La traza de los eventos permite descomponer la diferencia (47 pares de la comparación inicial, medianas):
+
+| Tramo | Diferencia |
+|---|---|
+| Reconocimiento en la propuesta, de la captura al texto y con el paso por el bus, frente a la petición completa anterior | +3 ms (−0,3 ms en los 31 pares con transcripciones idénticas) |
+| Glosado, plan y aceptación | 5 ms |
+| Fuera de la traza: creación de la sesión, flujo SSE, subida por la pasarela, normalización y entrega del evento final | 62 ms |
+
+El costo procede de las idas y vueltas HTTP de la sesión, no del bus ni de las etapas añadidas. La equivalencia se refiere a la latencia típica (mediana), no a las colas.
 
 ## 3. Reconocimiento de voz
 

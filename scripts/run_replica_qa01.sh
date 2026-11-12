@@ -46,6 +46,7 @@ done
 grep -q "Servidor iniciado correctamente" "$WORK/stt.log" && { echo "en 8095 arrancó la API heredada, no el STT"; exit 1; }
 curl -fs http://127.0.0.1:8095/health | grep -q '"stt"' || { echo "8095 no es el servicio stt"; curl -s http://127.0.0.1:8095/health; exit 1; }
 
+export RSP_STT_PROVIDER=kichwa-nativo
 export RSP_SUT_NOTE="propuesta $(git rev-parse --short HEAD) con STT nativo (kichwa, .venv-legacy); actual kichwa-app-api $(git -C "$LEGACY_REPO" rev-parse --short HEAD); config.yaml con fp16=false y use_distil_whisper=false en ambos"
 $PY scripts/experiments.py replica --reps "$REPS" --url http://127.0.0.1:8090 | tail -12
 $PY scripts/analysis_replica.py

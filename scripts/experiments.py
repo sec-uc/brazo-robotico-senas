@@ -55,7 +55,7 @@ def environment() -> dict:
         "git_commit": sh(f"git -C {ROOT} rev-parse --short HEAD"),
         # results/ es la salida de los experimentos, no el código evaluado
         "git_dirty": bool(sh(f"git -C {ROOT} status --porcelain -- . ':!results' ':!data/audio_tts' ':!data/audio_ctrl'")),
-        "stt_provider": sh("docker compose exec -T stt printenv STT_PROVIDER") or "echo",
+        "stt_provider": os.getenv("RSP_STT_PROVIDER") or sh("docker compose exec -T stt printenv STT_PROVIDER") or "echo",  # RSP_STT_PROVIDER si el STT medido corre fuera de contenedores
         # sistema bajo prueba cuando no es este árbol (estado «antes» o la arquitectura actual)
         **({"sut_dir": Path(sut).name, "sut_commit": sh(f"git -C {sut} rev-parse --short HEAD"),
             "sut_dirty": bool(sh(f"git -C {sut} status --porcelain")), "sut_diff": sh(f"git -C {sut} diff --stat"),

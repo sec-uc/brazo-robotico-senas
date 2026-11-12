@@ -3,13 +3,18 @@
 Estado: Aceptado · Fecha: 2026-11-11
 
 ## Contexto
-El robot solo ejecuta las señas de su vocabulario (104 entradas) y deletrea el resto; los enunciados son cortos. Con *faster-whisper base*, QA-01 quedaba en el límite de su meta (p95 de 1 551 ms frente a 1 500 ms) y la seña correcta se obtenía en el 63 % del corpus sintético, con muchos casi-aciertos de palabras del vocabulario («mecero» por «mesero»). La cola de latencia venía de decodificaciones que se repiten («uno uno uno…») hasta agotar la ventana del modelo.
+El robot solo ejecuta las señas de su vocabulario y deletrea el resto; los enunciados son cortos. Con *faster-whisper base*, en la medición anterior a esta decisión QA-01 quedaba en el límite de su meta (p95 de 1 551 ms frente a 1 500 ms) y la glosa correcta se obtenía en el 63 % del corpus sintético, con muchos casi-aciertos de palabras del vocabulario («mecero» por «mesero»). La cola de latencia venía de decodificaciones que se repiten («uno uno uno…») hasta agotar la ventana del modelo.
 
 ## Decisión
 1. **Tope de salida.** El servicio de reconocimiento limita la transcripción a 32 tokens (unas 20 palabras; `WHISPER_MAX_TOKENS`, 0 lo desactiva), impide repetir trigramas y no condiciona cada segmento al anterior. Activo en el despliegue con voz.
 2. **Sesgo por el vocabulario de señas, como opción.** El servicio puede pasar al motor las palabras del vocabulario como sesgo (`hotwords`) con búsqueda en haz (`SIGNS_VOCAB_URL`, `WHISPER_BEAM=5`). Lee el vocabulario del servicio de traducción a señas, su único dueño, y lo refresca cada 60 s; si ese servicio no responde conserva lo último leído (QA-06). **No se activa por defecto**: su mejora de exactitud no quedó demostrada.
 
-## Lo medido (commits `bf0fef7` y `3480299`, 180 audios: corpus original y control)
+## Medición final (commit `1fd015d`, 180 audios: corpus original de 60 y control de 120)
+Son las cifras que reporta el artículo; las tres configuraciones se miden sobre el mismo commit, solo por configuración.
+- **Tope de salida** (adoptado): p95 de 584 ms (máximo 666 ms) frente a 1 195 ms sin tope (máximo 2 336 ms); 604 ms con 300 sesiones. Exactitud sin diferencia detectable: 100 frente a 98 glosas correctas en los 180 audios; cambian 6, 4 a favor y 2 en contra (McNemar exacto, p = 0,69).
+- **Sesgo por vocabulario** (no adoptado), frente al tope solo: corpus original, 32 frente a 36 de 60; palabras del vocabulario no incluidas en el corpus, 43 frente a 29 de 60; palabras de fuera del vocabulario, 34 frente a 35 de 60. Cambian 57 de 180, 33 a favor y 24 en contra (p = 0,29); p95 de 830 ms.
+
+## Mediciones anteriores (commits `bf0fef7` y `3480299`)
 - Primera versión, sesgo con haz 5 y sin tope (`results/adr013_v1/`): el p95 subió de 975 a 2 124 ms (4 400 ms con 300 sesiones) y el rendimiento con voz bajó a 0,9 sesiones/s.
 - Con tope (`results/adr013_v2/`): p95 de 840 ms (1 001 ms con 300 sesiones; máximo 1 246 ms) frente a 1 387 ms sin sesgo ni tope.
 - Exactitud del sesgo frente a no sesgar: corpus original, 32 frente a 36 de 60; palabras del vocabulario no incluidas en el corpus, 43 frente a 29 de 60; palabras de fuera del vocabulario conservadas, 34 frente a 32 de 60. Sobre los 180 audios arregla 33 y rompe 21 (McNemar exacto, p = 0,13): corrige casi-aciertos («mecero» → mesero), pero deforma palabras comunes que antes salían bien («hola» → «ole», «ocho» → «ojo»).
