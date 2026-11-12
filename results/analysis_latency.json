@@ -1,0 +1,242 @@
+{
+  "plan": {
+    "delta_ms": 200.0,
+    "bootstrap": 10000,
+    "seed": 20261028,
+    "sesion_valida": "estado final correcto y transcripción no vacía"
+  },
+  "validez": {
+    "actual": {
+      "total": 60,
+      "validas": 48,
+      "vacias": 12
+    },
+    "mismo_codigo_de_reconocimiento (pipeline de la API actual como proveedor, nativo)": {
+      "total": 60,
+      "validas": 47,
+      "vacias": 13
+    },
+    "misma_arquitectura_de_motor (openai-whisper fp32 en ambas)": {
+      "total": 60,
+      "validas": 55,
+      "vacias": 5
+    },
+    "motor_de_cada_sistema (faster-whisper int8 vs openai-whisper fp32)": {
+      "total": 60,
+      "validas": 57,
+      "vacias": 3
+    }
+  },
+  "comparaciones": [
+    {
+      "comparacion": "mismo_codigo_de_reconocimiento (pipeline de la API actual como proveedor, nativo)",
+      "sesiones": "validas",
+      "pares": 47,
+      "propuesta": {
+        "mediana": 515.7,
+        "p95": 3058.1499999999855
+      },
+      "actual": {
+        "mediana": 457.1,
+        "p95": 662.1399999999995
+      },
+      "diferencia_pareada_mediana_ms": 67.59999999999997,
+      "ic95_ms": [
+        63.0,
+        84.10000000000002
+      ],
+      "ic90_ms": [
+        63.0,
+        81.41999999999827
+      ],
+      "wilcoxon_p": 1.1531966492839274e-09,
+      "r_rb_pareado": 0.8971631205673759,
+      "r_rb_pareado_ic95": [
+        0.7144946808510642,
+        0.9964539007092199
+      ],
+      "efecto_minimo_detectable_ms": 12.516957470041644,
+      "mann_whitney_p": 8.823365892019878e-05,
+      "r_rb": -0.46989588048890907,
+      "hodges_lehmann_2m_ms": 69.40000000000003,
+      "tost_delta_ms": 200.0,
+      "equivalente": true,
+      "propuesta_mas_rapida": false
+    },
+    {
+      "comparacion": "mismo_codigo_de_reconocimiento (pipeline de la API actual como proveedor, nativo)",
+      "sesiones": "todas",
+      "pares": 60,
+      "propuesta": {
+        "mediana": 503.9,
+        "p95": 1716.2149999999929
+      },
+      "actual": {
+        "mediana": 439.5,
+        "p95": 1020.0599999999848
+      },
+      "diferencia_pareada_mediana_ms": 63.10000000000001,
+      "ic95_ms": [
+        58.999999999999986,
+        74.60000000000002
+      ],
+      "ic90_ms": [
+        59.5,
+        67.59999999999997
+      ],
+      "wilcoxon_p": 8.022282384842302e-08,
+      "r_rb_pareado": 0.7967213114754098,
+      "r_rb_pareado_ic95": [
+        0.5693989071038251,
+        0.9858196721311472
+      ],
+      "efecto_minimo_detectable_ms": 11.379909596270736,
+      "mann_whitney_p": 0.0016970403190016026,
+      "r_rb": -0.3325,
+      "hodges_lehmann_2m_ms": 64.10000000000002,
+      "tost_delta_ms": 200.0,
+      "equivalente": true,
+      "propuesta_mas_rapida": false
+    },
+    {
+      "comparacion": "misma_arquitectura_de_motor (openai-whisper fp32 en ambas)",
+      "sesiones": "validas",
+      "pares": 47,
+      "propuesta": {
+        "mediana": 471.5,
+        "p95": 3486.0499999999997
+      },
+      "actual": {
+        "mediana": 458.3,
+        "p95": 735.0099999999998
+      },
+      "diferencia_pareada_mediana_ms": 43.39999999999998,
+      "ic95_ms": [
+        29.30000000000001,
+        328.0
+      ],
+      "ic90_ms": [
+        29.30000000000001,
+        287.19999999999993
+      ],
+      "wilcoxon_p": 5.953464068397807e-07,
+      "r_rb_pareado": 0.774822695035461,
+      "r_rb_pareado_ic95": [
+        0.5442819148936174,
+        0.9539007092198581
+      ],
+      "efecto_minimo_detectable_ms": 39.28589621785331,
+      "mann_whitney_p": 0.0105906736637725,
+      "r_rb": -0.30647351742870077,
+      "hodges_lehmann_2m_ms": 55.69999999999999,
+      "tost_delta_ms": 200.0,
+      "equivalente": false,
+      "propuesta_mas_rapida": false
+    },
+    {
+      "comparacion": "misma_arquitectura_de_motor (openai-whisper fp32 en ambas)",
+      "sesiones": "todas",
+      "pares": 60,
+      "propuesta": {
+        "mediana": 475.6,
+        "p95": 3651.169999999993
+      },
+      "actual": {
+        "mediana": 439.5,
+        "p95": 1020.0599999999848
+      },
+      "diferencia_pareada_mediana_ms": 317.95000000000005,
+      "ic95_ms": [
+        38.69999999999999,
+        817.7000000000007
+      ],
+      "ic90_ms": [
+        45.29999999999998,
+        590.7499999999952
+      ],
+      "wilcoxon_p": 1.1617768566885466e-08,
+      "r_rb_pareado": 0.8469945355191257,
+      "r_rb_pareado_ic95": [
+        0.6754098360655738,
+        0.9726775956284153
+      ],
+      "efecto_minimo_detectable_ms": 174.45538518427568,
+      "mann_whitney_p": 2.360098918237591e-05,
+      "r_rb": -0.44777777777777783,
+      "hodges_lehmann_2m_ms": 311.85,
+      "tost_delta_ms": 200.0,
+      "equivalente": false,
+      "propuesta_mas_rapida": false
+    },
+    {
+      "comparacion": "motor_de_cada_sistema (faster-whisper int8 vs openai-whisper fp32)",
+      "sesiones": "validas",
+      "pares": 48,
+      "propuesta": {
+        "mediana": 279.3,
+        "p95": 638.285
+      },
+      "actual": {
+        "mediana": 457.70000000000005,
+        "p95": 732.145
+      },
+      "diferencia_pareada_mediana_ms": -112.79999999999998,
+      "ic95_ms": [
+        -152.2,
+        -102.0
+      ],
+      "ic90_ms": [
+        -148.3,
+        -106.80000000000001
+      ],
+      "wilcoxon_p": 0.00012686883838597396,
+      "r_rb_pareado": -0.6122448979591837,
+      "r_rb_pareado_ic95": [
+        -0.8384353741496599,
+        -0.3434948979591843
+      ],
+      "efecto_minimo_detectable_ms": 44.20902960164052,
+      "mann_whitney_p": 0.0031093167402681515,
+      "r_rb": 0.3506944444444444,
+      "hodges_lehmann_2m_ms": -128.89999999999998,
+      "tost_delta_ms": 200.0,
+      "equivalente": true,
+      "propuesta_mas_rapida": true
+    },
+    {
+      "comparacion": "motor_de_cada_sistema (faster-whisper int8 vs openai-whisper fp32)",
+      "sesiones": "todas",
+      "pares": 60,
+      "propuesta": {
+        "mediana": 279.4,
+        "p95": 635.725
+      },
+      "actual": {
+        "mediana": 439.5,
+        "p95": 1020.0599999999848
+      },
+      "diferencia_pareada_mediana_ms": -107.29999999999998,
+      "ic95_ms": [
+        -133.14999999999998,
+        28.399999999999977
+      ],
+      "ic90_ms": [
+        -122.39999999999998,
+        9.650000000000034
+      ],
+      "wilcoxon_p": 0.2694888471041773,
+      "r_rb_pareado": -0.16393442622950818,
+      "r_rb_pareado_ic95": [
+        -0.45792349726775955,
+        0.12896174863387977
+      ],
+      "efecto_minimo_detectable_ms": 59.422323120767935,
+      "mann_whitney_p": 0.39080582300254607,
+      "r_rb": 0.09111111111111114,
+      "hodges_lehmann_2m_ms": -85.85,
+      "tost_delta_ms": 200.0,
+      "equivalente": true,
+      "propuesta_mas_rapida": false
+    }
+  ]
+}

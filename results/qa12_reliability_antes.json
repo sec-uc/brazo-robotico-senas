@@ -1,0 +1,109 @@
+{
+  "experiment": "qa12_reliability_antes",
+  "environment": {
+    "timestamp_utc": "2026-10-28T20:28:55+00:00",
+    "host": "macOS-26.5.2-arm64-arm-64bit",
+    "cpu": "Apple M4 Pro",
+    "cpus": 12,
+    "docker": "28.1.1",
+    "git_commit": "9b13b6f",
+    "git_dirty": false,
+    "stt_provider": "echo",
+    "sut_dir": "antes",
+    "sut_commit": "645439a",
+    "sut_dirty": true,
+    "sut_diff": "services/sign-translation/Dockerfile | 2 +-\n services/telemetry/Dockerfile        | 2 +-\n 2 files changed, 2 insertions(+), 2 deletions(-)",
+    "sut_note": "plataforma en 645439a"
+  },
+  "cases": [
+    {
+      "text": "hola",
+      "glosses": "HOLA",
+      "gestures": 4,
+      "unknown_reported": "",
+      "dropped_letters": "",
+      "silent_gap": false
+    },
+    {
+      "text": "año",
+      "glosses": "ANO",
+      "gestures": 3,
+      "unknown_reported": "",
+      "dropped_letters": "",
+      "silent_gap": false
+    },
+    {
+      "text": "ñandú",
+      "glosses": "NANDU",
+      "gestures": 5,
+      "unknown_reported": "",
+      "dropped_letters": "",
+      "silent_gap": false
+    },
+    {
+      "text": "42",
+      "glosses": "42",
+      "gestures": 0,
+      "unknown_reported": "42",
+      "dropped_letters": "",
+      "silent_gap": false
+    },
+    {
+      "text": "hola 42 bien",
+      "glosses": "HOLA 42 BIEN",
+      "gestures": 5,
+      "unknown_reported": "42",
+      "dropped_letters": "",
+      "silent_gap": false
+    },
+    {
+      "text": "café",
+      "glosses": "CAFE",
+      "gestures": 4,
+      "unknown_reported": "",
+      "dropped_letters": "",
+      "silent_gap": false
+    },
+    {
+      "text": "xyzw",
+      "glosses": "XYZW",
+      "gestures": 4,
+      "unknown_reported": "",
+      "dropped_letters": "",
+      "silent_gap": false
+    },
+    {
+      "text": "hola ñ bien",
+      "glosses": "HOLA N BIEN",
+      "gestures": 6,
+      "unknown_reported": "",
+      "dropped_letters": "",
+      "silent_gap": false
+    },
+    {
+      "text": "pingüino",
+      "glosses": "PINGUINO",
+      "gestures": 8,
+      "unknown_reported": "",
+      "dropped_letters": "",
+      "silent_gap": false
+    },
+    {
+      "text": "¿cómo?",
+      "glosses": "COMO",
+      "gestures": 4,
+      "unknown_reported": "",
+      "dropped_letters": "",
+      "silent_gap": false
+    }
+  ],
+  "e2e_mixed": {
+    "status": "done",
+    "wall_ms": 13944.55599784851,
+    "unknown": [
+      "42"
+    ],
+    "gestures": 5
+  },
+  "silent_gaps": 0
+}

@@ -1,0 +1,14 @@
+# Motor openai-whisper (PyTorch fp32): el mismo de la arquitectura actual (QA-01 con igual motor).
+#   docker compose -f docker-compose.yml -f docker-compose.whisper-openai.yml up -d --build stt
+services:
+  stt:
+    build:
+      args: { WITH_OPENAI_WHISPER: "1" }
+    environment:
+      STT_PROVIDER: whisper-openai
+      WHISPER_MODEL: ${WHISPER_MODEL:-base}
+      XDG_CACHE_HOME: /data/hf
+    volumes:
+      - whisper-models:/data/hf
+volumes:
+  whisper-models:

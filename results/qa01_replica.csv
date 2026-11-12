@@ -1,0 +1,601 @@
+rep,pos,file,voice,reference,system,first,status,wall_ms,transcript,polls,valid
+1,0,manzana__v0.wav,Paulina,manzana,propuesta,True,done,568.1,Máncana.,,True
+1,0,manzana__v0.wav,Paulina,manzana,actual,False,done,552.2,Máncana.,1,True
+1,1,mas_o_menos__v0.wav,Paulina,más o menos,actual,True,done,114.1,más o menos.,1,True
+1,1,mas_o_menos__v0.wav,Paulina,más o menos,propuesta,False,done,174.0,más o menos.,,True
+1,2,arriba__v2.wav,Eddy (Español (México)),arriba,actual,True,done,620.1,arriba.,1,True
+1,2,arriba__v2.wav,Eddy (Español (México)),arriba,propuesta,False,done,594.1,arriba.,,True
+1,3,cuatro__v2.wav,Eddy (Español (México)),cuatro,propuesta,True,done,473.3,4,,True
+1,3,cuatro__v2.wav,Eddy (Español (México)),cuatro,actual,False,done,429.6,4,1,True
+1,4,arriba__v0.wav,Paulina,arriba,propuesta,True,done,503.2,arriba.,,True
+1,4,arriba__v0.wav,Paulina,arriba,actual,False,done,449.5,arriba.,1,True
+1,5,mejor__v1.wav,Mónica,mejor,actual,True,done,551.0,mejor,1,True
+1,5,mejor__v1.wav,Mónica,mejor,propuesta,False,done,486.7,mejor,,True
+1,6,miel__v0.wav,Paulina,miel,propuesta,True,done,547.0,miel,,True
+1,6,miel__v0.wav,Paulina,miel,actual,False,done,474.6,miel,1,True
+1,7,mama__v1.wav,Mónica,mamá,propuesta,True,done,691.6,¡Mama!,,True
+1,7,mama__v1.wav,Mónica,mamá,actual,False,done,577.4,¡Mama!,1,True
+1,8,un_ratito__v1.wav,Mónica,un ratito,propuesta,True,done,633.3,Un ratito.,,True
+1,8,un_ratito__v1.wav,Mónica,un ratito,actual,False,done,556.6,Un ratito.,1,True
+1,9,hola__v0.wav,Paulina,hola,propuesta,True,done,472.9,Hola.,,True
+1,9,hola__v0.wav,Paulina,hola,actual,False,done,385.6,Hola.,1,True
+1,10,uno__v1.wav,Mónica,uno,actual,True,done,357.1,Una,1,True
+1,10,uno__v1.wav,Mónica,uno,propuesta,False,done,453.4,una,,True
+1,11,mil__v0.wav,Paulina,mil,actual,True,done,464.4,mil,1,True
+1,11,mil__v0.wav,Paulina,mil,propuesta,False,done,542.8,Mil.,,True
+1,12,mal__v0.wav,Paulina,mal,propuesta,True,done,406.9,Mal,,True
+1,12,mal__v0.wav,Paulina,mal,actual,False,done,338.5,Mal,1,True
+1,13,agua__v2.wav,Eddy (Español (México)),agua,actual,True,done,9480.7,"No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no",1,True
+1,13,agua__v2.wav,Eddy (Español (México)),agua,propuesta,False,done,9783.1,"Y ahora, lo que pasa es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es",,True
+1,14,hola__v1.wav,Mónica,hola,propuesta,True,done,141.7,Hola,,True
+1,14,hola__v1.wav,Mónica,hola,actual,False,done,83.7,Hola,1,True
+1,15,mas_o_menos__v1.wav,Mónica,más o menos,propuesta,True,done,566.5,más o menos.,,True
+1,15,mas_o_menos__v1.wav,Mónica,más o menos,actual,False,done,478.4,más o menos.,1,True
+1,16,bien__v1.wav,Mónica,bien,propuesta,True,done,438.2,Bien.,,True
+1,16,bien__v1.wav,Mónica,bien,actual,False,done,399.9,Bien.,1,True
+1,17,mas_o_menos__v2.wav,Eddy (Español (México)),más o menos,propuesta,True,done,532.4,por más o menos,,True
+1,17,mas_o_menos__v2.wav,Eddy (Español (México)),más o menos,actual,False,done,491.9,más o menos.,1,True
+1,18,cuatro__v0.wav,Paulina,cuatro,actual,True,done,86.3,,1,False
+1,18,cuatro__v0.wav,Paulina,cuatro,propuesta,False,done,140.3,,,False
+1,19,un_ratito__v2.wav,Eddy (Español (México)),un ratito,actual,True,done,535.9,un gratito.,1,True
+1,19,un_ratito__v2.wav,Eddy (Español (México)),un ratito,propuesta,False,done,574.3,un brato.,,True
+1,20,ocho__v2.wav,Eddy (Español (México)),ocho,actual,True,done,101.8,,1,False
+1,20,ocho__v2.wav,Eddy (Español (México)),ocho,propuesta,False,done,158.5,,,False
+1,21,moneda__v1.wav,Mónica,moneda,propuesta,True,done,485.5,moneda,,True
+1,21,moneda__v1.wav,Mónica,moneda,actual,False,done,438.0,moneda,1,True
+1,22,manzana__v2.wav,Eddy (Español (México)),manzana,propuesta,True,done,6531.4,,,False
+1,22,manzana__v2.wav,Eddy (Español (México)),manzana,actual,False,done,6147.3,,1,False
+1,23,moneda__v0.wav,Paulina,moneda,propuesta,True,done,566.7,muy bien,,True
+1,23,moneda__v0.wav,Paulina,moneda,actual,False,done,534.9,Unirá.,1,True
+1,24,mama__v0.wav,Paulina,mamá,propuesta,True,done,5319.9,¡Mama!,,True
+1,24,mama__v0.wav,Paulina,mamá,actual,False,done,2086.9,No me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me,1,True
+1,25,mesero__v0.wav,Paulina,mesero,actual,True,done,486.2,Mecero.,1,True
+1,25,mesero__v0.wav,Paulina,mesero,propuesta,False,done,529.6,Mesero,,True
+1,26,un_ratito__v0.wav,Paulina,un ratito,propuesta,True,done,543.5,un ratito.,,True
+1,26,un_ratito__v0.wav,Paulina,un ratito,actual,False,done,513.4,un ratito.,1,True
+1,27,abajo__v2.wav,Eddy (Español (México)),abajo,actual,True,done,687.2,¡Adiós!,1,True
+1,27,abajo__v2.wav,Eddy (Español (México)),abajo,propuesta,False,done,653.4,aquí,,True
+1,28,mano__v1.wav,Mónica,mano,propuesta,True,done,527.4,Mano.,,True
+1,28,mano__v1.wav,Mónica,mano,actual,False,done,445.3,Mano.,1,True
+1,29,manzana__v1.wav,Mónica,manzana,propuesta,True,done,550.2,Mancana,,True
+1,29,manzana__v1.wav,Mónica,manzana,actual,False,done,510.1,Manzana.,1,True
+1,30,hola__v2.wav,Eddy (Español (México)),hola,actual,True,done,111.1,,1,False
+1,30,hola__v2.wav,Eddy (Español (México)),hola,propuesta,False,done,140.8,,,False
+1,31,mano__v0.wav,Paulina,mano,actual,True,done,491.9,Mano.,1,True
+1,31,mano__v0.wav,Paulina,mano,propuesta,False,done,512.9,Mano.,,True
+1,32,mejor__v2.wav,Eddy (Español (México)),mejor,actual,True,done,447.3,de color.,1,True
+1,32,mejor__v2.wav,Eddy (Español (México)),mejor,propuesta,False,done,503.1,de color.,,True
+1,33,manana__v0.wav,Paulina,mañana,propuesta,True,done,552.7,mañana,,True
+1,33,manana__v0.wav,Paulina,mañana,actual,False,done,533.1,Manllana.,1,True
+1,34,mil__v1.wav,Mónica,mil,actual,True,done,89.7,,1,False
+1,34,mil__v1.wav,Mónica,mil,propuesta,False,done,146.4,,,False
+1,35,mejor__v0.wav,Paulina,mejor,actual,True,done,427.0,mejor.,1,True
+1,35,mejor__v0.wav,Paulina,mejor,propuesta,False,done,503.2,mejor.,,True
+1,36,ocho__v1.wav,Mónica,ocho,actual,True,done,457.4,Ocho.,1,True
+1,36,ocho__v1.wav,Mónica,ocho,propuesta,False,done,505.9,Ocho.,,True
+1,37,mama__v2.wav,Eddy (Español (México)),mamá,actual,True,done,96.0,,1,False
+1,37,mama__v2.wav,Eddy (Español (México)),mamá,propuesta,False,done,153.8,,,False
+1,38,cuatro__v1.wav,Mónica,cuatro,actual,True,done,100.3,,1,False
+1,38,cuatro__v1.wav,Mónica,cuatro,propuesta,False,done,150.6,,,False
+1,39,bien__v0.wav,Paulina,bien,actual,True,done,458.3,bien,1,True
+1,39,bien__v0.wav,Paulina,bien,propuesta,False,done,462.4,Bien.,,True
+1,40,mesero__v2.wav,Eddy (Español (México)),mesero,actual,True,done,539.3,Miserro.,1,True
+1,40,mesero__v2.wav,Eddy (Español (México)),mesero,propuesta,False,done,3983.5,de la serie de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los de los,,True
+1,41,mesero__v1.wav,Mónica,mesero,propuesta,True,done,520.8,Me siro.,,True
+1,41,mesero__v1.wav,Mónica,mesero,actual,False,done,493.7,Me siro.,1,True
+1,42,mal__v2.wav,Eddy (Español (México)),mal,propuesta,True,done,144.7,,,False
+1,42,mal__v2.wav,Eddy (Español (México)),mal,actual,False,done,86.9,,1,False
+1,43,miel__v2.wav,Eddy (Español (México)),miel,actual,True,done,95.6,,1,False
+1,43,miel__v2.wav,Eddy (Español (México)),miel,propuesta,False,done,151.0,,,False
+1,44,abajo__v1.wav,Mónica,abajo,propuesta,True,done,733.3,¡Adiós!,,True
+1,44,abajo__v1.wav,Mónica,abajo,actual,False,done,590.9,¡Adiós!,1,True
+1,45,bien__v2.wav,Eddy (Español (México)),bien,propuesta,True,done,457.2,bien.,,True
+1,45,bien__v2.wav,Eddy (Español (México)),bien,actual,False,done,420.3,bien.,1,True
+1,46,miel__v1.wav,Mónica,miel,propuesta,True,done,491.5,Miel.,,True
+1,46,miel__v1.wav,Mónica,miel,actual,False,done,445.0,Miel.,1,True
+1,47,agua__v1.wav,Mónica,agua,propuesta,True,done,479.7,Agua.,,True
+1,47,agua__v1.wav,Mónica,agua,actual,False,done,439.0,Agua.,1,True
+1,48,manana__v2.wav,Eddy (Español (México)),mañana,actual,True,done,459.4,vanyana.,1,True
+1,48,manana__v2.wav,Eddy (Español (México)),mañana,propuesta,False,done,535.7,vayan a.,,True
+1,49,manana__v1.wav,Mónica,mañana,actual,True,done,406.6,mañana,1,True
+1,49,manana__v1.wav,Mónica,mañana,propuesta,False,done,412.7,mañana,,True
+1,50,uno__v0.wav,Paulina,uno,propuesta,True,done,413.6,Una,,True
+1,50,uno__v0.wav,Paulina,uno,actual,False,done,350.8,Una,1,True
+1,51,mil__v2.wav,Eddy (Español (México)),mil,propuesta,True,done,136.7,,,False
+1,51,mil__v2.wav,Eddy (Español (México)),mil,actual,False,done,81.6,,1,False
+1,52,arriba__v1.wav,Mónica,arriba,propuesta,True,done,551.0,arriba,,True
+1,52,arriba__v1.wav,Mónica,arriba,actual,False,done,407.5,arriba,1,True
+1,53,mal__v1.wav,Mónica,mal,propuesta,True,done,529.8,Mal.,,True
+1,53,mal__v1.wav,Mónica,mal,actual,False,done,600.2,Maldito.,1,True
+1,54,abajo__v0.wav,Paulina,abajo,propuesta,True,done,561.3,Abajo.,,True
+1,54,abajo__v0.wav,Paulina,abajo,actual,False,done,562.7,Abajo.,1,True
+1,55,ocho__v0.wav,Paulina,ocho,propuesta,True,done,615.9,Ocho.,,True
+1,55,ocho__v0.wav,Paulina,ocho,actual,False,done,525.2,Ocho.,1,True
+1,56,moneda__v2.wav,Eddy (Español (México)),moneda,propuesta,True,done,4286.4,que se le ha dado en la segunda vez que ha dado en la segunda vez que ha dado en la segunda vez que ha dado en la segunda vez que ha dado en la segunda vez que ha dado en la segunda vez que ha dado en la segunda vez que ha dado en la segunda vez que ha dado en la segunda vez que ha dado en la segunda vez que ha dado en la segunda vez que ha dado en la segunda vez que ha dado en la segunda vez que ha dado en la segunda vez que ha dado en la segunda vez que ha dado en la segunda vez que ha dado en la segunda vez que ha dado en la segunda vez que ha dado en la segunda vez que ha dado en la segunda vez que ha dado en la segunda vez que ha dado en la segunda vez que ha dado en la segunda vez que ha dado en la segunda vez que ha dado en la segunda vez que ha dado en la segunda vez que ha dado en la segunda vez que ha dado en la segunda vez que ha dado en la segunda vez que ha dado en la segunda vez que ha dado en la segunda vez que ha dado en,,True
+1,56,moneda__v2.wav,Eddy (Español (México)),moneda,actual,False,done,620.1,moneda,1,True
+1,57,mano__v2.wav,Eddy (Español (México)),mano,propuesta,True,done,150.1,,,False
+1,57,mano__v2.wav,Eddy (Español (México)),mano,actual,False,done,100.5,,1,False
+1,58,agua__v0.wav,Paulina,agua,actual,True,done,596.9,¡Egüe!,1,True
+1,58,agua__v0.wav,Paulina,agua,propuesta,False,done,651.5,¡Egüe!,,True
+1,59,uno__v2.wav,Eddy (Español (México)),uno,actual,True,done,94.1,,1,False
+1,59,uno__v2.wav,Eddy (Español (México)),uno,propuesta,False,done,154.6,,,False
+2,0,mejor__v2.wav,Eddy (Español (México)),mejor,propuesta,True,done,519.5,de color.,,True
+2,0,mejor__v2.wav,Eddy (Español (México)),mejor,actual,False,done,486.8,de color.,1,True
+2,1,bien__v1.wav,Mónica,bien,actual,True,done,415.3,bien,1,True
+2,1,bien__v1.wav,Mónica,bien,propuesta,False,done,489.1,Bien.,,True
+2,2,cuatro__v0.wav,Paulina,cuatro,propuesta,True,done,144.3,,,False
+2,2,cuatro__v0.wav,Paulina,cuatro,actual,False,done,95.8,,1,False
+2,3,manzana__v0.wav,Paulina,manzana,actual,True,done,518.7,manzana.,1,True
+2,3,manzana__v0.wav,Paulina,manzana,propuesta,False,done,601.8,Mansana,,True
+2,4,arriba__v0.wav,Paulina,arriba,propuesta,True,done,538.8,arriba.,,True
+2,4,arriba__v0.wav,Paulina,arriba,actual,False,done,416.2,arriba.,1,True
+2,5,hola__v0.wav,Paulina,hola,actual,True,done,453.2,Hola.,1,True
+2,5,hola__v0.wav,Paulina,hola,propuesta,False,done,468.0,Hola.,,True
+2,6,cuatro__v1.wav,Mónica,cuatro,actual,True,done,97.5,,1,False
+2,6,cuatro__v1.wav,Mónica,cuatro,propuesta,False,done,151.2,,,False
+2,7,abajo__v1.wav,Mónica,abajo,propuesta,True,done,611.8,¡Aberso!,,True
+2,7,abajo__v1.wav,Mónica,abajo,actual,False,done,647.0,¡Adiós!,1,True
+2,8,ocho__v0.wav,Paulina,ocho,propuesta,True,done,636.1,Ocho.,,True
+2,8,ocho__v0.wav,Paulina,ocho,actual,False,done,522.7,¡Ocho!,1,True
+2,9,mama__v2.wav,Eddy (Español (México)),mamá,propuesta,True,done,166.0,,,False
+2,9,mama__v2.wav,Eddy (Español (México)),mamá,actual,False,done,103.7,,1,False
+2,10,agua__v1.wav,Mónica,agua,propuesta,True,done,536.2,Agua.,,True
+2,10,agua__v1.wav,Mónica,agua,actual,False,done,475.6,Agua.,1,True
+2,11,manzana__v2.wav,Eddy (Español (México)),manzana,propuesta,True,done,11090.3,con la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma forma de la misma,,True
+2,11,manzana__v2.wav,Eddy (Español (México)),manzana,actual,False,done,6225.6,,1,False
+2,12,manana__v0.wav,Paulina,mañana,propuesta,True,done,621.0,Manllana.,,True
+2,12,manana__v0.wav,Paulina,mañana,actual,False,done,548.1,Manllana.,1,True
+2,13,mesero__v2.wav,Eddy (Español (México)),mesero,propuesta,True,done,677.1,y un besero.,,True
+2,13,mesero__v2.wav,Eddy (Español (México)),mesero,actual,False,done,5606.7,y un besero.,1,True
+2,14,mas_o_menos__v1.wav,Mónica,más o menos,propuesta,True,done,596.6,más o menos.,,True
+2,14,mas_o_menos__v1.wav,Mónica,más o menos,actual,False,done,505.3,más o menos.,1,True
+2,15,arriba__v1.wav,Mónica,arriba,propuesta,True,done,519.6,arriba,,True
+2,15,arriba__v1.wav,Mónica,arriba,actual,False,done,422.6,arriba,1,True
+2,16,un_ratito__v0.wav,Paulina,un ratito,propuesta,True,done,534.4,un ratito.,,True
+2,16,un_ratito__v0.wav,Paulina,un ratito,actual,False,done,454.8,un ratito.,1,True
+2,17,agua__v2.wav,Eddy (Español (México)),agua,propuesta,True,done,7970.7,,,False
+2,17,agua__v2.wav,Eddy (Español (México)),agua,actual,False,done,6093.6,,1,False
+2,18,ocho__v2.wav,Eddy (Español (México)),ocho,propuesta,True,done,158.0,,,False
+2,18,ocho__v2.wav,Eddy (Español (México)),ocho,actual,False,done,87.4,,1,False
+2,19,mal__v2.wav,Eddy (Español (México)),mal,actual,True,done,94.5,,1,False
+2,19,mal__v2.wav,Eddy (Español (México)),mal,propuesta,False,done,144.4,,,False
+2,20,mil__v2.wav,Eddy (Español (México)),mil,actual,True,done,97.9,,1,False
+2,20,mil__v2.wav,Eddy (Español (México)),mil,propuesta,False,done,151.4,,,False
+2,21,bien__v2.wav,Eddy (Español (México)),bien,actual,True,done,389.6,bien.,1,True
+2,21,bien__v2.wav,Eddy (Español (México)),bien,propuesta,False,done,465.0,bien.,,True
+2,22,mama__v1.wav,Mónica,mamá,actual,True,done,477.5,¡Mama!,1,True
+2,22,mama__v1.wav,Mónica,mamá,propuesta,False,done,543.0,¡Mama!,,True
+2,23,hola__v1.wav,Mónica,hola,propuesta,True,done,148.4,Hola,,True
+2,23,hola__v1.wav,Mónica,hola,actual,False,done,81.1,Hola,1,True
+2,24,mesero__v0.wav,Paulina,mesero,actual,True,done,466.1,Mesero,1,True
+2,24,mesero__v0.wav,Paulina,mesero,propuesta,False,done,530.3,Mecero.,,True
+2,25,miel__v0.wav,Paulina,miel,propuesta,True,done,474.6,Miel.,,True
+2,25,miel__v0.wav,Paulina,miel,actual,False,done,425.3,Miel.,1,True
+2,26,mano__v2.wav,Eddy (Español (México)),mano,actual,True,done,81.1,,1,False
+2,26,mano__v2.wav,Eddy (Español (México)),mano,propuesta,False,done,142.2,,,False
+2,27,arriba__v2.wav,Eddy (Español (México)),arriba,propuesta,True,done,517.5,arriba.,,True
+2,27,arriba__v2.wav,Eddy (Español (México)),arriba,actual,False,done,503.2,arriba.,1,True
+2,28,manana__v2.wav,Eddy (Español (México)),mañana,actual,True,done,503.1,la mañana.,1,True
+2,28,manana__v2.wav,Eddy (Español (México)),mañana,propuesta,False,done,571.1,la mañana.,,True
+2,29,mano__v1.wav,Mónica,mano,propuesta,True,done,475.4,Mano.,,True
+2,29,mano__v1.wav,Mónica,mano,actual,False,done,405.8,Mano.,1,True
+2,30,uno__v2.wav,Eddy (Español (México)),uno,propuesta,True,done,140.5,,,False
+2,30,uno__v2.wav,Eddy (Español (México)),uno,actual,False,done,84.5,,1,False
+2,31,un_ratito__v2.wav,Eddy (Español (México)),un ratito,propuesta,True,done,561.7,un gratito.,,True
+2,31,un_ratito__v2.wav,Eddy (Español (México)),un ratito,actual,False,done,496.3,un gratito.,1,True
+2,32,mejor__v1.wav,Mónica,mejor,actual,True,done,430.2,mejor,1,True
+2,32,mejor__v1.wav,Mónica,mejor,propuesta,False,done,461.7,mejor,,True
+2,33,mil__v0.wav,Paulina,mil,actual,True,done,466.4,Mil.,1,True
+2,33,mil__v0.wav,Paulina,mil,propuesta,False,done,517.3,mil,,True
+2,34,uno__v0.wav,Paulina,uno,actual,True,done,341.6,una,1,True
+2,34,uno__v0.wav,Paulina,uno,propuesta,False,done,415.1,Una,,True
+2,35,cuatro__v2.wav,Eddy (Español (México)),cuatro,propuesta,True,done,466.4,4,,True
+2,35,cuatro__v2.wav,Eddy (Español (México)),cuatro,actual,False,done,394.8,4,1,True
+2,36,mal__v1.wav,Mónica,mal,actual,True,done,612.4,Mal.,1,True
+2,36,mal__v1.wav,Mónica,mal,propuesta,False,done,513.4,Mal.,,True
+2,37,miel__v1.wav,Mónica,miel,actual,True,done,418.3,Mil,1,True
+2,37,miel__v1.wav,Mónica,miel,propuesta,False,done,486.8,Miel,,True
+2,38,bien__v0.wav,Paulina,bien,propuesta,True,done,442.3,bien,,True
+2,38,bien__v0.wav,Paulina,bien,actual,False,done,374.2,bien,1,True
+2,39,moneda__v2.wav,Eddy (Español (México)),moneda,propuesta,True,done,611.8,¡Modernos!,,True
+2,39,moneda__v2.wav,Eddy (Español (México)),moneda,actual,False,done,516.3,No me decimos nada.,1,True
+2,40,mama__v0.wav,Paulina,mamá,actual,True,done,8744.8,No me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me,1,True
+2,40,mama__v0.wav,Paulina,mamá,propuesta,False,done,8937.7,No me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me,,True
+2,41,miel__v2.wav,Eddy (Español (México)),miel,actual,True,done,110.5,,1,False
+2,41,miel__v2.wav,Eddy (Español (México)),miel,propuesta,False,done,153.2,,,False
+2,42,mal__v0.wav,Paulina,mal,propuesta,True,done,428.3,Mal,,True
+2,42,mal__v0.wav,Paulina,mal,actual,False,done,349.9,Mal,1,True
+2,43,agua__v0.wav,Paulina,agua,actual,True,done,570.7,¡Egué!,1,True
+2,43,agua__v0.wav,Paulina,agua,propuesta,False,done,620.1,Agüe.,,True
+2,44,ocho__v1.wav,Mónica,ocho,propuesta,True,done,498.5,Ocho.,,True
+2,44,ocho__v1.wav,Mónica,ocho,actual,False,done,425.5,Ocho.,1,True
+2,45,manzana__v1.wav,Mónica,manzana,propuesta,True,done,540.4,Mantena,,True
+2,45,manzana__v1.wav,Mónica,manzana,actual,False,done,469.1,Manzana.,1,True
+2,46,abajo__v2.wav,Eddy (Español (México)),abajo,actual,True,done,594.0,¡Adiós!,1,True
+2,46,abajo__v2.wav,Eddy (Español (México)),abajo,propuesta,False,done,4048.4,y aquí a la parte de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la,,True
+2,47,abajo__v0.wav,Paulina,abajo,propuesta,True,done,598.6,Abajo.,,True
+2,47,abajo__v0.wav,Paulina,abajo,actual,False,done,499.5,Abajo.,1,True
+2,48,mil__v1.wav,Mónica,mil,propuesta,True,done,140.4,,,False
+2,48,mil__v1.wav,Mónica,mil,actual,False,done,85.1,,1,False
+2,49,moneda__v1.wav,Mónica,moneda,propuesta,True,done,469.4,moneda,,True
+2,49,moneda__v1.wav,Mónica,moneda,actual,False,done,425.6,moneda,1,True
+2,50,hola__v2.wav,Eddy (Español (México)),hola,actual,True,done,90.0,,1,False
+2,50,hola__v2.wav,Eddy (Español (México)),hola,propuesta,False,done,136.3,,,False
+2,51,mas_o_menos__v2.wav,Eddy (Español (México)),más o menos,actual,True,done,482.6,por más o menos,1,True
+2,51,mas_o_menos__v2.wav,Eddy (Español (México)),más o menos,propuesta,False,done,525.6,más o menos.,,True
+2,52,uno__v1.wav,Mónica,uno,actual,True,done,366.3,una,1,True
+2,52,uno__v1.wav,Mónica,uno,propuesta,False,done,524.1,Una,,True
+2,53,moneda__v0.wav,Paulina,moneda,actual,True,done,624.1,Unirá.,1,True
+2,53,moneda__v0.wav,Paulina,moneda,propuesta,False,done,618.8,¡Muenida!,,True
+2,54,mano__v0.wav,Paulina,mano,actual,True,done,433.3,Mano.,1,True
+2,54,mano__v0.wav,Paulina,mano,propuesta,False,done,502.1,Mano.,,True
+2,55,mejor__v0.wav,Paulina,mejor,actual,True,done,387.0,mejor.,1,True
+2,55,mejor__v0.wav,Paulina,mejor,propuesta,False,done,463.4,mejor.,,True
+2,56,mas_o_menos__v0.wav,Paulina,más o menos,propuesta,True,done,147.7,más o menos.,,True
+2,56,mas_o_menos__v0.wav,Paulina,más o menos,actual,False,done,95.3,más o menos.,1,True
+2,57,manana__v1.wav,Mónica,mañana,propuesta,True,done,447.7,mañana,,True
+2,57,manana__v1.wav,Mónica,mañana,actual,False,done,388.2,mañana,1,True
+2,58,mesero__v1.wav,Mónica,mesero,actual,True,done,472.7,Me siro.,1,True
+2,58,mesero__v1.wav,Mónica,mesero,propuesta,False,done,530.0,Me siro.,,True
+2,59,un_ratito__v1.wav,Mónica,un ratito,propuesta,True,done,526.5,un ratito.,,True
+2,59,un_ratito__v1.wav,Mónica,un ratito,actual,False,done,520.0,un ratito.,1,True
+3,0,bien__v2.wav,Eddy (Español (México)),bien,actual,True,done,389.6,bien.,1,True
+3,0,bien__v2.wav,Eddy (Español (México)),bien,propuesta,False,done,449.2,bien.,,True
+3,1,mal__v0.wav,Paulina,mal,propuesta,True,done,401.0,Mal,,True
+3,1,mal__v0.wav,Paulina,mal,actual,False,done,381.3,Mal,1,True
+3,2,manzana__v1.wav,Mónica,manzana,actual,True,done,466.6,Manzana.,1,True
+3,2,manzana__v1.wav,Mónica,manzana,propuesta,False,done,539.8,Mancena,,True
+3,3,mejor__v0.wav,Paulina,mejor,actual,True,done,394.9,mejor.,1,True
+3,3,mejor__v0.wav,Paulina,mejor,propuesta,False,done,452.0,mejor.,,True
+3,4,arriba__v1.wav,Mónica,arriba,actual,True,done,458.9,arriba,1,True
+3,4,arriba__v1.wav,Mónica,arriba,propuesta,False,done,561.5,arriba,,True
+3,5,mil__v0.wav,Paulina,mil,propuesta,True,done,530.4,Mil.,,True
+3,5,mil__v0.wav,Paulina,mil,actual,False,done,476.1,mil,1,True
+3,6,un_ratito__v0.wav,Paulina,un ratito,actual,True,done,489.2,un ratito.,1,True
+3,6,un_ratito__v0.wav,Paulina,un ratito,propuesta,False,done,539.9,un ratito.,,True
+3,7,miel__v1.wav,Mónica,miel,actual,True,done,595.6,Mil,1,True
+3,7,miel__v1.wav,Mónica,miel,propuesta,False,done,485.3,Miel.,,True
+3,8,cuatro__v0.wav,Paulina,cuatro,propuesta,True,done,143.5,,,False
+3,8,cuatro__v0.wav,Paulina,cuatro,actual,False,done,87.4,,1,False
+3,9,abajo__v2.wav,Eddy (Español (México)),abajo,propuesta,True,done,802.1,"No, no, no.",,True
+3,9,abajo__v2.wav,Eddy (Español (México)),abajo,actual,False,done,702.2,¡Adiós!,1,True
+3,10,miel__v0.wav,Paulina,miel,propuesta,True,done,488.2,miel,,True
+3,10,miel__v0.wav,Paulina,miel,actual,False,done,431.2,miel,1,True
+3,11,mama__v1.wav,Mónica,mamá,actual,True,done,471.8,¡Mama!,1,True
+3,11,mama__v1.wav,Mónica,mamá,propuesta,False,done,545.5,¡Mama!,,True
+3,12,un_ratito__v1.wav,Mónica,un ratito,propuesta,True,done,529.3,Un ratito.,,True
+3,12,un_ratito__v1.wav,Mónica,un ratito,actual,False,done,495.1,un ratito.,1,True
+3,13,mil__v2.wav,Eddy (Español (México)),mil,actual,True,done,82.6,,1,False
+3,13,mil__v2.wav,Eddy (Español (México)),mil,propuesta,False,done,141.4,,,False
+3,14,manana__v0.wav,Paulina,mañana,propuesta,True,done,539.2,Manllana.,,True
+3,14,manana__v0.wav,Paulina,mañana,actual,False,done,503.2,mañana,1,True
+3,15,hola__v2.wav,Eddy (Español (México)),hola,propuesta,True,done,155.6,,,False
+3,15,hola__v2.wav,Eddy (Español (México)),hola,actual,False,done,99.8,,1,False
+3,16,manana__v1.wav,Mónica,mañana,actual,True,done,384.3,mañana,1,True
+3,16,manana__v1.wav,Mónica,mañana,propuesta,False,done,443.7,mañana,,True
+3,17,mesero__v1.wav,Mónica,mesero,actual,True,done,464.2,Me siro.,1,True
+3,17,mesero__v1.wav,Mónica,mesero,propuesta,False,done,546.7,Me siro.,,True
+3,18,mano__v0.wav,Paulina,mano,actual,True,done,428.5,Mano.,1,True
+3,18,mano__v0.wav,Paulina,mano,propuesta,False,done,508.1,mano,,True
+3,19,moneda__v2.wav,Eddy (Español (México)),moneda,actual,True,done,506.3,no me den.,1,True
+3,19,moneda__v2.wav,Eddy (Español (México)),moneda,propuesta,False,done,609.0,de la,,True
+3,20,uno__v2.wav,Eddy (Español (México)),uno,actual,True,done,86.9,,1,False
+3,20,uno__v2.wav,Eddy (Español (México)),uno,propuesta,False,done,143.9,,,False
+3,21,manzana__v0.wav,Paulina,manzana,propuesta,True,done,578.4,Mantenas.,,True
+3,21,manzana__v0.wav,Paulina,manzana,actual,False,done,510.7,Máncana.,1,True
+3,22,agua__v2.wav,Eddy (Español (México)),agua,propuesta,True,done,9441.1,Con la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de la de,,True
+3,22,agua__v2.wav,Eddy (Español (México)),agua,actual,False,done,6051.7,,1,False
+3,23,mejor__v2.wav,Eddy (Español (México)),mejor,actual,True,done,419.1,de color.,1,True
+3,23,mejor__v2.wav,Eddy (Español (México)),mejor,propuesta,False,done,495.5,de color.,,True
+3,24,uno__v0.wav,Paulina,uno,propuesta,True,done,412.0,Una,,True
+3,24,uno__v0.wav,Paulina,uno,actual,False,done,371.4,Una,1,True
+3,25,ocho__v0.wav,Paulina,ocho,propuesta,True,done,548.8,Ocho.,,True
+3,25,ocho__v0.wav,Paulina,ocho,actual,False,done,498.9,Ocho.,1,True
+3,26,mal__v2.wav,Eddy (Español (México)),mal,actual,True,done,83.8,,1,False
+3,26,mal__v2.wav,Eddy (Español (México)),mal,propuesta,False,done,137.8,,,False
+3,27,hola__v0.wav,Paulina,hola,propuesta,True,done,481.9,Hola.,,True
+3,27,hola__v0.wav,Paulina,hola,actual,False,done,413.6,Hola.,1,True
+3,28,cuatro__v2.wav,Eddy (Español (México)),cuatro,propuesta,True,done,477.3,4,,True
+3,28,cuatro__v2.wav,Eddy (Español (México)),cuatro,actual,False,done,388.1,4,1,True
+3,29,moneda__v0.wav,Paulina,moneda,actual,True,done,534.1,¡Muenida!,1,True
+3,29,moneda__v0.wav,Paulina,moneda,propuesta,False,done,631.6,Unirá.,,True
+3,30,mil__v1.wav,Mónica,mil,actual,True,done,90.0,,1,False
+3,30,mil__v1.wav,Mónica,mil,propuesta,False,done,146.7,,,False
+3,31,mesero__v2.wav,Eddy (Español (México)),mesero,actual,True,done,5309.9,y un besero.,1,True
+3,31,mesero__v2.wav,Eddy (Español (México)),mesero,propuesta,False,done,1498.3,y un besero.,,True
+3,32,hola__v1.wav,Mónica,hola,propuesta,True,done,136.4,Hola,,True
+3,32,hola__v1.wav,Mónica,hola,actual,False,done,83.5,Hola,1,True
+3,33,agua__v0.wav,Paulina,agua,propuesta,True,done,655.8,Agüe.,,True
+3,33,agua__v0.wav,Paulina,agua,actual,False,done,547.1,¡Egüe!,1,True
+3,34,ocho__v2.wav,Eddy (Español (México)),ocho,actual,True,done,90.4,,1,False
+3,34,ocho__v2.wav,Eddy (Español (México)),ocho,propuesta,False,done,147.3,,,False
+3,35,miel__v2.wav,Eddy (Español (México)),miel,actual,True,done,97.8,,1,False
+3,35,miel__v2.wav,Eddy (Español (México)),miel,propuesta,False,done,159.3,,,False
+3,36,mama__v0.wav,Paulina,mamá,actual,True,done,5279.3,Mamá.,1,True
+3,36,mama__v0.wav,Paulina,mamá,propuesta,False,done,9010.6,me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me,,True
+3,37,mama__v2.wav,Eddy (Español (México)),mamá,actual,True,done,111.4,,1,False
+3,37,mama__v2.wav,Eddy (Español (México)),mamá,propuesta,False,done,149.5,,,False
+3,38,moneda__v1.wav,Mónica,moneda,actual,True,done,400.5,moneda,1,True
+3,38,moneda__v1.wav,Mónica,moneda,propuesta,False,done,498.8,moneda,,True
+3,39,manzana__v2.wav,Eddy (Español (México)),manzana,propuesta,True,done,6225.5,,,False
+3,39,manzana__v2.wav,Eddy (Español (México)),manzana,actual,False,done,6275.8,,1,False
+3,40,mesero__v0.wav,Paulina,mesero,actual,True,done,467.8,Mecero.,1,True
+3,40,mesero__v0.wav,Paulina,mesero,propuesta,False,done,535.0,Mesero,,True
+3,41,abajo__v0.wav,Paulina,abajo,propuesta,True,done,564.1,abajo.,,True
+3,41,abajo__v0.wav,Paulina,abajo,actual,False,done,494.0,Abajo.,1,True
+3,42,mano__v2.wav,Eddy (Español (México)),mano,actual,True,done,84.7,,1,False
+3,42,mano__v2.wav,Eddy (Español (México)),mano,propuesta,False,done,143.1,,,False
+3,43,un_ratito__v2.wav,Eddy (Español (México)),un ratito,actual,True,done,508.7,un gratito.,1,True
+3,43,un_ratito__v2.wav,Eddy (Español (México)),un ratito,propuesta,False,done,577.1,un gratito.,,True
+3,44,ocho__v1.wav,Mónica,ocho,propuesta,True,done,505.0,Ocho.,,True
+3,44,ocho__v1.wav,Mónica,ocho,actual,False,done,437.4,Ocho.,1,True
+3,45,uno__v1.wav,Mónica,uno,propuesta,True,done,481.2,Una,,True
+3,45,uno__v1.wav,Mónica,uno,actual,False,done,436.9,una,1,True
+3,46,arriba__v0.wav,Paulina,arriba,actual,True,done,417.6,arriba.,1,True
+3,46,arriba__v0.wav,Paulina,arriba,propuesta,False,done,504.2,arriba.,,True
+3,47,bien__v1.wav,Mónica,bien,propuesta,True,done,485.7,bien,,True
+3,47,bien__v1.wav,Mónica,bien,actual,False,done,389.4,Bien.,1,True
+3,48,arriba__v2.wav,Eddy (Español (México)),arriba,actual,True,done,554.9,Riva.,1,True
+3,48,arriba__v2.wav,Eddy (Español (México)),arriba,propuesta,False,done,645.5,arriba.,,True
+3,49,bien__v0.wav,Paulina,bien,propuesta,True,done,498.4,bien,,True
+3,49,bien__v0.wav,Paulina,bien,actual,False,done,406.4,bien,1,True
+3,50,abajo__v1.wav,Mónica,abajo,propuesta,True,done,582.7,¡Adiós!,,True
+3,50,abajo__v1.wav,Mónica,abajo,actual,False,done,535.1,"A ver, esto.",1,True
+3,51,mas_o_menos__v2.wav,Eddy (Español (México)),más o menos,propuesta,True,done,518.0,más o menos.,,True
+3,51,mas_o_menos__v2.wav,Eddy (Español (México)),más o menos,actual,False,done,454.9,más o menos.,1,True
+3,52,mas_o_menos__v1.wav,Mónica,más o menos,propuesta,True,done,518.5,más o menos.,,True
+3,52,mas_o_menos__v1.wav,Mónica,más o menos,actual,False,done,442.8,más o menos.,1,True
+3,53,mano__v1.wav,Mónica,mano,actual,True,done,442.0,Mano.,1,True
+3,53,mano__v1.wav,Mónica,mano,propuesta,False,done,525.3,Mano.,,True
+3,54,mejor__v1.wav,Mónica,mejor,propuesta,True,done,514.9,mejor,,True
+3,54,mejor__v1.wav,Mónica,mejor,actual,False,done,401.0,mejor,1,True
+3,55,manana__v2.wav,Eddy (Español (México)),mañana,actual,True,done,471.6,vayan a.,1,True
+3,55,manana__v2.wav,Eddy (Español (México)),mañana,propuesta,False,done,879.1,vañana.,,True
+3,56,mas_o_menos__v0.wav,Paulina,más o menos,propuesta,True,done,149.6,más o menos.,,True
+3,56,mas_o_menos__v0.wav,Paulina,más o menos,actual,False,done,90.8,más o menos.,1,True
+3,57,agua__v1.wav,Mónica,agua,actual,True,done,430.8,Agua.,1,True
+3,57,agua__v1.wav,Mónica,agua,propuesta,False,done,513.0,Agua.,,True
+3,58,mal__v1.wav,Mónica,mal,actual,True,done,489.0,Maldi,1,True
+3,58,mal__v1.wav,Mónica,mal,propuesta,False,done,538.2,Mal.,,True
+3,59,cuatro__v1.wav,Mónica,cuatro,actual,True,done,83.8,,1,False
+3,59,cuatro__v1.wav,Mónica,cuatro,propuesta,False,done,144.5,,,False
+4,0,mama__v1.wav,Mónica,mamá,actual,True,done,488.8,¡Mama!,1,True
+4,0,mama__v1.wav,Mónica,mamá,propuesta,False,done,575.9,¡Mama!,,True
+4,1,miel__v0.wav,Paulina,miel,propuesta,True,done,487.3,miel,,True
+4,1,miel__v0.wav,Paulina,miel,actual,False,done,415.1,Miel.,1,True
+4,2,mil__v2.wav,Eddy (Español (México)),mil,propuesta,True,done,149.5,,,False
+4,2,mil__v2.wav,Eddy (Español (México)),mil,actual,False,done,81.3,,1,False
+4,3,cuatro__v2.wav,Eddy (Español (México)),cuatro,actual,True,done,390.6,4,1,True
+4,3,cuatro__v2.wav,Eddy (Español (México)),cuatro,propuesta,False,done,455.9,4,,True
+4,4,abajo__v1.wav,Mónica,abajo,propuesta,True,done,628.4,¡Adiós!,,True
+4,4,abajo__v1.wav,Mónica,abajo,actual,False,done,549.4,¡Adiós!,1,True
+4,5,un_ratito__v2.wav,Eddy (Español (México)),un ratito,propuesta,True,done,555.4,un gratito.,,True
+4,5,un_ratito__v2.wav,Eddy (Español (México)),un ratito,actual,False,done,448.7,un gratito.,1,True
+4,6,mal__v2.wav,Eddy (Español (México)),mal,propuesta,True,done,153.2,,,False
+4,6,mal__v2.wav,Eddy (Español (México)),mal,actual,False,done,82.1,,1,False
+4,7,arriba__v1.wav,Mónica,arriba,actual,True,done,436.4,arriba,1,True
+4,7,arriba__v1.wav,Mónica,arriba,propuesta,False,done,569.4,arriba,,True
+4,8,mesero__v2.wav,Eddy (Español (México)),mesero,propuesta,True,done,760.2,y un besero.,,True
+4,8,mesero__v2.wav,Eddy (Español (México)),mesero,actual,False,done,8510.2,"Y en el caso de la primera vez, una vez más grande, una vez más grande.",1,True
+4,9,mas_o_menos__v0.wav,Paulina,más o menos,actual,True,done,90.9,más o menos.,1,True
+4,9,mas_o_menos__v0.wav,Paulina,más o menos,propuesta,False,done,146.2,más o menos.,,True
+4,10,uno__v0.wav,Paulina,uno,propuesta,True,done,440.3,Una,,True
+4,10,uno__v0.wav,Paulina,uno,actual,False,done,358.5,Una,1,True
+4,11,mama__v0.wav,Paulina,mamá,actual,True,done,8393.8,No me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me,1,True
+4,11,mama__v0.wav,Paulina,mamá,propuesta,False,done,8586.9,No me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me,,True
+4,12,cuatro__v0.wav,Paulina,cuatro,propuesta,True,done,175.6,,,False
+4,12,cuatro__v0.wav,Paulina,cuatro,actual,False,done,83.8,,1,False
+4,13,cuatro__v1.wav,Mónica,cuatro,actual,True,done,97.1,,1,False
+4,13,cuatro__v1.wav,Mónica,cuatro,propuesta,False,done,151.9,,,False
+4,14,mesero__v0.wav,Paulina,mesero,actual,True,done,475.0,Mecero.,1,True
+4,14,mesero__v0.wav,Paulina,mesero,propuesta,False,done,540.6,Mecero.,,True
+4,15,manzana__v2.wav,Eddy (Español (México)),manzana,actual,True,done,9129.4,con la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de la forma de,1,True
+4,15,manzana__v2.wav,Eddy (Español (México)),manzana,propuesta,False,done,6068.6,,,False
+4,16,uno__v2.wav,Eddy (Español (México)),uno,actual,True,done,84.1,,1,False
+4,16,uno__v2.wav,Eddy (Español (México)),uno,propuesta,False,done,140.4,,,False
+4,17,mil__v0.wav,Paulina,mil,actual,True,done,397.9,mil,1,True
+4,17,mil__v0.wav,Paulina,mil,propuesta,False,done,489.8,mil,,True
+4,18,manzana__v0.wav,Paulina,manzana,propuesta,True,done,586.9,¡Mensana!,,True
+4,18,manzana__v0.wav,Paulina,manzana,actual,False,done,471.9,Monsena,1,True
+4,19,mano__v1.wav,Mónica,mano,actual,True,done,406.1,Mano.,1,True
+4,19,mano__v1.wav,Mónica,mano,propuesta,False,done,497.9,Mano.,,True
+4,20,moneda__v0.wav,Paulina,moneda,actual,True,done,513.0,Mónida.,1,True
+4,20,moneda__v0.wav,Paulina,moneda,propuesta,False,done,633.7,moneda,,True
+4,21,mejor__v1.wav,Mónica,mejor,propuesta,True,done,404.4,mejor,,True
+4,21,mejor__v1.wav,Mónica,mejor,actual,False,done,396.5,mejor,1,True
+4,22,mal__v1.wav,Mónica,mal,actual,True,done,483.8,Maldi,1,True
+4,22,mal__v1.wav,Mónica,mal,propuesta,False,done,5170.2,Mal.,,True
+4,23,moneda__v2.wav,Eddy (Español (México)),moneda,actual,True,done,2627.2,que se ha llegado a las dos de los dos que se ha llegado a las dos de los dos que se ha llegado a las dos de los dos que se ha llegado a las dos de los dos que se ha llegado a las dos de los dos que se ha llegado a las dos de los dos que se ha llegado a las dos de los dos que se ha llegado a las dos de los dos que se ha llegado a las dos de los dos que se ha llegado a las dos de los dos que se ha llegado a las dos de los dos que se ha llegado a las dos,1,True
+4,23,moneda__v2.wav,Eddy (Español (México)),moneda,propuesta,False,done,637.7,no me decimos nada,,True
+4,24,mesero__v1.wav,Mónica,mesero,actual,True,done,448.3,Me siro.,1,True
+4,24,mesero__v1.wav,Mónica,mesero,propuesta,False,done,536.1,Me siro.,,True
+4,25,manzana__v1.wav,Mónica,manzana,propuesta,True,done,619.4,Manzana.,,True
+4,25,manzana__v1.wav,Mónica,manzana,actual,False,done,449.5,Manzana.,1,True
+4,26,uno__v1.wav,Mónica,uno,actual,True,done,376.9,Una,1,True
+4,26,uno__v1.wav,Mónica,uno,propuesta,False,done,478.1,Una,,True
+4,27,abajo__v2.wav,Eddy (Español (México)),abajo,propuesta,True,done,629.2,Michael,,True
+4,27,abajo__v2.wav,Eddy (Español (México)),abajo,actual,False,done,655.4,¡Adiós!,1,True
+4,28,moneda__v1.wav,Mónica,moneda,propuesta,True,done,474.7,Moneda,,True
+4,28,moneda__v1.wav,Mónica,moneda,actual,False,done,420.6,moneda,1,True
+4,29,un_ratito__v1.wav,Mónica,un ratito,actual,True,done,488.6,Un ratito.,1,True
+4,29,un_ratito__v1.wav,Mónica,un ratito,propuesta,False,done,649.0,Un ratito.,,True
+4,30,mano__v2.wav,Eddy (Español (México)),mano,actual,True,done,90.1,,1,False
+4,30,mano__v2.wav,Eddy (Español (México)),mano,propuesta,False,done,151.5,,,False
+4,31,hola__v1.wav,Mónica,hola,actual,True,done,97.5,Hola,1,True
+4,31,hola__v1.wav,Mónica,hola,propuesta,False,done,160.0,Hola,,True
+4,32,abajo__v0.wav,Paulina,abajo,propuesta,True,done,626.7,¡Avajo!,,True
+4,32,abajo__v0.wav,Paulina,abajo,actual,False,done,507.4,Abajo.,1,True
+4,33,miel__v1.wav,Mónica,miel,propuesta,True,done,505.7,Miel.,,True
+4,33,miel__v1.wav,Mónica,miel,actual,False,done,463.8,Miel.,1,True
+4,34,mano__v0.wav,Paulina,mano,propuesta,True,done,491.4,Mano.,,True
+4,34,mano__v0.wav,Paulina,mano,actual,False,done,469.0,Mano.,1,True
+4,35,bien__v0.wav,Paulina,bien,actual,True,done,420.0,bien,1,True
+4,35,bien__v0.wav,Paulina,bien,propuesta,False,done,487.8,bien,,True
+4,36,agua__v2.wav,Eddy (Español (México)),agua,propuesta,True,done,3066.1,,,False
+4,36,agua__v2.wav,Eddy (Español (México)),agua,actual,False,done,3678.2,,1,False
+4,37,hola__v0.wav,Paulina,hola,propuesta,True,done,455.1,Hola.,,True
+4,37,hola__v0.wav,Paulina,hola,actual,False,done,382.4,Hola.,1,True
+4,38,mal__v0.wav,Paulina,mal,propuesta,True,done,425.0,Mal,,True
+4,38,mal__v0.wav,Paulina,mal,actual,False,done,356.9,Mal,1,True
+4,39,ocho__v2.wav,Eddy (Español (México)),ocho,actual,True,done,85.7,,1,False
+4,39,ocho__v2.wav,Eddy (Español (México)),ocho,propuesta,False,done,145.7,,,False
+4,40,arriba__v0.wav,Paulina,arriba,actual,True,done,423.4,arriba.,1,True
+4,40,arriba__v0.wav,Paulina,arriba,propuesta,False,done,474.1,arriba,,True
+4,41,agua__v1.wav,Mónica,agua,actual,True,done,447.7,Agua.,1,True
+4,41,agua__v1.wav,Mónica,agua,propuesta,False,done,470.5,Agua.,,True
+4,42,miel__v2.wav,Eddy (Español (México)),miel,actual,True,done,101.3,,1,False
+4,42,miel__v2.wav,Eddy (Español (México)),miel,propuesta,False,done,142.3,,,False
+4,43,mejor__v0.wav,Paulina,mejor,propuesta,True,done,452.3,mejor.,,True
+4,43,mejor__v0.wav,Paulina,mejor,actual,False,done,404.2,mejor.,1,True
+4,44,mas_o_menos__v2.wav,Eddy (Español (México)),más o menos,actual,True,done,492.6,más o menos.,1,True
+4,44,mas_o_menos__v2.wav,Eddy (Español (México)),más o menos,propuesta,False,done,566.4,por más o menos,,True
+4,45,agua__v0.wav,Paulina,agua,propuesta,True,done,658.9,¡Egué!,,True
+4,45,agua__v0.wav,Paulina,agua,actual,False,done,568.8,¡Egüe!,1,True
+4,46,bien__v2.wav,Eddy (Español (México)),bien,propuesta,True,done,450.2,bien.,,True
+4,46,bien__v2.wav,Eddy (Español (México)),bien,actual,False,done,401.0,bien.,1,True
+4,47,bien__v1.wav,Mónica,bien,actual,True,done,427.0,Bien.,1,True
+4,47,bien__v1.wav,Mónica,bien,propuesta,False,done,516.2,Bien.,,True
+4,48,un_ratito__v0.wav,Paulina,un ratito,propuesta,True,done,640.8,un ratito.,,True
+4,48,un_ratito__v0.wav,Paulina,un ratito,actual,False,done,540.1,un ratito.,1,True
+4,49,mejor__v2.wav,Eddy (Español (México)),mejor,actual,True,done,455.2,de color.,1,True
+4,49,mejor__v2.wav,Eddy (Español (México)),mejor,propuesta,False,done,504.5,de color.,,True
+4,50,ocho__v0.wav,Paulina,ocho,propuesta,True,done,575.0,Ocho.,,True
+4,50,ocho__v0.wav,Paulina,ocho,actual,False,done,498.1,Ocho.,1,True
+4,51,hola__v2.wav,Eddy (Español (México)),hola,propuesta,True,done,142.5,,,False
+4,51,hola__v2.wav,Eddy (Español (México)),hola,actual,False,done,84.3,,1,False
+4,52,ocho__v1.wav,Mónica,ocho,actual,True,done,512.8,Ocho.,1,True
+4,52,ocho__v1.wav,Mónica,ocho,propuesta,False,done,525.0,Ocho.,,True
+4,53,mama__v2.wav,Eddy (Español (México)),mamá,actual,True,done,91.0,,1,False
+4,53,mama__v2.wav,Eddy (Español (México)),mamá,propuesta,False,done,148.7,,,False
+4,54,arriba__v2.wav,Eddy (Español (México)),arriba,propuesta,True,done,594.2,arriba.,,True
+4,54,arriba__v2.wav,Eddy (Español (México)),arriba,actual,False,done,447.1,arriba.,1,True
+4,55,mas_o_menos__v1.wav,Mónica,más o menos,propuesta,True,done,619.1,más o menos.,,True
+4,55,mas_o_menos__v1.wav,Mónica,más o menos,actual,False,done,502.3,más o menos.,1,True
+4,56,mil__v1.wav,Mónica,mil,actual,True,done,94.4,,1,False
+4,56,mil__v1.wav,Mónica,mil,propuesta,False,done,152.3,,,False
+4,57,manana__v2.wav,Eddy (Español (México)),mañana,propuesta,True,done,578.4,vañada.,,True
+4,57,manana__v2.wav,Eddy (Español (México)),mañana,actual,False,done,553.4,vanyana.,1,True
+4,58,manana__v0.wav,Paulina,mañana,actual,True,done,498.5,mañana,1,True
+4,58,manana__v0.wav,Paulina,mañana,propuesta,False,done,534.3,Manllana.,,True
+4,59,manana__v1.wav,Mónica,mañana,actual,True,done,326.8,mañana,1,True
+4,59,manana__v1.wav,Mónica,mañana,propuesta,False,done,438.4,mañana,,True
+5,0,uno__v0.wav,Paulina,uno,propuesta,True,done,411.0,Una,,True
+5,0,uno__v0.wav,Paulina,uno,actual,False,done,385.4,Una,1,True
+5,1,mal__v2.wav,Eddy (Español (México)),mal,actual,True,done,85.7,,1,False
+5,1,mal__v2.wav,Eddy (Español (México)),mal,propuesta,False,done,140.4,,,False
+5,2,mejor__v2.wav,Eddy (Español (México)),mejor,propuesta,True,done,512.4,de color.,,True
+5,2,mejor__v2.wav,Eddy (Español (México)),mejor,actual,False,done,440.6,de color.,1,True
+5,3,manzana__v1.wav,Mónica,manzana,propuesta,True,done,521.6,Mancena,,True
+5,3,manzana__v1.wav,Mónica,manzana,actual,False,done,490.7,Mancena,1,True
+5,4,mil__v2.wav,Eddy (Español (México)),mil,propuesta,True,done,155.3,,,False
+5,4,mil__v2.wav,Eddy (Español (México)),mil,actual,False,done,93.0,,1,False
+5,5,hola__v0.wav,Paulina,hola,actual,True,done,430.3,Hola.,1,True
+5,5,hola__v0.wav,Paulina,hola,propuesta,False,done,498.6,Hola.,,True
+5,6,miel__v2.wav,Eddy (Español (México)),miel,propuesta,True,done,176.5,,,False
+5,6,miel__v2.wav,Eddy (Español (México)),miel,actual,False,done,109.7,,1,False
+5,7,mano__v2.wav,Eddy (Español (México)),mano,propuesta,True,done,150.4,,,False
+5,7,mano__v2.wav,Eddy (Español (México)),mano,actual,False,done,99.1,,1,False
+5,8,arriba__v0.wav,Paulina,arriba,propuesta,True,done,484.4,arriba.,,True
+5,8,arriba__v0.wav,Paulina,arriba,actual,False,done,426.8,arriba.,1,True
+5,9,ocho__v1.wav,Mónica,ocho,propuesta,True,done,594.8,Ocho.,,True
+5,9,ocho__v1.wav,Mónica,ocho,actual,False,done,476.9,Ocho.,1,True
+5,10,abajo__v0.wav,Paulina,abajo,actual,True,done,541.1,Abajo.,1,True
+5,10,abajo__v0.wav,Paulina,abajo,propuesta,False,done,587.0,Abajo.,,True
+5,11,mesero__v2.wav,Eddy (Español (México)),mesero,propuesta,True,done,5571.8,el besero.,,True
+5,11,mesero__v2.wav,Eddy (Español (México)),mesero,actual,False,done,716.9,el besero.,1,True
+5,12,mas_o_menos__v2.wav,Eddy (Español (México)),más o menos,propuesta,True,done,528.2,por más o menos,,True
+5,12,mas_o_menos__v2.wav,Eddy (Español (México)),más o menos,actual,False,done,486.1,por más o menos,1,True
+5,13,abajo__v2.wav,Eddy (Español (México)),abajo,actual,True,done,561.3,¡Adiós!,1,True
+5,13,abajo__v2.wav,Eddy (Español (México)),abajo,propuesta,False,done,2853.2,¡Adiós!,,True
+5,14,mano__v1.wav,Mónica,mano,actual,True,done,418.3,Mano.,1,True
+5,14,mano__v1.wav,Mónica,mano,propuesta,False,done,511.5,Mano.,,True
+5,15,bien__v2.wav,Eddy (Español (México)),bien,propuesta,True,done,441.1,bien.,,True
+5,15,bien__v2.wav,Eddy (Español (México)),bien,actual,False,done,424.3,bien.,1,True
+5,16,mesero__v0.wav,Paulina,mesero,actual,True,done,491.2,Mecero.,1,True
+5,16,mesero__v0.wav,Paulina,mesero,propuesta,False,done,595.8,Mesero,,True
+5,17,mejor__v1.wav,Mónica,mejor,propuesta,True,done,474.2,mejor,,True
+5,17,mejor__v1.wav,Mónica,mejor,actual,False,done,378.8,mejor,1,True
+5,18,mano__v0.wav,Paulina,mano,propuesta,True,done,544.3,Mano.,,True
+5,18,mano__v0.wav,Paulina,mano,actual,False,done,421.7,Mano.,1,True
+5,19,bien__v0.wav,Paulina,bien,propuesta,True,done,480.2,bien,,True
+5,19,bien__v0.wav,Paulina,bien,actual,False,done,437.2,bien,1,True
+5,20,moneda__v0.wav,Paulina,moneda,actual,True,done,577.3,Mónida.,1,True
+5,20,moneda__v0.wav,Paulina,moneda,propuesta,False,done,631.6,¡Muenida!,,True
+5,21,manzana__v2.wav,Eddy (Español (México)),manzana,actual,True,done,9414.9,y vamos a ver el nuevo parque de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la jefe de la je,1,True
+5,21,manzana__v2.wav,Eddy (Español (México)),manzana,propuesta,False,done,6492.5,,,False
+5,22,ocho__v0.wav,Paulina,ocho,actual,True,done,511.4,Ocho.,1,True
+5,22,ocho__v0.wav,Paulina,ocho,propuesta,False,done,621.1,Ocho.,,True
+5,23,mil__v1.wav,Mónica,mil,actual,True,done,95.6,,1,False
+5,23,mil__v1.wav,Mónica,mil,propuesta,False,done,135.9,,,False
+5,24,arriba__v1.wav,Mónica,arriba,actual,True,done,477.6,arriba,1,True
+5,24,arriba__v1.wav,Mónica,arriba,propuesta,False,done,522.3,arriba,,True
+5,25,un_ratito__v1.wav,Mónica,un ratito,propuesta,True,done,516.4,un ratito.,,True
+5,25,un_ratito__v1.wav,Mónica,un ratito,actual,False,done,455.8,Un ratito.,1,True
+5,26,mal__v0.wav,Paulina,mal,actual,True,done,355.9,Mal,1,True
+5,26,mal__v0.wav,Paulina,mal,propuesta,False,done,427.2,Mal,,True
+5,27,arriba__v2.wav,Eddy (Español (México)),arriba,actual,True,done,421.5,arriba.,1,True
+5,27,arriba__v2.wav,Eddy (Español (México)),arriba,propuesta,False,done,522.8,arriba.,,True
+5,28,agua__v2.wav,Eddy (Español (México)),agua,propuesta,True,done,10120.6,y la verdad que es el momento de que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad sea que la verdad,,True
+5,28,agua__v2.wav,Eddy (Español (México)),agua,actual,False,done,1344.3,,1,False
+5,29,mejor__v0.wav,Paulina,mejor,propuesta,True,done,528.8,mejor.,,True
+5,29,mejor__v0.wav,Paulina,mejor,actual,False,done,465.1,mejor.,1,True
+5,30,mesero__v1.wav,Mónica,mesero,actual,True,done,600.4,Me siro.,1,True
+5,30,mesero__v1.wav,Mónica,mesero,propuesta,False,done,546.7,Me siro.,,True
+5,31,mas_o_menos__v0.wav,Paulina,más o menos,actual,True,done,97.7,más o menos.,1,True
+5,31,mas_o_menos__v0.wav,Paulina,más o menos,propuesta,False,done,157.7,más o menos.,,True
+5,32,miel__v0.wav,Paulina,miel,actual,True,done,452.8,Miel.,1,True
+5,32,miel__v0.wav,Paulina,miel,propuesta,False,done,520.0,Miel.,,True
+5,33,manana__v0.wav,Paulina,mañana,propuesta,True,done,647.9,Mañana.,,True
+5,33,manana__v0.wav,Paulina,mañana,actual,False,done,497.0,mañana,1,True
+5,34,manana__v2.wav,Eddy (Español (México)),mañana,propuesta,True,done,535.1,vanyana.,,True
+5,34,manana__v2.wav,Eddy (Español (México)),mañana,actual,False,done,464.5,vanyana.,1,True
+5,35,bien__v1.wav,Mónica,bien,actual,True,done,373.9,Bien.,1,True
+5,35,bien__v1.wav,Mónica,bien,propuesta,False,done,453.2,bien,,True
+5,36,agua__v0.wav,Paulina,agua,propuesta,True,done,596.2,¡Eggway!,,True
+5,36,agua__v0.wav,Paulina,agua,actual,False,done,581.2,Agüe.,1,True
+5,37,cuatro__v2.wav,Eddy (Español (México)),cuatro,actual,True,done,391.2,4,1,True
+5,37,cuatro__v2.wav,Eddy (Español (México)),cuatro,propuesta,False,done,468.3,cuatro.,,True
+5,38,ocho__v2.wav,Eddy (Español (México)),ocho,propuesta,True,done,162.1,,,False
+5,38,ocho__v2.wav,Eddy (Español (México)),ocho,actual,False,done,98.1,,1,False
+5,39,moneda__v1.wav,Mónica,moneda,actual,True,done,476.9,moneda,1,True
+5,39,moneda__v1.wav,Mónica,moneda,propuesta,False,done,517.2,moneda,,True
+5,40,mama__v0.wav,Paulina,mamá,propuesta,True,done,9831.6,No me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me,,True
+5,40,mama__v0.wav,Paulina,mamá,actual,False,done,9847.4,No me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me,1,True
+5,41,un_ratito__v0.wav,Paulina,un ratito,actual,True,done,482.5,un ratito.,1,True
+5,41,un_ratito__v0.wav,Paulina,un ratito,propuesta,False,done,537.4,un ratito.,,True
+5,42,agua__v1.wav,Mónica,agua,actual,True,done,421.6,Agua.,1,True
+5,42,agua__v1.wav,Mónica,agua,propuesta,False,done,504.9,Agua.,,True
+5,43,hola__v1.wav,Mónica,hola,propuesta,True,done,138.8,Hola,,True
+5,43,hola__v1.wav,Mónica,hola,actual,False,done,80.5,Hola,1,True
+5,44,un_ratito__v2.wav,Eddy (Español (México)),un ratito,actual,True,done,480.7,un gratito.,1,True
+5,44,un_ratito__v2.wav,Eddy (Español (México)),un ratito,propuesta,False,done,861.4,un gratito.,,True
+5,45,manzana__v0.wav,Paulina,manzana,propuesta,True,done,608.6,Máncana.,,True
+5,45,manzana__v0.wav,Paulina,manzana,actual,False,done,516.1,Manzana.,1,True
+5,46,cuatro__v1.wav,Mónica,cuatro,propuesta,True,done,140.8,,,False
+5,46,cuatro__v1.wav,Mónica,cuatro,actual,False,done,92.1,,1,False
+5,47,cuatro__v0.wav,Paulina,cuatro,propuesta,True,done,146.0,,,False
+5,47,cuatro__v0.wav,Paulina,cuatro,actual,False,done,159.8,,1,False
+5,48,mama__v2.wav,Eddy (Español (México)),mamá,propuesta,True,done,169.5,,,False
+5,48,mama__v2.wav,Eddy (Español (México)),mamá,actual,False,done,112.9,,1,False
+5,49,mal__v1.wav,Mónica,mal,actual,True,done,474.5,Mal.,1,True
+5,49,mal__v1.wav,Mónica,mal,propuesta,False,done,566.3,mal,,True
+5,50,mama__v1.wav,Mónica,mamá,actual,True,done,518.8,¡Mama!,1,True
+5,50,mama__v1.wav,Mónica,mamá,propuesta,False,done,571.9,¡Mama!,,True
+5,51,mil__v0.wav,Paulina,mil,propuesta,True,done,536.2,mil,,True
+5,51,mil__v0.wav,Paulina,mil,actual,False,done,418.3,mil,1,True
+5,52,hola__v2.wav,Eddy (Español (México)),hola,propuesta,True,done,133.2,,,False
+5,52,hola__v2.wav,Eddy (Español (México)),hola,actual,False,done,80.1,,1,False
+5,53,miel__v1.wav,Mónica,miel,actual,True,done,445.4,Mil,1,True
+5,53,miel__v1.wav,Mónica,miel,propuesta,False,done,507.2,Miel.,,True
+5,54,manana__v1.wav,Mónica,mañana,actual,True,done,346.4,mañana,1,True
+5,54,manana__v1.wav,Mónica,mañana,propuesta,False,done,389.1,mañana,,True
+5,55,mas_o_menos__v1.wav,Mónica,más o menos,actual,True,done,445.0,más o menos.,1,True
+5,55,mas_o_menos__v1.wav,Mónica,más o menos,propuesta,False,done,532.5,más o menos.,,True
+5,56,abajo__v1.wav,Mónica,abajo,actual,True,done,539.9,"A ver, esto.",1,True
+5,56,abajo__v1.wav,Mónica,abajo,propuesta,False,done,661.9,¡Adiós!,,True
+5,57,moneda__v2.wav,Eddy (Español (México)),moneda,actual,True,done,3833.7,no es una serie de cosas que no es una serie de cosas que no es una serie de cosas que no es una serie de cosas que no es una serie de cosas que no es una serie de cosas que no es una serie de cosas que no es una serie de cosas que no es una serie de cosas que no es una serie de cosas que no es una serie de cosas que no es una serie de cosas que no es una serie de cosas que no es una serie de cosas que no es una serie de cosas que no es una serie de cosas que no es una serie de cosas que no es una serie de cosas que no es una serie de cosas que no es una serie de cosas que no es una serie de cosas que no es una serie de cosas que no es una serie de cosas que no es una serie de cosas que no es una serie de cosas que no es una serie de cosas que no es una serie de cosas que no es una serie de cosas que no es una serie de cosas que no es una serie de cosas que no es una serie de cosas que no es una serie de cosas,1,True
+5,57,moneda__v2.wav,Eddy (Español (México)),moneda,propuesta,False,done,552.3,un momento.,,True
+5,58,uno__v2.wav,Eddy (Español (México)),uno,propuesta,True,done,136.5,,,False
+5,58,uno__v2.wav,Eddy (Español (México)),uno,actual,False,done,82.8,,1,False
+5,59,uno__v1.wav,Mónica,uno,actual,True,done,402.0,Una,1,True
+5,59,uno__v1.wav,Mónica,uno,propuesta,False,done,418.0,Una,,True

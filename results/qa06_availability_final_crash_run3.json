@@ -1,0 +1,483 @@
+{
+  "experiment": "qa06_availability_final_crash_run3",
+  "environment": {
+    "timestamp_utc": "2026-11-12T02:05:34+00:00",
+    "host": "macOS-26.5.2-arm64-arm-64bit",
+    "cpu": "Apple M4 Pro",
+    "cpus": 12,
+    "docker": "28.1.1",
+    "git_commit": "5c03c8b",
+    "git_dirty": false,
+    "stt_provider": "echo"
+  },
+  "summary": {
+    "mode": "crash",
+    "t_fail_s": 10.0,
+    "stt_down_detected_s": 10.4,
+    "stt_healthy_again_s": 10.91,
+    "recovery_s": 0.91,
+    "others_ok_during_outage": true,
+    "sessions": {
+      "text": {
+        "total": 143,
+        "ok": 143,
+        "ok_during_outage": 3,
+        "total_during_outage": 3,
+        "first_ok_after_fail_s": 10.2
+      },
+      "audio": {
+        "total": 118,
+        "ok": 118,
+        "ok_during_outage": 1,
+        "total_during_outage": 1,
+        "first_ok_after_fail_s": 10.34
+      }
+    },
+    "audio_during_outage_processed_after_recovery": {
+      "sent": 0,
+      "done_later": 0
+    }
+  },
+  "health": [
+    {
+      "t": 0.03,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 0.57,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 1.08,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 1.59,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 2.12,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 2.63,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 3.15,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 3.66,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 4.17,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 4.69,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 5.21,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 5.72,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 6.25,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 6.76,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 7.28,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 7.8,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 8.32,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 8.84,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 9.35,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 9.87,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 10.4,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 10.91,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 11.43,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 11.96,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 12.48,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 12.99,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 13.52,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 14.03,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 14.54,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 15.08,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 15.59,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 16.1,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 16.62,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 17.13,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 17.66,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 18.17,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 18.69,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 19.21,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 19.73,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 20.24,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 20.77,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 21.28,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 21.8,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 22.31,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 22.82,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 23.34,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 23.86,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 24.37,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 24.89,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 25.4,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 25.92,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 26.44,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 26.95,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 27.47,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 27.99,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 28.5,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 29.02,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 29.54,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 30.05,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 30.58,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 31.09,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 31.61,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 32.14,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 32.66,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 33.17,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 33.7,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 34.21,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 34.73,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 35.24,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 35.76,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 36.28,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 36.79,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 37.32,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 37.84,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 38.36,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 38.87,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 39.4,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 39.92,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 40.44,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 40.96,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 41.47,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 42.0,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 42.51,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 43.03,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 43.55,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 44.06,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 44.58,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 45.1,
+      "stt": "ok",
+      "others_ok": true
+    }
+  ]
+}

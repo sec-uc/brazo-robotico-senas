@@ -1,0 +1,103 @@
+{
+  "experiment": "qa09_security",
+  "environment": {
+    "timestamp_utc": "2026-11-12T18:39:24+00:00",
+    "host": "macOS-26.5.2-arm64-arm-64bit",
+    "cpu": "Apple M4 Pro",
+    "cpus": 12,
+    "docker": "28.1.1",
+    "git_commit": "1fd015d",
+    "git_dirty": false,
+    "stt_provider": "echo"
+  },
+  "protected_routes": 15,
+  "summary": {
+    "sin_token": {
+      "requests": 15,
+      "rejected_401_403": 15
+    },
+    "token_malformado": {
+      "requests": 15,
+      "rejected_401_403": 15
+    },
+    "firma_falsa": {
+      "requests": 15,
+      "rejected_401_403": 15
+    },
+    "expirado": {
+      "requests": 15,
+      "rejected_401_403": 15
+    },
+    "valido": {
+      "requests": 15,
+      "rejected_401_403": 0
+    }
+  },
+  "not_rejected": [],
+  "internal_ports_from_host": {
+    "auth": "no alcanzable",
+    "voice-capture": "no alcanzable",
+    "stt": "no alcanzable",
+    "nlp": "no alcanzable",
+    "sign-translation": "no alcanzable",
+    "actuator-control": "no alcanzable",
+    "telemetry": "no alcanzable"
+  },
+  "bus_and_monitoring_boundary": {
+    "bus_desde_el_host": {
+      "4222": "no alcanzable",
+      "8222": "no alcanzable"
+    },
+    "monitoreo_desde_la_red": {
+      "9090": "no alcanzable",
+      "3000": "no alcanzable"
+    },
+    "bus_sin_credencial_dentro_de_la_red": "RECHAZADO Error nats: 'Authorization Violation'"
+  },
+  "viewer_on_operator_routes": {
+    "requests": 8,
+    "forbidden_403": 8,
+    "rows": [
+      {
+        "method": "POST",
+        "path": "/v1/sessions",
+        "status": 403
+      },
+      {
+        "method": "POST",
+        "path": "/v1/sessions/00000000000000000000000000000000/text",
+        "status": 403
+      },
+      {
+        "method": "POST",
+        "path": "/v1/sessions/00000000000000000000000000000000/audio",
+        "status": 403
+      },
+      {
+        "method": "POST",
+        "path": "/v1/actuator/servo",
+        "status": 403
+      },
+      {
+        "method": "POST",
+        "path": "/v1/actuator/pose",
+        "status": 403
+      },
+      {
+        "method": "POST",
+        "path": "/v1/actuator/reset",
+        "status": 403
+      },
+      {
+        "method": "PUT",
+        "path": "/v1/signs/HOLA",
+        "status": 403
+      },
+      {
+        "method": "DELETE",
+        "path": "/v1/signs/HOLA",
+        "status": 403
+      }
+    ]
+  }
+}

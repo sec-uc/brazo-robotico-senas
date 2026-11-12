@@ -1,0 +1,64 @@
+{
+  "experiment": "qa01_asr_whisper_base_sin_sesgo",
+  "environment": {
+    "timestamp_utc": "2026-11-11T22:25:53+00:00",
+    "host": "macOS-26.5.2-arm64-arm-64bit",
+    "cpu": "Apple M4 Pro",
+    "cpus": 12,
+    "docker": "28.1.1",
+    "git_commit": "3480299",
+    "git_dirty": false,
+    "stt_provider": "whisper"
+  },
+  "label": "whisper_base_sin_sesgo",
+  "corpus": "audio_tts",
+  "n": 60,
+  "done": 60,
+  "empty_transcripts": 3,
+  "by_set": {
+    "corpus": {
+      "gloss": 36,
+      "n": 60
+    }
+  },
+  "software_ms": {
+    "n": 60,
+    "mean": 506.85,
+    "median": 232.0,
+    "p95": 1387.3499999999988,
+    "sd": 585.5368628844901,
+    "min": 206,
+    "max": 2953
+  },
+  "stt_ms": {
+    "n": 60,
+    "mean": 505.35,
+    "median": 231.0,
+    "p95": 1386.2999999999988,
+    "sd": 585.4808490260558,
+    "min": 205,
+    "max": 2951
+  },
+  "exact_match_rate": 0.55,
+  "mean_wer": 0.5083333333333333,
+  "gloss_match_rate": 0.6,
+  "qa01_target_ms": 1500,
+  "meets_target_p95": true,
+  "by_voice": {
+    "Mónica": {
+      "exact": 16,
+      "gloss": 17,
+      "n": 20
+    },
+    "Eddy (Español (México))": {
+      "exact": 4,
+      "gloss": 5,
+      "n": 20
+    },
+    "Paulina": {
+      "exact": 13,
+      "gloss": 14,
+      "n": 20
+    }
+  }
+}

@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: rsp-common
+Version: 0.1.0
+Summary: Contratos de eventos, bus NATS y utilidades comunes de la Robot Signs Platform
+Requires-Python: >=3.11
+Requires-Dist: fastapi>=0.110
+Requires-Dist: pydantic>=2.5
+Requires-Dist: nats-py>=2.7
+Requires-Dist: prometheus-client>=0.19
+Requires-Dist: PyJWT>=2.8

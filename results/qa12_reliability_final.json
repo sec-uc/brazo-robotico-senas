@@ -1,0 +1,104 @@
+{
+  "experiment": "qa12_reliability_final",
+  "environment": {
+    "timestamp_utc": "2026-11-12T18:39:40+00:00",
+    "host": "macOS-26.5.2-arm64-arm-64bit",
+    "cpu": "Apple M4 Pro",
+    "cpus": 12,
+    "docker": "28.1.1",
+    "git_commit": "1fd015d",
+    "git_dirty": false,
+    "stt_provider": "echo"
+  },
+  "cases": [
+    {
+      "text": "hola",
+      "glosses": "HOLA",
+      "gestures": 1,
+      "unknown_reported": "",
+      "dropped_letters": "",
+      "silent_gap": false
+    },
+    {
+      "text": "año",
+      "glosses": "AÑO",
+      "gestures": 2,
+      "unknown_reported": "AÑO:Ñ",
+      "dropped_letters": "Ñ",
+      "silent_gap": false
+    },
+    {
+      "text": "ñandú",
+      "glosses": "ÑANDU",
+      "gestures": 4,
+      "unknown_reported": "ÑANDU:Ñ",
+      "dropped_letters": "Ñ",
+      "silent_gap": false
+    },
+    {
+      "text": "42",
+      "glosses": "42",
+      "gestures": 0,
+      "unknown_reported": "42",
+      "dropped_letters": "",
+      "silent_gap": false
+    },
+    {
+      "text": "hola 42 bien",
+      "glosses": "HOLA 42 BIEN",
+      "gestures": 2,
+      "unknown_reported": "42",
+      "dropped_letters": "",
+      "silent_gap": false
+    },
+    {
+      "text": "café",
+      "glosses": "CAFE",
+      "gestures": 4,
+      "unknown_reported": "",
+      "dropped_letters": "",
+      "silent_gap": false
+    },
+    {
+      "text": "xyzw",
+      "glosses": "XYZW",
+      "gestures": 3,
+      "unknown_reported": "XYZW:X",
+      "dropped_letters": "X",
+      "silent_gap": false
+    },
+    {
+      "text": "hola ñ bien",
+      "glosses": "HOLA Ñ BIEN",
+      "gestures": 2,
+      "unknown_reported": "Ñ",
+      "dropped_letters": "Ñ",
+      "silent_gap": false
+    },
+    {
+      "text": "pingüino",
+      "glosses": "PINGUINO",
+      "gestures": 8,
+      "unknown_reported": "",
+      "dropped_letters": "",
+      "silent_gap": false
+    },
+    {
+      "text": "¿cómo?",
+      "glosses": "COMO",
+      "gestures": 1,
+      "unknown_reported": "",
+      "dropped_letters": "",
+      "silent_gap": false
+    }
+  ],
+  "e2e_mixed": {
+    "status": "done",
+    "wall_ms": 15051.618814468384,
+    "unknown": [
+      "42"
+    ],
+    "gestures": 2
+  },
+  "silent_gaps": 0
+}

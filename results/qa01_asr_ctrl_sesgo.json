@@ -1,0 +1,68 @@
+{
+  "experiment": "qa01_asr_ctrl_sesgo",
+  "environment": {
+    "timestamp_utc": "2026-11-12T18:46:09+00:00",
+    "host": "macOS-26.5.2-arm64-arm-64bit",
+    "cpu": "Apple M4 Pro",
+    "cpus": 12,
+    "docker": "28.1.1",
+    "git_commit": "1fd015d",
+    "git_dirty": false,
+    "stt_provider": "whisper"
+  },
+  "label": "ctrl_sesgo",
+  "corpus": "audio_ctrl",
+  "n": 120,
+  "done": 120,
+  "empty_transcripts": 0,
+  "by_set": {
+    "in": {
+      "gloss": 43,
+      "n": 60
+    },
+    "oov": {
+      "gloss": 34,
+      "n": 60
+    }
+  },
+  "software_ms": {
+    "n": 120,
+    "mean": 376.6166666666667,
+    "median": 261.5,
+    "p95": 811.0,
+    "sd": 219.68033243643762,
+    "min": 240,
+    "max": 1066
+  },
+  "stt_ms": {
+    "n": 120,
+    "mean": 374.18333333333334,
+    "median": 259.0,
+    "p95": 808.9,
+    "sd": 219.19198381854233,
+    "min": 237,
+    "max": 1056
+  },
+  "exact_match_rate": 0.6333333333333333,
+  "mean_wer": 0.4666666666666667,
+  "gloss_match_rate": 0.6416666666666667,
+  "qa01_target_ms": 1500,
+  "meets_target_p95": true,
+  "by_voice": {
+    "Eddy (Español (México))": {
+      "exact": 21,
+      "gloss": 21,
+      "n": 40
+    },
+    "Paulina": {
+      "exact": 29,
+      "gloss": 29,
+      "n": 40
+    },
+    "Mónica": {
+      "exact": 26,
+      "gloss": 27,
+      "n": 40
+    }
+  }
+}

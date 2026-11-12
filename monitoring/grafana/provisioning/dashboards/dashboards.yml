@@ -1,0 +1,7 @@
+apiVersion: 1
+providers:
+  - name: rsp
+    folder: Robot Signs Platform
+    type: file
+    options:
+      path: /var/lib/grafana/dashboards

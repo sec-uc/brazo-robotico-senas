@@ -1,0 +1,7 @@
+# Publica el bus solo en la interfaz local, para un servicio que corre fuera de contenedores
+# (actuador con el brazo por USB en macOS, o el reconocimiento nativo de la comparación de QA-01):
+#   docker compose -f docker-compose.yml -f docker-compose.native.yml up -d
+#   NATS_URL=nats://127.0.0.1:4222 BUS_TOKEN=... (la credencial va aparte, no en la URL)
+services:
+  nats:
+    ports: ["127.0.0.1:4222:4222"]

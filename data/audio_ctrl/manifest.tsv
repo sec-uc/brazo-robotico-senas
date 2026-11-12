@@ -1,0 +1,121 @@
+file	reference	voice	set
+in_martes__v0.wav	martes	Paulina	in
+in_martes__v1.wav	martes	Mónica	in
+in_martes__v2.wav	martes	Eddy (Español (México))	in
+in_miercoles__v0.wav	miércoles	Paulina	in
+in_miercoles__v1.wav	miércoles	Mónica	in
+in_miercoles__v2.wav	miércoles	Eddy (Español (México))	in
+in_mujer__v0.wav	mujer	Paulina	in
+in_mujer__v1.wav	mujer	Mónica	in
+in_mujer__v2.wav	mujer	Eddy (Español (México))	in
+in_mosca__v0.wav	mosca	Paulina	in
+in_mosca__v1.wav	mosca	Mónica	in
+in_mosca__v2.wav	mosca	Eddy (Español (México))	in
+in_morado__v0.wav	morado	Paulina	in
+in_morado__v1.wav	morado	Mónica	in
+in_morado__v2.wav	morado	Eddy (Español (México))	in
+in_muela__v0.wav	muela	Paulina	in
+in_muela__v1.wav	muela	Mónica	in
+in_muela__v2.wav	muela	Eddy (Español (México))	in
+in_mango__v0.wav	mango	Paulina	in
+in_mango__v1.wav	mango	Mónica	in
+in_mango__v2.wav	mango	Eddy (Español (México))	in
+in_mentir__v0.wav	mentir	Paulina	in
+in_mentir__v1.wav	mentir	Mónica	in
+in_mentir__v2.wav	mentir	Eddy (Español (México))	in
+in_morir__v0.wav	morir	Paulina	in
+in_morir__v1.wav	morir	Mónica	in
+in_morir__v2.wav	morir	Eddy (Español (México))	in
+in_mayor__v0.wav	mayor	Paulina	in
+in_mayor__v1.wav	mayor	Mónica	in
+in_mayor__v2.wav	mayor	Eddy (Español (México))	in
+in_malo__v0.wav	malo	Paulina	in
+in_malo__v1.wav	malo	Mónica	in
+in_malo__v2.wav	malo	Eddy (Español (México))	in
+in_millon__v0.wav	millón	Paulina	in
+in_millon__v1.wav	millón	Mónica	in
+in_millon__v2.wav	millón	Eddy (Español (México))	in
+in_militar__v0.wav	militar	Paulina	in
+in_militar__v1.wav	militar	Mónica	in
+in_militar__v2.wav	militar	Eddy (Español (México))	in
+in_mexico__v0.wav	méxico	Paulina	in
+in_mexico__v1.wav	méxico	Mónica	in
+in_mexico__v2.wav	méxico	Eddy (Español (México))	in
+in_mora__v0.wav	mora	Paulina	in
+in_mora__v1.wav	mora	Mónica	in
+in_mora__v2.wav	mora	Eddy (Español (México))	in
+in_mancha__v0.wav	mancha	Paulina	in
+in_mancha__v1.wav	mancha	Mónica	in
+in_mancha__v2.wav	mancha	Eddy (Español (México))	in
+in_marcador__v0.wav	marcador	Paulina	in
+in_marcador__v1.wav	marcador	Mónica	in
+in_marcador__v2.wav	marcador	Eddy (Español (México))	in
+in_mareo__v0.wav	mareo	Paulina	in
+in_mareo__v1.wav	mareo	Mónica	in
+in_mareo__v2.wav	mareo	Eddy (Español (México))	in
+in_merienda__v0.wav	merienda	Paulina	in
+in_merienda__v1.wav	merienda	Mónica	in
+in_merienda__v2.wav	merienda	Eddy (Español (México))	in
+in_grado__v0.wav	grado	Paulina	in
+in_grado__v1.wav	grado	Mónica	in
+in_grado__v2.wav	grado	Eddy (Español (México))	in
+oov_casa__v0.wav	casa	Paulina	oov
+oov_casa__v1.wav	casa	Mónica	oov
+oov_casa__v2.wav	casa	Eddy (Español (México))	oov
+oov_perro__v0.wav	perro	Paulina	oov
+oov_perro__v1.wav	perro	Mónica	oov
+oov_perro__v2.wav	perro	Eddy (Español (México))	oov
+oov_gato__v0.wav	gato	Paulina	oov
+oov_gato__v1.wav	gato	Mónica	oov
+oov_gato__v2.wav	gato	Eddy (Español (México))	oov
+oov_mesa__v0.wav	mesa	Paulina	oov
+oov_mesa__v1.wav	mesa	Mónica	oov
+oov_mesa__v2.wav	mesa	Eddy (Español (México))	oov
+oov_libro__v0.wav	libro	Paulina	oov
+oov_libro__v1.wav	libro	Mónica	oov
+oov_libro__v2.wav	libro	Eddy (Español (México))	oov
+oov_comer__v0.wav	comer	Paulina	oov
+oov_comer__v1.wav	comer	Mónica	oov
+oov_comer__v2.wav	comer	Eddy (Español (México))	oov
+oov_dormir__v0.wav	dormir	Paulina	oov
+oov_dormir__v1.wav	dormir	Mónica	oov
+oov_dormir__v2.wav	dormir	Eddy (Español (México))	oov
+oov_gracias__v0.wav	gracias	Paulina	oov
+oov_gracias__v1.wav	gracias	Mónica	oov
+oov_gracias__v2.wav	gracias	Eddy (Español (México))	oov
+oov_amigo__v0.wav	amigo	Paulina	oov
+oov_amigo__v1.wav	amigo	Mónica	oov
+oov_amigo__v2.wav	amigo	Eddy (Español (México))	oov
+oov_trabajo__v0.wav	trabajo	Paulina	oov
+oov_trabajo__v1.wav	trabajo	Mónica	oov
+oov_trabajo__v2.wav	trabajo	Eddy (Español (México))	oov
+oov_escuela__v0.wav	escuela	Paulina	oov
+oov_escuela__v1.wav	escuela	Mónica	oov
+oov_escuela__v2.wav	escuela	Eddy (Español (México))	oov
+oov_familia__v0.wav	familia	Paulina	oov
+oov_familia__v1.wav	familia	Mónica	oov
+oov_familia__v2.wav	familia	Eddy (Español (México))	oov
+oov_masa__v0.wav	masa	Paulina	oov
+oov_masa__v1.wav	masa	Mónica	oov
+oov_masa__v2.wav	masa	Eddy (Español (México))	oov
+oov_mono__v0.wav	mono	Paulina	oov
+oov_mono__v1.wav	mono	Mónica	oov
+oov_mono__v2.wav	mono	Eddy (Español (México))	oov
+oov_malla__v0.wav	malla	Paulina	oov
+oov_malla__v1.wav	malla	Mónica	oov
+oov_malla__v2.wav	malla	Eddy (Español (México))	oov
+oov_mina__v0.wav	mina	Paulina	oov
+oov_mina__v1.wav	mina	Mónica	oov
+oov_mina__v2.wav	mina	Eddy (Español (México))	oov
+oov_mural__v0.wav	mural	Paulina	oov
+oov_mural__v1.wav	mural	Mónica	oov
+oov_mural__v2.wav	mural	Eddy (Español (México))	oov
+oov_mirar__v0.wav	mirar	Paulina	oov
+oov_mirar__v1.wav	mirar	Mónica	oov
+oov_mirar__v2.wav	mirar	Eddy (Español (México))	oov
+oov_marzo__v0.wav	marzo	Paulina	oov
+oov_marzo__v1.wav	marzo	Mónica	oov
+oov_marzo__v2.wav	marzo	Eddy (Español (México))	oov
+oov_moto__v0.wav	moto	Paulina	oov
+oov_moto__v1.wav	moto	Mónica	oov
+oov_moto__v2.wav	moto	Eddy (Español (México))	oov

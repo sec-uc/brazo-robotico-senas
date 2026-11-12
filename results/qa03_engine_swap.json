@@ -1,0 +1,43 @@
+{
+  "experiment": "qa03_engine_swap",
+  "change": "nuevo proveedor STT whisper-openai (openai-whisper, PyTorch fp32)",
+  "files_in_service": [
+    {
+      "file": "services/stt/app/providers.py",
+      "added": 36,
+      "removed": 0
+    },
+    {
+      "file": "services/stt/Dockerfile",
+      "added": 3,
+      "removed": 0
+    },
+    {
+      "file": "services/stt/requirements-whisper-openai.txt",
+      "added": 4,
+      "removed": 0
+    }
+  ],
+  "files_outside_service": [
+    {
+      "file": "docker-compose.whisper-openai.yml",
+      "note": "override de despliegue opcional; equivale a fijar STT_PROVIDER y un build arg"
+    }
+  ],
+  "services_touched": [
+    "stt"
+  ],
+  "client_changes": 0,
+  "other_services_changes": 0,
+  "qa03_target": "<=2 archivos, todos dentro del servicio",
+  "meets_files_target": false,
+  "meets_confinement": true,
+  "note": "implementado con asistencia de un modelo de lenguaje: se reportan archivos y líneas, no tiempo",
+  "measured_with": "git diff --no-index --numstat contra copia previa del servicio",
+  "date": "2026-10-28",
+  "environment": {
+    "git_commit": "eafeb82",
+    "git_dirty": false,
+    "medido_con": "git diff --numstat eafeb82^ eafeb82 -- services/stt"
+  }
+}

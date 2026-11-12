@@ -1,0 +1,488 @@
+{
+  "experiment": "qa06_availability_antes",
+  "environment": {
+    "timestamp_utc": "2026-10-28T20:29:43+00:00",
+    "host": "macOS-26.5.2-arm64-arm-64bit",
+    "cpu": "Apple M4 Pro",
+    "cpus": 12,
+    "docker": "28.1.1",
+    "git_commit": "9b13b6f",
+    "git_dirty": false,
+    "stt_provider": "echo",
+    "sut_dir": "antes",
+    "sut_commit": "645439a",
+    "sut_dirty": true,
+    "sut_diff": "services/sign-translation/Dockerfile | 2 +-\n services/telemetry/Dockerfile        | 2 +-\n 2 files changed, 2 insertions(+), 2 deletions(-)",
+    "sut_note": "plataforma en 645439a"
+  },
+  "summary": {
+    "mode": "crash",
+    "t_fail_s": 10.0,
+    "stt_down_detected_s": 10.3,
+    "stt_healthy_again_s": 10.82,
+    "recovery_s": 0.82,
+    "others_ok_during_outage": true,
+    "sessions": {
+      "text": {
+        "total": 119,
+        "ok": 118,
+        "ok_during_outage": 1,
+        "total_during_outage": 2,
+        "first_ok_after_fail_s": 10.03
+      },
+      "audio": {
+        "total": 101,
+        "ok": 100,
+        "ok_during_outage": 1,
+        "total_during_outage": 2,
+        "first_ok_after_fail_s": 10.01
+      }
+    },
+    "audio_during_outage_processed_after_recovery": {
+      "sent": 1,
+      "done_later": 0
+    }
+  },
+  "health": [
+    {
+      "t": 0.02,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 0.55,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 1.07,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 1.58,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 2.09,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 2.6,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 3.12,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 3.64,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 4.16,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 4.67,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 5.18,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 5.69,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 6.2,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 6.72,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 7.23,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 7.75,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 8.26,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 8.77,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 9.29,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 9.8,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 10.3,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 10.82,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 11.34,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 11.85,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 12.37,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 12.88,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 13.4,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 13.93,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 14.44,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 14.95,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 15.47,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 16.0,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 16.52,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 17.04,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 17.56,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 18.08,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 18.6,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 19.12,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 19.63,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 20.14,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 20.67,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 21.19,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 21.71,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 22.22,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 22.73,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 23.24,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 23.75,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 24.27,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 24.79,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 25.3,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 25.81,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 26.32,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 26.83,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 27.34,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 27.86,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 28.37,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 28.88,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 29.39,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 29.92,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 30.45,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 30.97,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 31.49,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 32.01,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 32.52,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 33.04,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 33.55,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 34.06,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 34.58,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 35.09,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 35.6,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 36.12,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 36.63,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 37.14,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 37.65,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 38.16,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 38.67,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 39.19,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 39.7,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 40.22,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 40.73,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 41.24,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 41.76,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 42.27,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 42.79,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 43.31,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 43.82,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 44.33,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 44.84,
+      "stt": "ok",
+      "others_ok": true
+    }
+  ]
+}

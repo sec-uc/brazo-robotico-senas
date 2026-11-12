@@ -1,0 +1,17 @@
+global:
+  scrape_interval: 5s
+scrape_configs:
+  - job_name: rsp-services
+    metrics_path: /metrics
+    static_configs:
+      - targets:
+          - gateway:8000
+          - auth:8000
+          - voice-capture:8000
+          - stt:8000
+          - nlp:8000
+          - sign-translation:8000
+          - actuator-control:8000
+          - telemetry:8000
+  # NATS no expone métricas en formato Prometheus (su monitor /varz es JSON): haría falta
+  # prometheus-nats-exporter. Ningún panel las usa, así que no se recogen.

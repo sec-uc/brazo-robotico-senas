@@ -1,0 +1,407 @@
+asyncapi: 2.6.0
+info:
+  title: Robot Signs Platform — eventos
+  version: 0.1.0
+  description: Contratos del pipeline voz→seña sobre NATS. Generado desde libs/rsp_common/rsp_common/events.py
+servers:
+  nats:
+    url: nats://nats:4222
+    protocol: nats
+channels:
+  voice.audio.chunk:
+    description: AudioChunk
+    publish:
+      message:
+        $ref: '#/components/schemas/AudioChunk'
+  voice.text.transcribed:
+    description: TextTranscribed
+    publish:
+      message:
+        $ref: '#/components/schemas/TextTranscribed'
+  nlp.gloss.sequence:
+    description: GlossSequence
+    publish:
+      message:
+        $ref: '#/components/schemas/GlossSequence'
+  signs.gesture.plan:
+    description: GesturePlan
+    publish:
+      message:
+        $ref: '#/components/schemas/GesturePlan'
+  actuator.state:
+    description: ActuatorState
+    publish:
+      message:
+        $ref: '#/components/schemas/ActuatorState'
+  telemetry.event:
+    description: TelemetryEvent
+    publish:
+      message:
+        $ref: '#/components/schemas/TelemetryEvent'
+components:
+  schemas:
+    AudioChunk:
+      properties:
+        event_id:
+          title: Event Id
+          type: string
+        session_id:
+          title: Session Id
+          type: string
+        ts:
+          description: epoch ms en el productor
+          title: Ts
+          type: integer
+        producer:
+          default: unknown
+          description: nombre del servicio emisor
+          title: Producer
+          type: string
+        trace:
+          additionalProperties:
+            type: integer
+          description: 'marcas de tiempo acumuladas por etapa, p.ej. {''captured'':
+            ..., ''transcribed'': ...}'
+          title: Trace
+          type: object
+        seq:
+          default: 0
+          title: Seq
+          type: integer
+        audio_b64:
+          description: audio codificado en base64
+          title: Audio B64
+          type: string
+        mime_type:
+          default: audio/wav
+          title: Mime Type
+          type: string
+        sample_rate:
+          default: 16000
+          title: Sample Rate
+          type: integer
+        language_hint:
+          default: auto
+          enum:
+          - es
+          - qu
+          - auto
+          title: Language Hint
+          type: string
+        is_final:
+          default: true
+          title: Is Final
+          type: boolean
+        text_override:
+          anyOf:
+          - type: string
+          - type: 'null'
+          default: null
+          description: Si viene, STT lo usa en lugar de transcribir (modo texto /
+            pruebas)
+          title: Text Override
+      required:
+      - session_id
+      - audio_b64
+      title: AudioChunk
+      type: object
+    TextTranscribed:
+      properties:
+        event_id:
+          title: Event Id
+          type: string
+        session_id:
+          title: Session Id
+          type: string
+        ts:
+          description: epoch ms en el productor
+          title: Ts
+          type: integer
+        producer:
+          default: unknown
+          description: nombre del servicio emisor
+          title: Producer
+          type: string
+        trace:
+          additionalProperties:
+            type: integer
+          description: 'marcas de tiempo acumuladas por etapa, p.ej. {''captured'':
+            ..., ''transcribed'': ...}'
+          title: Trace
+          type: object
+        text:
+          title: Text
+          type: string
+        language:
+          default: unknown
+          enum:
+          - es
+          - qu
+          - unknown
+          title: Language
+          type: string
+        confidence:
+          default: 0.0
+          title: Confidence
+          type: number
+        provider:
+          default: unknown
+          title: Provider
+          type: string
+      required:
+      - session_id
+      - text
+      title: TextTranscribed
+      type: object
+    GlossSequence:
+      properties:
+        event_id:
+          title: Event Id
+          type: string
+        session_id:
+          title: Session Id
+          type: string
+        ts:
+          description: epoch ms en el productor
+          title: Ts
+          type: integer
+        producer:
+          default: unknown
+          description: nombre del servicio emisor
+          title: Producer
+          type: string
+        trace:
+          additionalProperties:
+            type: integer
+          description: 'marcas de tiempo acumuladas por etapa, p.ej. {''captured'':
+            ..., ''transcribed'': ...}'
+          title: Trace
+          type: object
+        source_text:
+          title: Source Text
+          type: string
+        source_language:
+          default: unknown
+          title: Source Language
+          type: string
+        glosses:
+          description: palabras/glosas en mayúsculas, ya normalizadas
+          items:
+            type: string
+          title: Glosses
+          type: array
+        translation_applied:
+          default: false
+          title: Translation Applied
+          type: boolean
+      required:
+      - session_id
+      - source_text
+      - glosses
+      title: GlossSequence
+      type: object
+    Gesture:
+      properties:
+        gloss:
+          title: Gloss
+          type: string
+        kind:
+          default: sign
+          enum:
+          - sign
+          - fingerspell
+          - unknown
+          title: Kind
+          type: string
+        targets:
+          items:
+            $ref: '#/components/schemas/ServoTarget'
+          title: Targets
+          type: array
+        hold_ms:
+          default: 600
+          title: Hold Ms
+          type: integer
+        image_path:
+          anyOf:
+          - type: string
+          - type: 'null'
+          default: null
+          title: Image Path
+        keyframes:
+          description: poses que siguen a targets dentro de la misma seña (vacío = seña estática)
+          items:
+            items:
+              $ref: '#/components/schemas/ServoTarget'
+            type: array
+          title: Keyframes
+          type: array
+      required:
+      - gloss
+      - targets
+      title: Gesture
+      type: object
+    ServoTarget:
+      properties:
+        servo_id:
+          maximum: 15
+          minimum: 1
+          title: Servo Id
+          type: integer
+        angle:
+          maximum: 180
+          minimum: 0
+          title: Angle
+          type: integer
+      required:
+      - servo_id
+      - angle
+      title: ServoTarget
+      type: object
+    GesturePlan:
+      properties:
+        event_id:
+          title: Event Id
+          type: string
+        session_id:
+          title: Session Id
+          type: string
+        ts:
+          description: epoch ms en el productor
+          title: Ts
+          type: integer
+        producer:
+          default: unknown
+          description: nombre del servicio emisor
+          title: Producer
+          type: string
+        trace:
+          additionalProperties:
+            type: integer
+          description: 'marcas de tiempo acumuladas por etapa, p.ej. {''captured'':
+            ..., ''transcribed'': ...}'
+          title: Trace
+          type: object
+        gestures:
+          items:
+            $ref: '#/components/schemas/Gesture'
+          title: Gestures
+          type: array
+        unknown_glosses:
+          items:
+            type: string
+          title: Unknown Glosses
+          type: array
+      required:
+      - session_id
+      - gestures
+      title: GesturePlan
+      type: object
+    ActuatorStatus:
+      enum:
+      - accepted
+      - executing
+      - done
+      - failed
+      title: ActuatorStatus
+      type: string
+    ActuatorState:
+      properties:
+        event_id:
+          title: Event Id
+          type: string
+        session_id:
+          title: Session Id
+          type: string
+        ts:
+          description: epoch ms en el productor
+          title: Ts
+          type: integer
+        producer:
+          default: unknown
+          description: nombre del servicio emisor
+          title: Producer
+          type: string
+        trace:
+          additionalProperties:
+            type: integer
+          description: 'marcas de tiempo acumuladas por etapa, p.ej. {''captured'':
+            ..., ''transcribed'': ...}'
+          title: Trace
+          type: object
+        status:
+          $ref: '#/components/schemas/ActuatorStatus'
+        gesture_index:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          default: null
+          title: Gesture Index
+        gesture_gloss:
+          anyOf:
+          - type: string
+          - type: 'null'
+          default: null
+          title: Gesture Gloss
+        servo_positions:
+          additionalProperties:
+            type: integer
+          title: Servo Positions
+          type: object
+        driver:
+          default: simulator
+          title: Driver
+          type: string
+        error:
+          anyOf:
+          - type: string
+          - type: 'null'
+          default: null
+          title: Error
+        execution_ms:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          default: null
+          title: Execution Ms
+      required:
+      - session_id
+      - status
+      title: ActuatorState
+      type: object
+    TelemetryEvent:
+      properties:
+        event_id:
+          title: Event Id
+          type: string
+        session_id:
+          title: Session Id
+          type: string
+        ts:
+          description: epoch ms en el productor
+          title: Ts
+          type: integer
+        producer:
+          default: unknown
+          description: nombre del servicio emisor
+          title: Producer
+          type: string
+        trace:
+          additionalProperties:
+            type: integer
+          description: 'marcas de tiempo acumuladas por etapa, p.ej. {''captured'':
+            ..., ''transcribed'': ...}'
+          title: Trace
+          type: object
+        name:
+          title: Name
+          type: string
+        data:
+          additionalProperties: true
+          title: Data
+          type: object
+      required:
+      - session_id
+      - name
+      title: TelemetryEvent
+      type: object

@@ -1,0 +1,82 @@
+==== plataforma con el bus en la interfaz local y sin el STT en contenedor
+ actuator-control  Built
+ auth  Built
+ gateway  Built
+ nlp  Built
+ sign-translation  Built
+ stt  Built
+ telemetry  Built
+ voice-capture  Built
+ Container robot-signs-platform-signs-db-1  Running
+ Container robot-signs-platform-actuator-db-1  Running
+ Container robot-signs-platform-prometheus-1  Running
+ Container robot-signs-platform-auth-db-1  Running
+ Container robot-signs-platform-grafana-1  Running
+ Container robot-signs-platform-nlp-db-1  Running
+ Container robot-signs-platform-nats-1  Running
+ Container robot-signs-platform-telemetry-db-1  Running
+ Container robot-signs-platform-gateway-1  Recreate
+ Container robot-signs-platform-telemetry-1  Recreate
+ Container robot-signs-platform-auth-1  Recreate
+ Container robot-signs-platform-actuator-control-1  Recreate
+ Container robot-signs-platform-sign-translation-1  Recreate
+ Container robot-signs-platform-nlp-1  Recreate
+ Container robot-signs-platform-voice-capture-1  Recreate
+ Container robot-signs-platform-stt-1  Recreate
+ Container robot-signs-platform-stt-1  Recreated
+ Container robot-signs-platform-voice-capture-1  Recreated
+ Container robot-signs-platform-gateway-1  Recreated
+ Container robot-signs-platform-auth-1  Recreated
+ Container robot-signs-platform-nlp-1  Recreated
+ Container robot-signs-platform-telemetry-1  Recreated
+ Container robot-signs-platform-actuator-control-1  Recreated
+ Container robot-signs-platform-sign-translation-1  Recreated
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-actuator-db-1  Waiting
+ Container robot-signs-platform-signs-db-1  Waiting
+ Container robot-signs-platform-auth-db-1  Waiting
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-telemetry-db-1  Waiting
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-nlp-db-1  Waiting
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-signs-db-1  Healthy
+ Container robot-signs-platform-auth-db-1  Healthy
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-nlp-db-1  Healthy
+ Container robot-signs-platform-nlp-1  Starting
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-auth-1  Starting
+ Container robot-signs-platform-telemetry-db-1  Healthy
+ Container robot-signs-platform-telemetry-1  Starting
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-sign-translation-1  Starting
+ Container robot-signs-platform-stt-1  Starting
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-voice-capture-1  Starting
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-actuator-db-1  Healthy
+ Container robot-signs-platform-actuator-control-1  Starting
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-gateway-1  Starting
+ Container robot-signs-platform-voice-capture-1  Started
+ Container robot-signs-platform-gateway-1  Started
+ Container robot-signs-platform-auth-1  Started
+ Container robot-signs-platform-sign-translation-1  Started
+ Container robot-signs-platform-actuator-control-1  Started
+ Container robot-signs-platform-stt-1  Started
+ Container robot-signs-platform-telemetry-1  Started
+ Container robot-signs-platform-nlp-1  Started
+ Container robot-signs-platform-stt-1  Stopping
+ Container robot-signs-platform-stt-1  Stopped
+==== STT nativo con el proveedor kichwa (pipeline de la API actual)
+==== arquitectura actual (3dc0738) en 8090
+en 8095 arrancó la API heredada, no el STT
+scripts/run_replica_qa01.sh: line 37: 39363 Terminated: 15          NATS_URL=nats://127.0.0.1:4222 STT_PROVIDER=kichwa KICHWA_CONFIG_PATH=$CFG BUS_DURABLE_SUBJECTS=voice.audio.chunk BUS_DURABLE_MAX_AGE_S=30 PYTHONPATH=$ROOT/services/stt:$ROOT/libs:$WORK/legacy "$LEGACY_VENV/bin/uvicorn" app.main:app --host 127.0.0.1 --port 8095 > "$WORK/stt.log" 2>&1
+scripts/run_replica_qa01.sh: line 39: 39368 Terminated: 15          "$LEGACY_VENV/bin/python" -m uvicorn app.main:app --host 127.0.0.1 --port 8090 > "$WORK/legacy.log" 2>&1

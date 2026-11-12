@@ -1,0 +1,45 @@
+{
+  "experiment": "qa01_replica",
+  "environment": {
+    "timestamp_utc": "2026-11-12T20:18:22+00:00",
+    "host": "macOS-26.5.2-arm64-arm-64bit",
+    "cpu": "Apple M4 Pro",
+    "cpus": 12,
+    "docker": "28.1.1",
+    "git_commit": "4b59154",
+    "git_dirty": false,
+    "stt_provider": "echo"
+  },
+  "label": "replica",
+  "reps": 5,
+  "n": 600,
+  "plan": "docs/plan-replica-qa01.md (etiqueta plan-replica-qa01)",
+  "by_system": {
+    "actual": {
+      "n": 300,
+      "valid": 238,
+      "wall_ms": {
+        "n": 238,
+        "mean": 798.4029411764706,
+        "median": 464.8,
+        "p95": 2167.944999999988,
+        "sd": 1575.6519884292666,
+        "min": 80.5,
+        "max": 9847.4
+      }
+    },
+    "propuesta": {
+      "n": 300,
+      "valid": 239,
+      "wall_ms": {
+        "n": 239,
+        "mean": 941.1338912133891,
+        "median": 528.8,
+        "p95": 4072.199999999999,
+        "sd": 1762.7106086164322,
+        "min": 136.4,
+        "max": 11090.3
+      }
+    }
+  }
+}

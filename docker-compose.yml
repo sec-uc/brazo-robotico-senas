@@ -1,0 +1,235 @@
+# Robot Signs Platform — instancia de la arquitectura de referencia (prototipo)
+# Levantar:   docker compose up --build
+# Con brazo real (Linux): ACTUATOR_DRIVER=serial SERIAL_PORT=/dev/ttyUSB0 y descomentar devices: en actuator-control
+# Con brazo real (macOS): scripts/run_actuator_native.sh /dev/tty.usbserial-XXXX (USB no pasa a contenedores)
+# Con Whisper:    STT_PROVIDER=whisper docker compose up --build   (instalar services/stt/requirements-whisper.txt en la imagen)
+
+x-common: &common
+  restart: unless-stopped
+  init: true   # el servicio no es el PID 1: una terminación abrupta (SIGKILL) acaba el contenedor y se reinicia
+  environment: &common-env
+    # el bus exige credencial (BUS_TOKEN): estar en la red de contenedores no basta para publicar
+    NATS_URL: nats://nats:4222
+    BUS_TOKEN: ${BUS_TOKEN:-dev-bus-token-change-me}   # aparte de la URL, que se escribe en los registros
+    AUTH_ENABLED: ${AUTH_ENABLED:-true}
+    LOG_LEVEL: ${LOG_LEVEL:-INFO}
+    # ADR-010: el audio que llega con el STT caído espera en JetStream (máx. 30 s) en lugar de perderse
+    BUS_DURABLE_SUBJECTS: ${BUS_DURABLE_SUBJECTS:-voice.audio.chunk}
+    BUS_DURABLE_MAX_AGE_S: ${BUS_DURABLE_MAX_AGE_S:-30}
+    BUS_MAX_INFLIGHT: ${BUS_MAX_INFLIGHT:-64}
+  networks: [rsp]
+  depends_on:
+    nats:
+      condition: service_healthy
+
+# ADR-014: cada servicio con datos maneja su propia base (un contenedor PostgreSQL por servicio), en una red
+# privada que solo comparte con ella. Ningún servicio alcanza la base de otro. La contraseña va en PGPASSWORD,
+# no en la URL. La pasarela, la captura de voz y el reconocimiento no guardan nada: son servicios sin estado.
+x-db: &db
+  image: postgres:16-alpine
+  restart: unless-stopped
+  healthcheck:
+    test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+    interval: 5s
+    timeout: 3s
+    retries: 12
+
+x-needs-bus: &needs-bus
+  nats:
+    condition: service_healthy
+
+services:
+  # ------------------------------------------------------------ infraestructura
+  nats:
+    image: nats:2.10-alpine
+    command: ["-js", "-m", "8222", "--auth", "${BUS_TOKEN:-dev-bus-token-change-me}"]
+    # sin puertos publicados: el bus no es alcanzable desde fuera de la red de contenedores.
+    # Para un servicio nativo (brazo USB en macOS): -f docker-compose.native.yml
+    networks: [rsp]
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8222/healthz"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  # ------------------------------------------------------------ borde
+  gateway:   # sin estado: no tiene base de datos
+    <<: *common
+    build: { context: ., dockerfile: services/gateway/Dockerfile }
+    ports: ["${GATEWAY_PORT:-8080}:8000"]   # GATEWAY_PORT=8081 si el 8080 está ocupado (y GATEWAY=http://127.0.0.1:8081 para los scripts)
+    environment:
+      <<: *common-env
+      AUTH_SECRET: ${AUTH_SECRET:?defina AUTH_SECRET en .env (32 bytes o más)}   # verifica tokens (ADR-006): solo los servicios que lo hacen tienen la clave
+      CORS_ORIGINS: ${CORS_ORIGINS:-*}
+      # con el actuador nativo (brazo USB en macOS): ACTUATOR_URL=http://host.docker.internal:8006
+      ACTUATOR_URL: ${ACTUATOR_URL:-http://actuator-control:8000}
+    extra_hosts: ["host.docker.internal:host-gateway"]
+
+  auth:
+    <<: *common
+    build: { context: ., dockerfile: services/auth/Dockerfile }
+    environment:
+      <<: *common-env
+      AUTH_SECRET: ${AUTH_SECRET:?defina AUTH_SECRET en .env (32 bytes o más)}   # firma y verifica tokens (ADR-006): solo los servicios que lo hacen tienen la clave
+      # usuarios con los que se siembra la base la primera vez; después manda la base
+      AUTH_USERS: ${AUTH_USERS:?defina AUTH_USERS en .env (ver .env.example)}
+      AUTH_DATABASE_URL: postgresql://auth@auth-db:5432/auth
+      PGPASSWORD: ${AUTH_DB_PASSWORD:-dev-auth-db}
+    networks: [rsp, auth-data]
+    depends_on:
+      <<: *needs-bus
+      auth-db: { condition: service_healthy }
+
+  auth-db:
+    <<: *db
+    environment: { POSTGRES_DB: auth, POSTGRES_USER: auth, POSTGRES_PASSWORD: "${AUTH_DB_PASSWORD:-dev-auth-db}", POSTGRES_INITDB_ARGS: "--locale=C --encoding=UTF8" }
+    volumes: ["auth-pg:/var/lib/postgresql/data"]
+    networks: [auth-data]
+
+  # ------------------------------------------------------------ pipeline voz → seña
+  voice-capture:   # sin estado: no tiene base de datos
+    <<: *common
+    build: { context: ., dockerfile: services/voice-capture/Dockerfile }
+
+  stt:   # sin estado: no tiene base de datos
+    <<: *common
+    build: { context: ., dockerfile: services/stt/Dockerfile }
+    environment:
+      <<: *common-env
+      STT_PROVIDER: ${STT_PROVIDER:-echo}
+      STT_WORKERS: ${STT_WORKERS:-2}
+      WHISPER_MODEL: ${WHISPER_MODEL:-base}
+      WHISPER_DEVICE: ${WHISPER_DEVICE:-cpu}
+      KICHWA_HOTWORDS_PATH: ${KICHWA_HOTWORDS_PATH:-}   # vacío = Whisper sin sesgo (evaluación)
+    volumes:
+      - model-cache:/home/appuser/.cache
+      - ./data/kichwa_dictionary.json:/srv/kichwa_dictionary.json:ro
+    deploy:
+      replicas: ${STT_REPLICAS:-1}
+
+  nlp:
+    <<: *common
+    build: { context: ., dockerfile: services/nlp/Dockerfile }
+    environment:
+      <<: *common-env
+      TRANSLATION_PROVIDER: ${TRANSLATION_PROVIDER:-dictionary}
+      GOOGLE_TRANSLATE_API_KEY: ${GOOGLE_TRANSLATE_API_KEY:-}
+      KICHWA_DICTIONARY_PATH: /data/kichwa_dictionary.json   # semilla del diccionario; después manda la base
+      NLP_DATABASE_URL: postgresql://nlp@nlp-db:5432/nlp
+      PGPASSWORD: ${NLP_DB_PASSWORD:-dev-nlp-db}
+    volumes:
+      - ./data:/data:ro
+    networks: [rsp, nlp-data]
+    depends_on:
+      <<: *needs-bus
+      nlp-db: { condition: service_healthy }
+
+  nlp-db:
+    <<: *db
+    environment: { POSTGRES_DB: nlp, POSTGRES_USER: nlp, POSTGRES_PASSWORD: "${NLP_DB_PASSWORD:-dev-nlp-db}", POSTGRES_INITDB_ARGS: "--locale=C --encoding=UTF8" }
+    volumes: ["nlp-pg:/var/lib/postgresql/data"]
+    networks: [nlp-data]
+
+  sign-translation:
+    <<: *common
+    build: { context: ., dockerfile: services/sign-translation/Dockerfile }
+    environment:
+      <<: *common-env
+      AUTH_SECRET: ${AUTH_SECRET:?defina AUTH_SECRET en .env (32 bytes o más)}   # verifica tokens (ADR-006): solo los servicios que lo hacen tienen la clave
+      SIGNS_DATABASE_URL: postgresql://signs@signs-db:5432/signs
+      PGPASSWORD: ${SIGNS_DB_PASSWORD:-dev-signs-db}
+      SIGNS_SEED_PATH: /data/signs_seed.json   # semilla del vocabulario; después manda la base
+    volumes:
+      - ./data/signs_seed.json:/data/signs_seed.json:ro
+    networks: [rsp, signs-data]
+    depends_on:
+      <<: *needs-bus
+      signs-db: { condition: service_healthy }
+
+  signs-db:
+    <<: *db
+    environment: { POSTGRES_DB: signs, POSTGRES_USER: signs, POSTGRES_PASSWORD: "${SIGNS_DB_PASSWORD:-dev-signs-db}", POSTGRES_INITDB_ARGS: "--locale=C --encoding=UTF8" }
+    volumes: ["signs-pg:/var/lib/postgresql/data"]
+    networks: [signs-data]
+
+  actuator-control:
+    <<: *common
+    build: { context: ., dockerfile: services/actuator-control/Dockerfile }
+    environment:
+      <<: *common-env
+      AUTH_SECRET: ${AUTH_SECRET:?defina AUTH_SECRET en .env (32 bytes o más)}   # verifica tokens (ADR-006): solo los servicios que lo hacen tienen la clave
+      ACTUATOR_DRIVER: ${ACTUATOR_DRIVER:-simulator}
+      SERIAL_PORT: ${SERIAL_PORT:-/dev/ttyUSB0}
+      INTER_COMMAND_MS: ${INTER_COMMAND_MS:-150}
+      SIM_INTER_COMMAND_MS: ${SIM_INTER_COMMAND_MS:-150}
+      # tabla del hardware y calibración (límites, orden, cableado, canales sin respuesta)
+      ACTUATOR_DATABASE_URL: postgresql://actuator@actuator-db:5432/actuator
+      PGPASSWORD: ${ACTUATOR_DB_PASSWORD:-dev-actuator-db}
+    networks: [rsp, actuator-data]
+    depends_on:
+      <<: *needs-bus
+      actuator-db: { condition: service_healthy }
+    # Para el brazo real descomentar y ajustar el puerto:
+    # devices: ["/dev/ttyUSB0:/dev/ttyUSB0"]
+
+  actuator-db:
+    <<: *db
+    environment: { POSTGRES_DB: actuator, POSTGRES_USER: actuator, POSTGRES_PASSWORD: "${ACTUATOR_DB_PASSWORD:-dev-actuator-db}", POSTGRES_INITDB_ARGS: "--locale=C --encoding=UTF8" }
+    volumes: ["actuator-pg:/var/lib/postgresql/data"]
+    networks: [actuator-data]
+
+  telemetry:
+    <<: *common
+    build: { context: ., dockerfile: services/telemetry/Dockerfile }
+    environment:
+      <<: *common-env
+      TELEMETRY_DATABASE_URL: postgresql://telemetry@telemetry-db:5432/telemetry
+      PGPASSWORD: ${TELEMETRY_DB_PASSWORD:-dev-telemetry-db}
+    networks: [rsp, telemetry-data]
+    depends_on:
+      <<: *needs-bus
+      telemetry-db: { condition: service_healthy }
+
+  telemetry-db:
+    <<: *db
+    environment: { POSTGRES_DB: telemetry, POSTGRES_USER: telemetry, POSTGRES_PASSWORD: "${TELEMETRY_DB_PASSWORD:-dev-telemetry-db}", POSTGRES_INITDB_ARGS: "--locale=C --encoding=UTF8" }
+    volumes: ["telemetry-pg:/var/lib/postgresql/data"]
+    networks: [telemetry-data]
+
+  # ------------------------------------------------------------ monitoreo
+  prometheus:
+    image: prom/prometheus:v2.53.0
+    volumes:
+      - ./monitoring/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    ports: ["127.0.0.1:9090:9090"]   # monitoreo: solo desde el propio equipo
+    networks: [rsp]
+
+  grafana:
+    image: grafana/grafana:11.1.0
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASSWORD:-admin}
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+    volumes:
+      - ./monitoring/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./monitoring/grafana/dashboards:/var/lib/grafana/dashboards:ro
+    ports: ["127.0.0.1:${GRAFANA_PORT:-3000}:3000"]   # solo desde el propio equipo; GRAFANA_PORT=3001 si el 3000 está ocupado
+    networks: [rsp]
+    depends_on: [prometheus]
+
+networks:
+  rsp:
+    name: rsp-network
+  # una red privada por base de datos: solo la comparten la base y su servicio dueño
+  auth-data: { internal: true }
+  nlp-data: { internal: true }
+  signs-data: { internal: true }
+  actuator-data: { internal: true }
+  telemetry-data: { internal: true }
+
+volumes:
+  auth-pg:
+  nlp-pg:
+  signs-pg:
+  actuator-pg:
+  telemetry-pg:
+  model-cache:

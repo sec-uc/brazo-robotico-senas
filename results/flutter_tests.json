@@ -1,0 +1,35 @@
+{
+  "suite": "rsp-mobile-client (Makia) — flutter test",
+  "date": "2026-11-12",
+  "flutter": "3.47.5",
+  "total": 54,
+  "passed": 54,
+  "failed": 0,
+  "line_coverage_pct": 32.8,
+  "coverage_scope": "archivos de lib/ cargados por las pruebas (lcov.info); lógica de UI y componentes, no servicios de red/plataforma",
+  "lines_hit": 526,
+  "lines_found": 1604,
+  "tests_por_archivo": {
+    "unit/sign_images_test.dart": 8,
+    "unit/logic_test.dart": 9,
+    "unit/usb_arm_test.dart": 9,
+    "widgets/components_test.dart": 28
+  },
+  "resoluciones_probadas_dp": [
+    "1280x800",
+    "914x411",
+    "411x914"
+  ],
+  "escala_texto_probada": [
+    1.0,
+    1.3
+  ],
+  "defectos_encontrados": [
+    {
+      "archivo": "lib/ui/glass/glass_toast.dart",
+      "descripcion": "el filtro de emojis no cubría U+2300–U+23FF; \"⏱️ Tiempo de espera agotado\" mostraba el reloj",
+      "estado": "corregido"
+    }
+  ],
+  "client_commit": "02f9493"
+}

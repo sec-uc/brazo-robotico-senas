@@ -1,0 +1,4 @@
+# extra opcional: STT_PROVIDER=whisper-openai (mismo motor que la arquitectura actual)
+openai-whisper>=20231117
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch

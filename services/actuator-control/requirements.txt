@@ -1,0 +1,10 @@
+fastapi>=0.110
+uvicorn[standard]>=0.27
+pydantic>=2.5
+nats-py>=2.7
+prometheus-client>=0.19
+PyJWT>=2.8
+httpx>=0.26
+python-multipart>=0.0.9
+pyserial>=3.5
+psycopg[binary]>=3.1

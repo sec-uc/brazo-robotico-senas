@@ -1,0 +1,61 @@
+i,file,voice,set,reference,transcript,status,exact,wer,gloss_match,stt_ms,nlp_ms,plan_ms,accept_ms,software_ms,wall_ms
+0,hola__v0.wav,Paulina,corpus,hola,ole,done,False,1.0,False,741,1,1,0,743,794.1
+1,bien__v0.wav,Paulina,corpus,bien,bien,done,True,0.0,True,236,1,1,0,238,287.4
+2,mama__v0.wav,Paulina,corpus,mamá,me me me meto,done,False,4.0,False,653,0,4,0,657,707.9
+3,agua__v0.wav,Paulina,corpus,agua,egue,done,False,1.0,False,242,1,1,1,245,297.6
+4,arriba__v0.wav,Paulina,corpus,arriba,arriba,done,True,0.0,True,244,1,0,1,246,297.6
+5,abajo__v0.wav,Paulina,corpus,abajo,abajo,done,True,0.0,True,247,1,0,1,249,298.2
+6,manana__v0.wav,Paulina,corpus,mañana,mañana,done,True,0.0,True,250,0,1,0,251,303.2
+7,manzana__v0.wav,Paulina,corpus,manzana,masana,done,False,1.0,False,245,1,2,0,248,299.4
+8,mano__v0.wav,Paulina,corpus,mano,mano,done,True,0.0,True,235,0,1,0,236,285.5
+9,mejor__v0.wav,Paulina,corpus,mejor,mejor,done,True,0.0,True,254,0,1,1,256,307.7
+10,uno__v0.wav,Paulina,corpus,uno,uno,done,True,0.0,True,256,0,1,0,257,309.1
+11,cuatro__v0.wav,Paulina,corpus,cuatro,cuatro,done,True,0.0,True,242,0,1,0,243,292.3
+12,ocho__v0.wav,Paulina,corpus,ocho,ojo ojo,done,False,2.0,False,967,1,1,0,969,1020.3
+13,un_ratito__v0.wav,Paulina,corpus,un ratito,un ratito,done,True,0.0,True,262,0,1,0,263,316.9
+14,mas_o_menos__v0.wav,Paulina,corpus,más o menos,mas o menos,done,True,0.0,True,264,1,1,0,266,316.2
+15,mal__v0.wav,Paulina,corpus,mal,mal,done,True,0.0,True,249,0,1,0,250,300.7
+16,miel__v0.wav,Paulina,corpus,miel,miel,done,True,0.0,True,257,0,1,0,258,309.7
+17,moneda__v0.wav,Paulina,corpus,moneda,moneda,done,True,0.0,True,247,1,1,0,249,299.2
+18,mesero__v0.wav,Paulina,corpus,mesero,mesero,done,True,0.0,True,247,0,1,0,248,298.1
+19,mil__v0.wav,Paulina,corpus,mil,mil,done,True,0.0,True,241,1,0,1,243,291.9
+20,hola__v1.wav,Mónica,corpus,hola,hola,done,True,0.0,True,240,1,0,1,242,292.1
+21,bien__v1.wav,Mónica,corpus,bien,bien,done,True,0.0,True,760,1,0,1,762,812.9
+22,mama__v1.wav,Mónica,corpus,mamá,mme mme,done,False,2.0,False,678,1,2,0,681,732.1
+23,agua__v1.wav,Mónica,corpus,agua,agua,done,True,0.0,True,243,1,1,0,245,294.8
+24,arriba__v1.wav,Mónica,corpus,arriba,rima,done,False,1.0,False,243,1,1,1,246,298.0
+25,abajo__v1.wav,Mónica,corpus,abajo,alberto,done,False,1.0,False,737,0,3,0,740,789.7
+26,manana__v1.wav,Mónica,corpus,mañana,manana,done,False,1.0,False,240,1,1,0,242,295.8
+27,manzana__v1.wav,Mónica,corpus,manzana,manzana,done,True,0.0,True,247,1,0,1,249,300.2
+28,mano__v1.wav,Mónica,corpus,mano,mano,done,True,0.0,True,241,0,1,0,242,292.5
+29,mejor__v1.wav,Mónica,corpus,mejor,mil por,done,False,2.0,False,659,1,0,1,661,710.4
+30,uno__v1.wav,Mónica,corpus,uno,uno,done,True,0.0,True,240,1,1,0,242,293.4
+31,cuatro__v1.wav,Mónica,corpus,cuatro,cuantro,done,False,1.0,False,245,1,2,0,248,300.2
+32,ocho__v1.wav,Mónica,corpus,ocho,ojo,done,False,1.0,False,250,0,1,1,252,304.5
+33,un_ratito__v1.wav,Mónica,corpus,un ratito,un ratito,done,True,0.0,True,251,1,0,1,253,301.0
+34,mas_o_menos__v1.wav,Mónica,corpus,más o menos,mas o menos,done,True,0.0,True,268,1,0,1,270,323.6
+35,mal__v1.wav,Mónica,corpus,mal,mel,done,False,1.0,False,241,1,1,1,244,299.8
+36,miel__v1.wav,Mónica,corpus,miel,mil,done,False,1.0,False,239,0,1,0,240,291.3
+37,moneda__v1.wav,Mónica,corpus,moneda,moneda,done,True,0.0,True,244,1,0,1,246,298.1
+38,mesero__v1.wav,Mónica,corpus,mesero,mesero,done,True,0.0,True,261,1,1,0,263,312.4
+39,mil__v1.wav,Mónica,corpus,mil,mil,done,True,0.0,True,241,0,1,0,242,291.4
+40,hola__v2.wav,Eddy (Español (México)),corpus,hola,no,done,False,1.0,False,794,1,0,1,796,846.2
+41,bien__v2.wav,Eddy (Español (México)),corpus,bien,bien,done,True,0.0,True,268,1,0,1,270,319.2
+42,mama__v2.wav,Eddy (Español (México)),corpus,mamá,mamá,done,True,0.0,True,706,1,1,0,708,761.5
+43,agua__v2.wav,Eddy (Español (México)),corpus,agua,,done,False,1.0,False,247,0,1,0,248,298.6
+44,arriba__v2.wav,Eddy (Español (México)),corpus,arriba,riva,done,False,1.0,False,280,0,2,0,282,334.4
+45,abajo__v2.wav,Eddy (Español (México)),corpus,abajo,maldito,done,False,1.0,False,856,1,2,0,859,909.2
+46,manana__v2.wav,Eddy (Español (México)),corpus,mañana,vanyana,done,False,1.0,False,256,1,2,0,259,309.1
+47,manzana__v2.wav,Eddy (Español (México)),corpus,manzana,manzana,done,True,0.0,True,254,0,1,0,255,307.1
+48,mano__v2.wav,Eddy (Español (México)),corpus,mano,mano,done,True,0.0,True,245,1,0,1,247,297.2
+49,mejor__v2.wav,Eddy (Español (México)),corpus,mejor,,done,False,1.0,False,773,1,0,0,774,828.1
+50,uno__v2.wav,Eddy (Español (México)),corpus,uno,,done,False,1.0,False,249,1,0,1,251,300.9
+51,cuatro__v2.wav,Eddy (Español (México)),corpus,cuatro,cuatro,done,True,0.0,True,251,0,1,0,252,303.8
+52,ocho__v2.wav,Eddy (Español (México)),corpus,ocho,,done,False,1.0,False,270,1,0,0,271,321.2
+53,un_ratito__v2.wav,Eddy (Español (México)),corpus,un ratito,gratido,done,False,1.0,False,965,0,3,0,968,1019.1
+54,mas_o_menos__v2.wav,Eddy (Español (México)),corpus,más o menos,mas o menos,done,True,0.0,True,279,0,1,1,281,334.2
+55,mal__v2.wav,Eddy (Español (México)),corpus,mal,van,done,False,1.0,False,262,0,1,0,263,314.2
+56,miel__v2.wav,Eddy (Español (México)),corpus,miel,bien,done,False,1.0,False,730,0,1,0,731,782.1
+57,moneda__v2.wav,Eddy (Español (México)),corpus,moneda,monega,done,False,1.0,False,825,0,3,0,828,882.2
+58,mesero__v2.wav,Eddy (Español (México)),corpus,mesero,masero,done,False,1.0,False,737,0,3,0,740,791.1
+59,mil__v2.wav,Eddy (Español (México)),corpus,mil,,done,False,1.0,False,249,1,0,0,250,298.8

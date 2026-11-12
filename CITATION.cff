@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Si usa este software o sus datos, cite el artículo asociado."
+title: "Robot Signs Platform: material de réplica de una arquitectura de referencia basada en microservicios para sistemas robóticos de traducción de voz a lengua de señas"
+authors:
+  - family-names: "Wachapa Yankur"
+    given-names: "Junior Leonardo"
+    affiliation: "Universidad Politécnica Salesiana"
+  - family-names: "Timbi Sisalima"
+    given-names: "Cristian Fernando"
+    affiliation: "Universidad Politécnica Salesiana"
+license: MIT
+date-released: "2026-11-12"
+version: "1.0.0"

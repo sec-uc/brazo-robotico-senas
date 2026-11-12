@@ -1,0 +1,98 @@
+==== plataforma con el bus en la interfaz local y sin el STT en contenedor
+ actuator-control  Built
+ auth  Built
+ gateway  Built
+ nlp  Built
+ sign-translation  Built
+ stt  Built
+ telemetry  Built
+ voice-capture  Built
+ Container robot-signs-platform-signs-db-1  Running
+ Container robot-signs-platform-auth-db-1  Running
+ Container robot-signs-platform-nlp-db-1  Running
+ Container robot-signs-platform-nats-1  Running
+ Container robot-signs-platform-auth-1  Recreate
+ Container robot-signs-platform-gateway-1  Recreate
+ Container robot-signs-platform-stt-1  Recreate
+ Container robot-signs-platform-prometheus-1  Running
+ Container robot-signs-platform-nlp-1  Recreate
+ Container robot-signs-platform-grafana-1  Running
+ Container robot-signs-platform-actuator-db-1  Running
+ Container robot-signs-platform-sign-translation-1  Recreate
+ Container robot-signs-platform-telemetry-db-1  Running
+ Container robot-signs-platform-voice-capture-1  Recreate
+ Container robot-signs-platform-actuator-control-1  Recreate
+ Container robot-signs-platform-telemetry-1  Recreate
+ Container robot-signs-platform-stt-1  Recreated
+ Container robot-signs-platform-auth-1  Recreated
+ Container robot-signs-platform-actuator-control-1  Recreated
+ Container robot-signs-platform-gateway-1  Recreated
+ Container robot-signs-platform-voice-capture-1  Recreated
+ Container robot-signs-platform-telemetry-1  Recreated
+ Container robot-signs-platform-nlp-1  Recreated
+ Container robot-signs-platform-sign-translation-1  Recreated
+ Container robot-signs-platform-nlp-db-1  Waiting
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-auth-db-1  Waiting
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-actuator-db-1  Waiting
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-telemetry-db-1  Waiting
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-signs-db-1  Waiting
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-voice-capture-1  Starting
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-gateway-1  Starting
+ Container robot-signs-platform-signs-db-1  Healthy
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-auth-db-1  Healthy
+ Container robot-signs-platform-actuator-db-1  Healthy
+ Container robot-signs-platform-actuator-control-1  Starting
+ Container robot-signs-platform-auth-1  Starting
+ Container robot-signs-platform-nlp-db-1  Healthy
+ Container robot-signs-platform-nlp-1  Starting
+ Container robot-signs-platform-telemetry-db-1  Healthy
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-stt-1  Starting
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-telemetry-1  Starting
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-sign-translation-1  Starting
+ Container robot-signs-platform-gateway-1  Started
+ Container robot-signs-platform-voice-capture-1  Started
+ Container robot-signs-platform-nlp-1  Started
+ Container robot-signs-platform-stt-1  Started
+ Container robot-signs-platform-telemetry-1  Started
+ Container robot-signs-platform-auth-1  Started
+ Container robot-signs-platform-actuator-control-1  Started
+ Container robot-signs-platform-sign-translation-1  Started
+ Container robot-signs-platform-stt-1  Stopping
+ Container robot-signs-platform-stt-1  Stopped
+==== STT nativo con el proveedor kichwa (pipeline de la API actual)
+==== arquitectura actual (3dc0738) en 8090
+  "wall_ms": {
+   "n": 239,
+   "mean": 941.1338912133891,
+   "median": 528.8,
+   "p95": 4072.199999999999,
+   "sd": 1762.7106086164322,
+   "min": 136.4,
+   "max": 11090.3
+  }
+ }
+}
+→ results/qa01_replica.json + .csv (600 filas)
+principal: 47 archivos, efecto +66.0 ms, IC95 59.2..78.0, IC90 59.3..77.1, equivalente=True
+actual    válidas 238/300 mediana 465 p95 2168 ms
+propuesta válidas 239/300 mediana 529 p95 4072 ms
+→ results/analysis_replica.json
+replicación terminada; plan en 7156d0b, medida sobre 4b59154
+scripts/run_replica_qa01.sh: line 41: 39869 Terminated: 15          "$LEGACY_VENV/bin/python" -m uvicorn app.main:app --host 127.0.0.1 --port 8090 > "$WORK/legacy.log" 2>&1
+scripts/run_replica_qa01.sh: line 39: 39865 Terminated: 15          NATS_URL=nats://127.0.0.1:4222 STT_PROVIDER=kichwa KICHWA_CONFIG_PATH=$CFG BUS_DURABLE_SUBJECTS=voice.audio.chunk BUS_DURABLE_MAX_AGE_S=30 PYTHONPATH=$WORK/stt:$ROOT/libs:$WORK/legacy "$LEGACY_VENV/bin/uvicorn" rspstt.main:app --host 127.0.0.1 --port 8095 > "$WORK/stt.log" 2>&1

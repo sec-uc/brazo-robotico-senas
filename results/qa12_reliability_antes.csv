@@ -1,0 +1,11 @@
+text,glosses,gestures,unknown_reported,dropped_letters,silent_gap
+hola,HOLA,4,,,False
+año,ANO,3,,,False
+ñandú,NANDU,5,,,False
+42,42,0,42,,False
+hola 42 bien,HOLA 42 BIEN,5,42,,False
+café,CAFE,4,,,False
+xyzw,XYZW,4,,,False
+hola ñ bien,HOLA N BIEN,6,,,False
+pingüino,PINGUINO,8,,,False
+¿cómo?,COMO,4,,,False

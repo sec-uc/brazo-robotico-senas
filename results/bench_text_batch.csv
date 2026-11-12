@@ -1,0 +1,61 @@
+i,label,text,accepted->executing,captured->transcribed,e2e_ms,executing->done,gestures,glossed->planned,mechanical_ms,planned->accepted,session_id,software_ms,status,transcribed->glossed,unknown
+0,text_batch,hola,0,0,1374,1372,1,1,1372,0,f888a4af41a14aa2b39f6026f013f8ed,2,done,1,0
+1,text_batch,bien,0,0,756,754,1,1,754,0,48af51bfa60e44af85efe642df1ca21a,2,done,1,0
+2,text_batch,mamá,0,0,910,908,1,1,908,0,895590957e724f3d87e874f785cd2998,2,done,1,0
+3,text_batch,agua,0,0,906,904,1,1,904,1,b79bd73275984362af77ca5d768f8057,2,done,0,0
+4,text_batch,arriba,1,0,757,755,1,1,755,0,81057533fc294dfeac260c9562ff67e5,1,done,0,0
+5,text_batch,abajo,0,0,759,757,1,1,757,1,7a11af837c2c46f3981f353a2301e43b,2,done,0,0
+6,text_batch,mañana,0,0,910,908,1,1,908,1,735b15634df64e2baa57c6de5bc93e26,2,done,0,0
+7,text_batch,manzana,0,0,910,908,1,1,908,1,2a2965c149af4f6e837b95f8962d88bf,2,done,0,0
+8,text_batch,mano,0,0,909,907,1,1,907,0,566994e168624d4d9dd96a52183b7651,2,done,1,0
+9,text_batch,mejor,1,0,909,907,1,1,907,0,f117bbb6f21b4897a95f86286088402a,1,done,0,0
+10,text_batch,uno,0,0,758,756,1,1,756,1,ad2e9f85a6204c8c91972cdf639de59e,2,done,0,0
+11,text_batch,cuatro,0,0,757,755,1,1,755,1,d29039711337483eb34f9a27aa165d00,2,done,0,0
+12,text_batch,ocho,0,0,757,755,1,1,755,1,c8e6665f5b5a463f9c78d65dc092acde,2,done,0,0
+13,text_batch,un ratito,0,0,754,752,1,1,752,0,1326c154420041a6a057b85cc7c89439,2,done,1,0
+14,text_batch,más o menos,0,0,912,910,1,0,910,1,c46d23db046e457bb3662f9197bd780f,2,done,1,0
+15,text_batch,mal,0,0,909,907,1,0,907,1,dea2918bf7ac4388b7cddd47e43d04d7,2,done,1,0
+16,text_batch,miel,0,0,926,924,1,1,924,0,df83f01c3c50461cb8766a65135a6517,2,done,1,0
+17,text_batch,moneda,0,0,911,909,1,1,909,0,6de22df94f414b729b9666f739272501,2,done,1,0
+18,text_batch,mesero,0,0,910,908,1,1,908,1,43a6e835b0b543e1ade5fe63edcb9a1c,2,done,0,0
+19,text_batch,mil,0,0,906,905,1,1,905,0,bc248ee7cf104f8db37d51eff3bbb44e,1,done,0,0
+20,text_batch,hola,0,0,1376,1374,1,1,1374,0,5d42c2798e76448f90453dcee097101c,2,done,1,0
+21,text_batch,bien,0,0,771,769,1,1,769,1,5f690cd8ad6e435d9be081fa38954fd7,2,done,0,0
+22,text_batch,mamá,0,0,919,918,1,1,918,0,56a0de1af6df4cd6a17f006483260dee,1,done,0,0
+23,text_batch,agua,1,0,922,920,1,1,920,0,a2d1699102b94a279402015f1365fd74,1,done,0,0
+24,text_batch,arriba,0,0,758,756,1,1,756,0,bb8c2d273d304813b281d09bac39fff8,2,done,1,0
+25,text_batch,abajo,0,0,764,762,1,1,762,1,b503ba3f919342b884c4df3fd9272d2a,2,done,0,0
+26,text_batch,mañana,0,0,927,925,1,1,925,0,cc10b380195e4323a6d0912053ae2570,2,done,1,0
+27,text_batch,manzana,0,0,907,905,1,0,905,1,94a3fb6a484a48589907af92f7c79037,2,done,1,0
+28,text_batch,mano,0,0,922,920,1,1,920,0,3a7e7c3e3dbc4e328f9d03b2daa7815a,2,done,1,0
+29,text_batch,mejor,0,0,915,913,1,1,913,1,fa5ca723f0624f7caf486b5d9af649ab,2,done,0,0
+30,text_batch,uno,0,0,759,757,1,1,757,0,efca9ad2aede4039bc13859fbf696e25,2,done,1,0
+31,text_batch,cuatro,0,0,772,770,1,1,770,0,14deb1618dd74dbfb5f956751dbd0daf,2,done,1,0
+32,text_batch,ocho,0,0,766,764,1,1,764,1,4e8672493c4945dfb1771e52bcef346a,2,done,0,0
+33,text_batch,un ratito,0,0,760,758,1,1,758,0,c423b7d5d6814eca9d33cc91229537fa,2,done,1,0
+34,text_batch,más o menos,0,0,910,908,1,1,908,0,55091f5d09304199a12c7342b42a557b,2,done,1,0
+35,text_batch,mal,0,0,911,909,1,0,909,1,d73030a2593542f8937919850085f168,2,done,1,0
+36,text_batch,miel,1,0,917,915,1,1,915,0,5c4a5900418f44e1b31945b55306a9aa,1,done,0,0
+37,text_batch,moneda,0,0,922,920,1,1,920,0,00265f2458714f47b894ef5892ddcf81,2,done,1,0
+38,text_batch,mesero,0,0,929,927,1,0,927,1,0d65cf5f022c4724a0c4710860bde693,2,done,1,0
+39,text_batch,mil,1,0,918,916,1,1,916,0,374e79965255493f87666807cc43d381,1,done,0,0
+40,text_batch,hola,1,0,1356,1354,1,1,1354,0,02738dedbf014a099b7c7b004c6cb9c9,1,done,0,0
+41,text_batch,bien,0,0,760,758,1,1,758,1,cf87c6dae3db422aad68f8e3536a522f,2,done,0,0
+42,text_batch,mamá,1,0,920,918,1,1,918,0,067a4b87dadc43ceaf8ff7dcff73aa64,1,done,0,0
+43,text_batch,agua,0,0,915,913,1,1,913,1,78cdc695e01d4243b518abb5cc8ddd40,2,done,0,0
+44,text_batch,arriba,0,0,766,764,1,1,764,1,c49322bdcd9147379186e674327b1aca,2,done,0,0
+45,text_batch,abajo,0,0,763,761,1,1,761,1,bf50edbc670942be9478463728144bf5,2,done,0,0
+46,text_batch,mañana,0,0,913,911,1,1,911,0,e018adcb303f416a9f5481a32d8af0e5,2,done,1,0
+47,text_batch,manzana,0,0,911,910,1,1,910,0,c730f94fedf74738b701f5a57a144368,1,done,0,0
+48,text_batch,mano,0,0,913,911,1,1,911,0,6dca832b225c4b51a27485ee01c04b42,2,done,1,0
+49,text_batch,mejor,0,0,917,915,1,1,915,1,d3142ceccd164bfdbd47399c53b98c37,2,done,0,0
+50,text_batch,uno,0,0,763,761,1,1,761,0,066d40d2f6194a9fb144c5fa5b18c683,2,done,1,0
+51,text_batch,cuatro,0,0,761,759,1,2,759,0,8e437829996646249d42163fcfeebf99,2,done,0,0
+52,text_batch,ocho,0,0,761,760,1,1,760,0,9758ffec6c2845b69c9564bbfb5c50d7,1,done,0,0
+53,text_batch,un ratito,0,0,761,758,1,1,758,1,da7d34d07f424b4aa56f830956a3936f,3,done,1,0
+54,text_batch,más o menos,0,0,923,921,1,1,921,1,ee71041684f14e7390137005d63c5e4f,2,done,0,0
+55,text_batch,mal,0,0,914,912,1,1,912,0,3067b7be54e944d5a6b915b1c2937c24,2,done,1,0
+56,text_batch,miel,0,0,919,917,1,1,917,0,b56246efcce54f6c9ce0b2cf058fb41b,2,done,1,0
+57,text_batch,moneda,0,0,915,913,1,1,913,1,c20f0383801e43958cde0c964654cfdc,2,done,0,0
+58,text_batch,mesero,0,0,915,913,1,1,913,1,025feee626d44796b6b4d97f392814aa,2,done,0,0
+59,text_batch,mil,0,0,921,919,1,0,919,1,4124dc850b824e75897ce41919beb760,2,done,1,0

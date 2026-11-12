@@ -1,0 +1,285 @@
+commit evaluado: bc5e656
+
+==== 1. plataforma con STT echo y brazo simulado
+ actuator-control  Built
+ auth  Built
+ gateway  Built
+ nlp  Built
+ sign-translation  Built
+ stt  Built
+ telemetry  Built
+ voice-capture  Built
+ Container robot-signs-platform-actuator-db-1  Running
+ Container robot-signs-platform-telemetry-db-1  Running
+ Container robot-signs-platform-auth-db-1  Running
+ Container robot-signs-platform-nats-1  Running
+ Container robot-signs-platform-prometheus-1  Running
+ Container robot-signs-platform-nlp-db-1  Running
+ Container robot-signs-platform-signs-db-1  Running
+ Container robot-signs-platform-gateway-1  Recreate
+ Container robot-signs-platform-nlp-1  Recreate
+ Container robot-signs-platform-grafana-1  Running
+ Container robot-signs-platform-actuator-control-1  Recreate
+ Container robot-signs-platform-voice-capture-1  Recreate
+ Container robot-signs-platform-telemetry-1  Recreate
+ Container robot-signs-platform-auth-1  Recreate
+ Container robot-signs-platform-stt-1  Recreate
+ Container robot-signs-platform-sign-translation-1  Recreate
+ Container robot-signs-platform-gateway-1  Recreated
+ Container robot-signs-platform-voice-capture-1  Recreated
+ Container robot-signs-platform-telemetry-1  Recreated
+ Container robot-signs-platform-stt-1  Recreated
+ Container robot-signs-platform-auth-1  Recreated
+ Container robot-signs-platform-actuator-control-1  Recreated
+ Container robot-signs-platform-sign-translation-1  Recreated
+ Container robot-signs-platform-nlp-1  Recreated
+ Container robot-signs-platform-actuator-db-1  Waiting
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-nlp-db-1  Waiting
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-signs-db-1  Waiting
+ Container robot-signs-platform-auth-db-1  Waiting
+ Container robot-signs-platform-telemetry-db-1  Waiting
+ Container robot-signs-platform-actuator-db-1  Healthy
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-auth-db-1  Healthy
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-auth-1  Starting
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-stt-1  Starting
+ Container robot-signs-platform-nlp-db-1  Healthy
+ Container robot-signs-platform-nlp-1  Starting
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-gateway-1  Starting
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-telemetry-db-1  Healthy
+ Container robot-signs-platform-voice-capture-1  Starting
+ Container robot-signs-platform-telemetry-1  Starting
+ Container robot-signs-platform-signs-db-1  Healthy
+ Container robot-signs-platform-sign-translation-1  Starting
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-actuator-control-1  Starting
+ Container robot-signs-platform-voice-capture-1  Started
+ Container robot-signs-platform-gateway-1  Started
+ Container robot-signs-platform-actuator-control-1  Started
+ Container robot-signs-platform-auth-1  Started
+ Container robot-signs-platform-telemetry-1  Started
+ Container robot-signs-platform-sign-translation-1  Started
+ Container robot-signs-platform-stt-1  Started
+ Container robot-signs-platform-nlp-1  Started
+
+==== QA-01/QA-08 texto (n=60)
+  transcribed->glossed     n=60 media=0.5 mediana=0.0 p95=1.0 sd=0.5 min=0 max=1
+
+CSV: results/bench_text_sim.csv
+
+==== QA-09 seguridad
+./.venv/lib/python3.11/site-packages/jwt/api_jwt.py:149: InsecureKeyLengthWarning: The HMAC key is 10 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+./.venv/lib/python3.11/site-packages/jwt/api_jwt.py:149: InsecureKeyLengthWarning: The HMAC key is 19 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+puertos: {'auth': 'no alcanzable', 'voice-capture': 'no alcanzable', 'stt': 'no alcanzable', 'nlp': 'no alcanzable', 'sign-translation': 'no alcanzable', 'actuator-control': 'no alcanzable', 'telemetry': 'no alcanzable'}
+rol viewer en rutas de operador: 8/8 con 403
+→ results/qa09_security.json + .csv (79 filas)
+
+==== QA-12 fiabilidad
+'¿cómo?'         glosas=['COMO'] gestos= 1 desconocidas=[] letras_perdidas='' 
+→ results/qa12_reliability_final.json + .csv (10 filas)
+
+==== QA-04 vocabulario
+ "add_time_ms_total": 24.900666999997156,
+ "planned_as_sign_immediately": 10,
+
+==== QA-06 fallo del proceso
+}
+→ results/qa06_availability_final_crash.json + .csv (256 filas)
+
+==== QA-06 corte prolongado (16 s)
+}
+→ results/qa06_availability_final_outage.json + .csv (226 filas)
+
+==== carga en modo texto
+concurrencia=  1 ok=64/64 sesiones/s=  21.8 software p50=1.5 p95=2.0 ms
+concurrencia=  2 ok=64/64 sesiones/s=  34.9 software p50=1.0 p95=2.0 ms
+concurrencia=  4 ok=64/64 sesiones/s=  34.0 software p50=2.0 p95=2.0 ms
+concurrencia=  8 ok=64/64 sesiones/s=  35.1 software p50=1.0 p95=2.0 ms
+concurrencia= 16 ok=64/64 sesiones/s=  35.1 software p50=1.0 p95=2.0 ms
+concurrencia= 32 ok=64/64 sesiones/s=  35.0 software p50=1.0 p95=2.0 ms
+→ results/load_text.json + .csv (390 filas)
+
+==== 2. driver por lotes (QA-05)
+ Container robot-signs-platform-actuator-db-1  Running
+ Container robot-signs-platform-nats-1  Running
+ Container robot-signs-platform-actuator-control-1  Recreate
+ Container robot-signs-platform-actuator-control-1  Recreated
+ Container robot-signs-platform-actuator-db-1  Waiting
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-actuator-db-1  Healthy
+ Container robot-signs-platform-actuator-control-1  Starting
+ Container robot-signs-platform-actuator-control-1  Started
+
+CSV: results/bench_text_batch.csv
+ Container robot-signs-platform-nats-1  Running
+ Container robot-signs-platform-actuator-db-1  Running
+ Container robot-signs-platform-actuator-control-1  Recreate
+ Container robot-signs-platform-actuator-control-1  Recreated
+ Container robot-signs-platform-actuator-db-1  Waiting
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-actuator-db-1  Healthy
+ Container robot-signs-platform-actuator-control-1  Starting
+ Container robot-signs-platform-actuator-control-1  Started
+
+==== 3a. faster-whisper base (int8) sin tope de salida: estado anterior a ADR-013, solo por configuración
+ stt  Built
+ Container robot-signs-platform-nats-1  Running
+ Container robot-signs-platform-stt-1  Recreate
+ Container robot-signs-platform-stt-1  Recreated
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-stt-1  Starting
+ Container robot-signs-platform-stt-1  Started
+ "meets_target_p95": false
+}
+→ results/qa01_asr_whisper_base_sin_tope.json + .csv (60 filas)
+ "meets_target_p95": true
+}
+→ results/qa01_asr_ctrl_sin_tope.json + .csv (120 filas)
+
+==== 3b. con el vocabulario de señas como sesgo y haz 5 (opción de ADR-013, no activa por defecto)
+ Container robot-signs-platform-nats-1  Running
+ Container robot-signs-platform-stt-1  Recreate
+ Container robot-signs-platform-stt-1  Recreated
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-stt-1  Starting
+ Container robot-signs-platform-stt-1  Started
+ "meets_target_p95": true
+}
+→ results/qa01_asr_whisper_base_sesgo.json + .csv (60 filas)
+ "meets_target_p95": true
+}
+→ results/qa01_asr_ctrl_sesgo.json + .csv (120 filas)
+
+==== 3. faster-whisper base (int8) con tope de salida (ADR-013): configuración del despliegue
+ Container robot-signs-platform-nats-1  Running
+ Container robot-signs-platform-stt-1  Recreate
+ Container robot-signs-platform-stt-1  Recreated
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-stt-1  Starting
+ Container robot-signs-platform-stt-1  Started
+ "meets_target_p95": true
+}
+→ results/qa01_asr_whisper_base.json + .csv (60 filas)
+ "meets_target_p95": true
+}
+→ results/qa01_asr_ctrl.json + .csv (120 filas)
+ "meets_target_p95": true
+}
+→ results/qa01_asr_whisper_base_n300.json + .csv (300 filas)
+
+==== QA-06 con reconocedor real: 30 terminaciones abruptas y ráfagas de audio durante una parada
+ "audio_done_s": {
+  "n": 27,
+  "mean": 7.196296296296297,
+  "median": 3.22,
+  "p95": 27.173,
+  "sd": 8.228271688863645,
+  "min": 0.76,
+  "max": 27.2
+ },
+ "text_ok_during_outage": 30
+}
+→ results/qa06_real_ciclos.json + .csv (30 filas)
+  "median": 14.68,
+  "p95": 17.4225,
+  "sd": 1.692295960515633,
+  "min": 11.63,
+  "max": 18.34
+ }
+}
+→ results/qa06_real_rafaga.json + .csv (90 filas)
+concurrencia=  1 ok=32/32 sesiones/s=   2.8 software p50=212.0 p95=503.6 ms
+concurrencia=  2 ok=32/32 sesiones/s=   3.5 software p50=382.5 p95=894.6 ms
+concurrencia=  4 ok=32/32 sesiones/s=   3.8 software p50=763.5 p95=1386.6 ms
+concurrencia=  8 ok=32/32 sesiones/s=   3.8 software p50=1882.5 p95=2555.2 ms
+→ results/load_voice_r1.json + .csv (132 filas)
+ Container robot-signs-platform-nats-1  Running
+ Container robot-signs-platform-stt-1  Running
+ Container robot-signs-platform-stt-2  Creating
+ Container robot-signs-platform-stt-2  Created
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-stt-2  Starting
+ Container robot-signs-platform-stt-2  Started
+concurrencia=  1 ok=32/32 sesiones/s=   2.8 software p50=212.0 p95=488.6 ms
+concurrencia=  2 ok=32/32 sesiones/s=   3.7 software p50=359.5 p95=938.2 ms
+concurrencia=  4 ok=32/32 sesiones/s=   3.5 software p50=803.0 p95=2359.7 ms
+concurrencia=  8 ok=32/32 sesiones/s=   3.6 software p50=1877.0 p95=3325.7 ms
+→ results/load_voice_r2.json + .csv (132 filas)
+ Container robot-signs-platform-nats-1  Running
+ Container robot-signs-platform-stt-1  Running
+ Container robot-signs-platform-stt-2  Stopping
+ Container robot-signs-platform-stt-2  Stopped
+ Container robot-signs-platform-stt-2  Removing
+ Container robot-signs-platform-stt-2  Removed
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-nats-1  Healthy
+
+==== 4. faster-whisper small
+ Container robot-signs-platform-nats-1  Running
+ Container robot-signs-platform-stt-1  Recreate
+ Container robot-signs-platform-stt-1  Recreated
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-stt-1  Starting
+ Container robot-signs-platform-stt-1  Started
+ "meets_target_p95": true
+}
+→ results/qa01_asr_whisper_small.json + .csv (60 filas)
+
+==== 5. openai-whisper base fp32 (mismo motor que la arquitectura actual)
+ stt  Built
+ Container robot-signs-platform-nats-1  Running
+ Container robot-signs-platform-stt-1  Recreate
+ Container robot-signs-platform-stt-1  Recreated
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-stt-1  Starting
+ Container robot-signs-platform-stt-1  Started
+ "meets_target_p95": false
+}
+→ results/qa01_asr_whisper_openai.json + .csv (60 filas)
+
+==== 6. vuelta a echo, análisis y datos de figuras
+ stt  Built
+ Container robot-signs-platform-nats-1  Running
+ Container robot-signs-platform-stt-1  Recreate
+ Container robot-signs-platform-stt-1  Recreated
+ Container robot-signs-platform-nats-1  Waiting
+ Container robot-signs-platform-nats-1  Healthy
+ Container robot-signs-platform-stt-1  Starting
+ Container robot-signs-platform-stt-1  Started
+
+→ robot-signs-platform/results/coupling.json
+mismo_codigo_de_reconocimien validas n=47 Δmed=   67.6 IC95=   63.0..   84.1 Wilcoxon p=0.000 equiv±200=True más_rápida=False
+mismo_codigo_de_reconocimien todas   n=60 Δmed=   63.1 IC95=   59.0..   74.6 Wilcoxon p=0.000 equiv±200=True más_rápida=False
+misma_arquitectura_de_motor  validas n=48 Δmed=   37.9 IC95=   21.3..  939.0 Wilcoxon p=0.000 equiv±200=False más_rápida=False
+misma_arquitectura_de_motor  todas   n=60 Δmed=  320.2 IC95=   33.9..  939.4 Wilcoxon p=0.000 equiv±200=False más_rápida=False
+motor_de_cada_sistema (faste validas n=48 Δmed= -118.0 IC95= -162.1.. -101.8 Wilcoxon p=0.000 equiv±200=True más_rápida=True
+motor_de_cada_sistema (faste todas   n=60 Δmed= -108.2 IC95= -139.3..   26.2 Wilcoxon p=0.198 equiv±200=True más_rápida=False
+→ results/analysis_latency.json
+167 passed in 5.60s
+→ Articulo_Robot_Senas/datos: asr_compromiso.csv, cobertura.csv, concurrencia.csv, disponibilidad_antes.csv, disponibilidad_antes_corte.csv, disponibilidad_despues.csv, disponibilidad_despues_corte.csv, escalado_voz.csv, etapas.csv, impacto_cambio.csv, latencia.csv, latencia_cliente_atipicos.csv, latencia_cliente_caja.csv, mecanica.csv, qa08.csv, resumen.json
+
+evaluación terminada sobre bc5e656

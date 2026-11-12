@@ -1,0 +1,61 @@
+i,file,voice,reference,status,polls,wall_ms,transcript,exact,wer
+0,hola__v0.wav,Paulina,hola,completed,1,410.4,Hola.,True,0.0
+1,bien__v0.wav,Paulina,bien,completed,1,389.2,Bien.,True,0.0
+2,mama__v0.wav,Paulina,mamá,completed,1,8583.8,No me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me,False,223.0
+3,agua__v0.wav,Paulina,agua,completed,1,585.7,¡Egüe!,False,1.0
+4,arriba__v0.wav,Paulina,arriba,completed,1,378.0,arriba.,True,0.0
+5,abajo__v0.wav,Paulina,abajo,completed,1,491.0,Abajo.,True,0.0
+6,manana__v0.wav,Paulina,mañana,completed,1,469.4,Manllana.,False,1.0
+7,manzana__v0.wav,Paulina,manzana,completed,1,483.4,Monsana.,False,1.0
+8,mano__v0.wav,Paulina,mano,completed,1,511.4,Mato.,False,1.0
+9,mejor__v0.wav,Paulina,mejor,completed,1,376.7,mejor.,True,0.0
+10,uno__v0.wav,Paulina,uno,completed,1,336.4,Una,False,1.0
+11,cuatro__v0.wav,Paulina,cuatro,completed,1,83.3,,False,1.0
+12,ocho__v0.wav,Paulina,ocho,completed,1,508.3,Ocho.,True,0.0
+13,un_ratito__v0.wav,Paulina,un ratito,completed,1,460.4,un ratito.,True,0.0
+14,mas_o_menos__v0.wav,Paulina,más o menos,completed,1,90.9,más o menos.,True,0.0
+15,mal__v0.wav,Paulina,mal,completed,1,371.5,Mal,True,0.0
+16,miel__v0.wav,Paulina,miel,completed,1,442.3,miel,True,0.0
+17,moneda__v0.wav,Paulina,moneda,completed,1,492.8,Unirá.,False,1.0
+18,mesero__v0.wav,Paulina,mesero,completed,1,458.3,Mecero.,False,1.0
+19,mil__v0.wav,Paulina,mil,completed,1,447.1,mil,True,0.0
+20,hola__v1.wav,Mónica,hola,completed,1,79.3,Hola,True,0.0
+21,bien__v1.wav,Mónica,bien,completed,1,415.8,bien,True,0.0
+22,mama__v1.wav,Mónica,mamá,completed,1,464.7,¡Mama!,True,0.0
+23,agua__v1.wav,Mónica,agua,completed,1,408.2,Agua.,True,0.0
+24,arriba__v1.wav,Mónica,arriba,completed,1,458.6,arriba,True,0.0
+25,abajo__v1.wav,Mónica,abajo,completed,1,559.1,¡Adiós!,False,1.0
+26,manana__v1.wav,Mónica,mañana,completed,1,361.9,mañana,True,0.0
+27,manzana__v1.wav,Mónica,manzana,completed,1,450.9,Manzana.,True,0.0
+28,mano__v1.wav,Mónica,mano,completed,1,420.0,Mano.,True,0.0
+29,mejor__v1.wav,Mónica,mejor,completed,1,341.8,mejor,True,0.0
+30,uno__v1.wav,Mónica,uno,completed,1,368.0,Una,False,1.0
+31,cuatro__v1.wav,Mónica,cuatro,completed,1,82.6,,False,1.0
+32,ocho__v1.wav,Mónica,ocho,completed,1,442.4,Ocho.,True,0.0
+33,un_ratito__v1.wav,Mónica,un ratito,completed,1,459.1,Un ratito.,True,0.0
+34,mas_o_menos__v1.wav,Mónica,más o menos,completed,1,532.9,más o menos.,True,0.0
+35,mal__v1.wav,Mónica,mal,completed,1,436.7,Maldi,False,1.0
+36,miel__v1.wav,Mónica,miel,completed,1,432.1,Mil,False,1.0
+37,moneda__v1.wav,Mónica,moneda,completed,1,380.9,moneda,True,0.0
+38,mesero__v1.wav,Mónica,mesero,completed,1,476.4,Me siro.,False,2.0
+39,mil__v1.wav,Mónica,mil,completed,1,82.4,,False,1.0
+40,hola__v2.wav,Eddy (Español (México)),hola,completed,1,93.8,,False,1.0
+41,bien__v2.wav,Eddy (Español (México)),bien,completed,1,415.3,bien.,True,0.0
+42,mama__v2.wav,Eddy (Español (México)),mamá,completed,1,106.1,,False,1.0
+43,agua__v2.wav,Eddy (Español (México)),agua,completed,1,6109.4,,False,1.0
+44,arriba__v2.wav,Eddy (Español (México)),arriba,completed,1,567.8,arriba.,True,0.0
+45,abajo__v2.wav,Eddy (Español (México)),abajo,completed,1,694.9,¡Adiós!,False,1.0
+46,manana__v2.wav,Eddy (Español (México)),mañana,completed,1,457.1,vanyana.,False,1.0
+47,manzana__v2.wav,Eddy (Español (México)),manzana,completed,1,9206.2,de la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda vez en la segunda,False,223.0
+48,mano__v2.wav,Eddy (Español (México)),mano,completed,1,83.7,,False,1.0
+49,mejor__v2.wav,Eddy (Español (México)),mejor,completed,1,468.6,de color.,False,2.0
+50,uno__v2.wav,Eddy (Español (México)),uno,completed,1,84.7,,False,1.0
+51,cuatro__v2.wav,Eddy (Español (México)),cuatro,completed,1,393.3,cuatro.,True,0.0
+52,ocho__v2.wav,Eddy (Español (México)),ocho,completed,1,87.3,,False,1.0
+53,un_ratito__v2.wav,Eddy (Español (México)),un ratito,completed,1,478.2,un pratito.,False,0.5
+54,mas_o_menos__v2.wav,Eddy (Español (México)),más o menos,completed,1,460.3,por más o menos,False,0.333
+55,mal__v2.wav,Eddy (Español (México)),mal,completed,1,85.5,,False,1.0
+56,miel__v2.wav,Eddy (Español (México)),miel,completed,1,99.0,,False,1.0
+57,moneda__v2.wav,Eddy (Español (México)),moneda,completed,1,525.1,moneda,True,0.0
+58,mesero__v2.wav,Eddy (Español (México)),mesero,completed,1,752.2,un besero.,False,2.0
+59,mil__v2.wav,Eddy (Español (México)),mil,completed,1,81.5,,False,1.0

@@ -1,0 +1,2 @@
+# extra opcional: STT_PROVIDER=whisper
+faster-whisper>=1.0

@@ -1,0 +1,21 @@
+# Sustituye el motor de reconocimiento por faster-whisper (QA-03 / QA-01 con voz real).
+#   docker compose -f docker-compose.yml -f docker-compose.whisper.yml up -d --build stt
+services:
+  stt:
+    build:
+      args: { WITH_WHISPER: "1" }
+    environment:
+      STT_PROVIDER: whisper
+      WHISPER_MODEL: ${WHISPER_MODEL:-base}
+      WHISPER_DEVICE: cpu
+      WHISPER_COMPUTE: int8
+      WHISPER_BEAM: ${WHISPER_BEAM:-1}
+      WHISPER_MAX_TOKENS: ${WHISPER_MAX_TOKENS-32}   # 0 = sin tope ni freno de repeticiones
+      # sesgo por el vocabulario de señas: opcional, su mejora de exactitud no quedó demostrada (ADR-013).
+      # Para activarlo: SIGNS_VOCAB_URL=http://sign-translation:8000/signs WHISPER_BEAM=5
+      SIGNS_VOCAB_URL: ${SIGNS_VOCAB_URL:-}
+      HF_HOME: /data/hf
+    volumes:
+      - whisper-models:/data/hf
+volumes:
+  whisper-models:

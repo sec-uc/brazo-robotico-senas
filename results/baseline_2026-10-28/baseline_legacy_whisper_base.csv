@@ -1,0 +1,61 @@
+i,file,voice,reference,status,polls,wall_ms,transcript,exact,wer
+0,hola__v0.wav,Paulina,hola,completed,1,390.9,Hola.,True,0.0
+1,bien__v0.wav,Paulina,bien,completed,1,397.4,bien,True,0.0
+2,mama__v0.wav,Paulina,mamá,completed,1,8775.2,no me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me,False,223.0
+3,agua__v0.wav,Paulina,agua,completed,1,602.1,¡Egüe!,False,1.0
+4,arriba__v0.wav,Paulina,arriba,completed,1,412.8,arriba.,True,0.0
+5,abajo__v0.wav,Paulina,abajo,completed,1,490.4,¡Avajo!,False,1.0
+6,manana__v0.wav,Paulina,mañana,completed,1,453.7,Manllana.,False,1.0
+7,manzana__v0.wav,Paulina,manzana,completed,1,535.4,Máncana.,False,1.0
+8,mano__v0.wav,Paulina,mano,completed,1,432.1,Mano.,True,0.0
+9,mejor__v0.wav,Paulina,mejor,completed,1,386.7,mejor.,True,0.0
+10,uno__v0.wav,Paulina,uno,completed,1,340.4,Una,False,1.0
+11,cuatro__v0.wav,Paulina,cuatro,completed,1,78.7,,False,1.0
+12,ocho__v0.wav,Paulina,ocho,completed,1,501.4,Ocho.,True,0.0
+13,un_ratito__v0.wav,Paulina,un ratito,completed,1,489.3,un ratito.,True,0.0
+14,mas_o_menos__v0.wav,Paulina,más o menos,completed,1,87.8,más o menos.,True,0.0
+15,mal__v0.wav,Paulina,mal,completed,1,352.6,Mal,True,0.0
+16,miel__v0.wav,Paulina,miel,completed,1,405.7,miel,True,0.0
+17,moneda__v0.wav,Paulina,moneda,completed,1,557.3,¡Muenida!,False,1.0
+18,mesero__v0.wav,Paulina,mesero,completed,1,493.8,Mecero.,False,1.0
+19,mil__v0.wav,Paulina,mil,completed,1,479.8,Mil.,True,0.0
+20,hola__v1.wav,Mónica,hola,completed,1,82.2,Hola,True,0.0
+21,bien__v1.wav,Mónica,bien,completed,1,389.2,Bien.,True,0.0
+22,mama__v1.wav,Mónica,mamá,completed,1,470.4,M-m-,False,2.0
+23,agua__v1.wav,Mónica,agua,completed,1,417.5,Agua.,True,0.0
+24,arriba__v1.wav,Mónica,arriba,completed,1,486.0,arriba,True,0.0
+25,abajo__v1.wav,Mónica,abajo,completed,1,538.1,A ver si lo...,False,4.0
+26,manana__v1.wav,Mónica,mañana,completed,1,369.2,mañana,True,0.0
+27,manzana__v1.wav,Mónica,manzana,completed,1,488.2,Manzana.,True,0.0
+28,mano__v1.wav,Mónica,mano,completed,1,442.7,Manu.,False,1.0
+29,mejor__v1.wav,Mónica,mejor,completed,1,377.3,mejor,True,0.0
+30,uno__v1.wav,Mónica,uno,completed,1,350.4,Una,False,1.0
+31,cuatro__v1.wav,Mónica,cuatro,completed,1,80.4,,False,1.0
+32,ocho__v1.wav,Mónica,ocho,completed,1,444.0,ocho,True,0.0
+33,un_ratito__v1.wav,Mónica,un ratito,completed,1,461.6,Un ratito.,True,0.0
+34,mas_o_menos__v1.wav,Mónica,más o menos,completed,1,464.8,más o menos.,True,0.0
+35,mal__v1.wav,Mónica,mal,completed,1,3842.1,el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el que es el,False,223.0
+36,miel__v1.wav,Mónica,miel,completed,1,443.4,Miel.,True,0.0
+37,moneda__v1.wav,Mónica,moneda,completed,1,395.5,moneda,True,0.0
+38,mesero__v1.wav,Mónica,mesero,completed,1,467.7,Me siro.,False,2.0
+39,mil__v1.wav,Mónica,mil,completed,1,93.2,,False,1.0
+40,hola__v2.wav,Eddy (Español (México)),hola,completed,1,97.1,,False,1.0
+41,bien__v2.wav,Eddy (Español (México)),bien,completed,1,435.4,bien,True,0.0
+42,mama__v2.wav,Eddy (Español (México)),mamá,completed,1,90.6,,False,1.0
+43,agua__v2.wav,Eddy (Español (México)),agua,completed,1,9567.7,y la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad es que la verdad,False,223.0
+44,arriba__v2.wav,Eddy (Español (México)),arriba,completed,1,500.1,arriba.,True,0.0
+45,abajo__v2.wav,Eddy (Español (México)),abajo,completed,1,611.4,¡Bien!,False,1.0
+46,manana__v2.wav,Eddy (Español (México)),mañana,completed,1,454.5,vayan a.,False,2.0
+47,manzana__v2.wav,Eddy (Español (México)),manzana,completed,1,6851.4,,False,1.0
+48,mano__v2.wav,Eddy (Español (México)),mano,completed,1,81.9,,False,1.0
+49,mejor__v2.wav,Eddy (Español (México)),mejor,completed,1,474.0,de cor.,False,2.0
+50,uno__v2.wav,Eddy (Español (México)),uno,completed,1,85.5,,False,1.0
+51,cuatro__v2.wav,Eddy (Español (México)),cuatro,completed,1,391.2,4,False,1.0
+52,ocho__v2.wav,Eddy (Español (México)),ocho,completed,1,86.2,,False,1.0
+53,un_ratito__v2.wav,Eddy (Español (México)),un ratito,completed,1,502.7,un gratito.,False,0.5
+54,mas_o_menos__v2.wav,Eddy (Español (México)),más o menos,completed,1,462.0,más o menos.,True,0.0
+55,mal__v2.wav,Eddy (Español (México)),mal,completed,1,78.8,,False,1.0
+56,miel__v2.wav,Eddy (Español (México)),miel,completed,1,91.6,,False,1.0
+57,moneda__v2.wav,Eddy (Español (México)),moneda,completed,1,520.1,de la,False,2.0
+58,mesero__v2.wav,Eddy (Español (México)),mesero,completed,1,8527.5,"Y en el momento que nos vamos a hacer, vamos a hacer un poco de un poco de deshazamiento",False,19.0
+59,mil__v2.wav,Eddy (Español (México)),mil,completed,1,103.0,,False,1.0

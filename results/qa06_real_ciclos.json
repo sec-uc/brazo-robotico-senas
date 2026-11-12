@@ -1,0 +1,39 @@
+{
+  "experiment": "qa06_real_ciclos",
+  "environment": {
+    "timestamp_utc": "2026-11-12T18:56:23+00:00",
+    "host": "macOS-26.5.2-arm64-arm-64bit",
+    "cpu": "Apple M4 Pro",
+    "cpus": 12,
+    "docker": "28.1.1",
+    "git_commit": "1fd015d",
+    "git_dirty": false,
+    "stt_provider": "whisper"
+  },
+  "mode": "ciclos",
+  "cycles": 30,
+  "recovered": 30,
+  "recovery_s": {
+    "n": 30,
+    "mean": 11.660666666666666,
+    "median": 3.84,
+    "p95": 52.6425,
+    "sd": 15.928901716221915,
+    "min": 1.56,
+    "max": 52.79
+  },
+  "audio_sent_with_stt_down": 30,
+  "audio_processed": 27,
+  "audio_sent_total": 30,
+  "audio_processed_total": 27,
+  "audio_done_s": {
+    "n": 27,
+    "mean": 7.198888888888889,
+    "median": 3.13,
+    "p95": 26.989,
+    "sd": 8.186129607373557,
+    "min": 1.59,
+    "max": 27.35
+  },
+  "text_ok_during_outage": 30
+}

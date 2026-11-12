@@ -1,0 +1,493 @@
+{
+  "experiment": "qa06_availability_bus_antes_outage",
+  "environment": {
+    "timestamp_utc": "2026-10-28T20:31:50+00:00",
+    "host": "macOS-26.5.2-arm64-arm-64bit",
+    "cpu": "Apple M4 Pro",
+    "cpus": 12,
+    "docker": "28.1.1",
+    "git_commit": "9b13b6f",
+    "git_dirty": false,
+    "stt_provider": "echo",
+    "sut_dir": "antes",
+    "sut_commit": "e467743",
+    "sut_dirty": false,
+    "sut_diff": "",
+    "sut_note": "plataforma en e467743"
+  },
+  "summary": {
+    "mode": "outage",
+    "t_fail_s": 10.0,
+    "stt_down_detected_s": 10.33,
+    "stt_healthy_again_s": 26.53,
+    "recovery_s": 16.53,
+    "others_ok_during_outage": true,
+    "sessions": {
+      "text": {
+        "total": 147,
+        "ok": 147,
+        "ok_during_outage": 53,
+        "total_during_outage": 53,
+        "first_ok_after_fail_s": 10.04
+      },
+      "audio": {
+        "total": 83,
+        "ok": 81,
+        "ok_during_outage": 0,
+        "total_during_outage": 2,
+        "first_ok_after_fail_s": 26.93
+      }
+    },
+    "audio_during_outage_processed_after_recovery": {
+      "sent": 2,
+      "done_later": 0
+    }
+  },
+  "health": [
+    {
+      "t": 0.03,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 0.56,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 1.07,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 1.58,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 2.09,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 2.61,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 3.12,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 3.63,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 4.15,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 4.66,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 5.17,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 5.69,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 6.21,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 6.72,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 7.23,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 7.75,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 8.27,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 8.78,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 9.3,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 9.82,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 10.33,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 10.84,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 11.37,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 11.88,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 12.41,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 12.93,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 13.45,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 13.98,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 14.5,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 15.03,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 15.56,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 16.08,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 16.61,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 17.13,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 17.65,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 18.17,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 18.69,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 19.2,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 19.73,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 20.26,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 20.79,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 21.3,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 21.84,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 22.36,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 22.89,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 23.41,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 23.94,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 24.46,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 24.99,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 25.51,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 26.02,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 26.53,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 27.05,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 27.56,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 28.08,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 28.59,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 29.1,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 29.62,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 30.14,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 30.66,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 31.17,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 31.68,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 32.2,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 32.72,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 33.23,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 33.75,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 34.26,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 34.78,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 35.29,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 35.8,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 36.33,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 36.84,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 37.36,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 37.87,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 38.38,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 38.9,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 39.42,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 39.93,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 40.44,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 40.96,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 41.47,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 41.98,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 42.5,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 43.01,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 43.53,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 44.04,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 44.56,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 45.08,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 45.59,
+      "stt": "ok",
+      "others_ok": true
+    }
+  ]
+}

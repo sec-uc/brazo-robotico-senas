@@ -1,0 +1,136 @@
+{
+  "plan": "docs/plan-replica-qa01.md",
+  "principal": {
+    "analisis": "válidas, ≥3 por archivo y sistema",
+    "archivos": 47,
+    "efecto_mediana_ms": 66.0,
+    "ic95_ms": [
+      59.19999999999999,
+      77.99999999999994
+    ],
+    "ic90_ms": [
+      59.299999999999955,
+      77.10000000000002
+    ],
+    "wilcoxon_p": 3.504396772768814e-10,
+    "equivalente_tost_200": true
+  },
+  "secundarios": {
+    "todas": {
+      "analisis": "todas las mediciones",
+      "archivos": 60,
+      "efecto_mediana_ms": 61.80000000000001,
+      "ic95_ms": [
+        58.19999999999999,
+        71.15
+      ],
+      "ic90_ms": [
+        58.7,
+        69.94999999999999
+      ],
+      "wilcoxon_p": 3.2401330940893454e-10,
+      "equivalente_tost_200": true
+    },
+    "por_repeticion": [
+      {
+        "analisis": "repetición 1",
+        "archivos": 60,
+        "efecto_mediana_ms": 54.85000000000001,
+        "ic95_ms": [
+          46.5,
+          57.999999999999986
+        ],
+        "ic90_ms": [
+          47.5,
+          57.80000000000001
+        ],
+        "wilcoxon_p": 2.163851924462012e-09,
+        "equivalente_tost_200": true
+      },
+      {
+        "analisis": "repetición 2",
+        "archivos": 60,
+        "efecto_mediana_ms": 65.45000000000002,
+        "ic95_ms": [
+          56.0,
+          70.44999999999996
+        ],
+        "ic90_ms": [
+          58.30000000000001,
+          69.59999999999997
+        ],
+        "wilcoxon_p": 4.633245446262295e-09,
+        "equivalente_tost_200": true
+      },
+      {
+        "analisis": "repetición 3",
+        "archivos": 60,
+        "efecto_mediana_ms": 62.30000000000002,
+        "ic95_ms": [
+          57.699999999999996,
+          71.9
+        ],
+        "ic90_ms": [
+          58.39999999999999,
+          69.25000000000003
+        ],
+        "wilcoxon_p": 6.0385700555246034e-09,
+        "equivalente_tost_200": true
+      },
+      {
+        "analisis": "repetición 4",
+        "archivos": 60,
+        "efecto_mediana_ms": 67.95000000000002,
+        "ic95_ms": [
+          57.900000000000006,
+          79.0
+        ],
+        "ic90_ms": [
+          59.099999999999994,
+          76.39999999999998
+        ],
+        "wilcoxon_p": 6.001563068523749e-07,
+        "equivalente_tost_200": true
+      },
+      {
+        "analisis": "repetición 5",
+        "archivos": 60,
+        "efecto_mediana_ms": 61.19999999999999,
+        "ic95_ms": [
+          54.30000000000007,
+          70.60000000000002
+        ],
+        "ic90_ms": [
+          54.79999999999999,
+          68.30000000000001
+        ],
+        "wilcoxon_p": 1.065456647107426e-08,
+        "equivalente_tost_200": true
+      }
+    ]
+  },
+  "por_sistema": {
+    "actual": {
+      "mediciones": 300,
+      "validas": 238,
+      "vacias": 62,
+      "mediana_ms": 464.8,
+      "p95_ms": 2167.944999999988,
+      "p95_ic95_ms": [
+        620.1,
+        6042.224999999934
+      ]
+    },
+    "propuesta": {
+      "mediciones": 300,
+      "validas": 239,
+      "vacias": 61,
+      "mediana_ms": 528.8,
+      "p95_ms": 4072.199999999999,
+      "p95_ic95_ms": [
+        733.3,
+        8937.7
+      ]
+    }
+  }
+}

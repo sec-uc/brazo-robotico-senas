@@ -1,0 +1,121 @@
+i,file,voice,set,reference,transcript,status,exact,wer,gloss_match,stt_ms,nlp_ms,plan_ms,accept_ms,software_ms,wall_ms
+0,in_martes__v0.wav,Paulina,in,martes,martes,done,True,0.0,True,275,0,1,1,277,325.4
+1,in_martes__v1.wav,Mónica,in,martes,martes,done,True,0.0,True,284,1,1,0,286,341.0
+2,in_martes__v2.wav,Eddy (Español (México)),in,martes,vartes,done,False,1.0,False,297,1,0,1,299,361.2
+3,in_miercoles__v0.wav,Paulina,in,miércoles,miércoles,done,True,0.0,True,281,1,0,1,283,333.4
+4,in_miercoles__v1.wav,Mónica,in,miércoles,miercoles,done,True,0.0,True,272,0,1,0,273,323.1
+5,in_miercoles__v2.wav,Eddy (Español (México)),in,miércoles,mercomes,done,False,1.0,False,658,0,1,1,660,713.8
+6,in_mujer__v0.wav,Paulina,in,mujer,mujer,done,True,0.0,True,260,1,0,1,262,314.7
+7,in_mujer__v1.wav,Mónica,in,mujer,mucer mucero mucera mucere muceres mucerno,done,False,6.0,False,1085,0,3,1,1089,1143.7
+8,in_mujer__v2.wav,Eddy (Español (México)),in,mujer,buel,done,False,1.0,False,708,1,0,1,710,759.7
+9,in_mosca__v0.wav,Paulina,in,mosca,mosca,done,True,0.0,True,257,1,0,1,259,310.0
+10,in_mosca__v1.wav,Mónica,in,mosca,mosca,done,True,0.0,True,281,1,1,0,283,339.9
+11,in_mosca__v2.wav,Eddy (Español (México)),in,mosca,mosca,done,True,0.0,True,296,0,1,0,297,347.6
+12,in_morado__v0.wav,Paulina,in,morado,morado,done,True,0.0,True,290,0,1,0,291,339.8
+13,in_morado__v1.wav,Mónica,in,morado,morado,done,True,0.0,True,288,0,1,0,289,341.9
+14,in_morado__v2.wav,Eddy (Español (México)),in,morado,morado,done,True,0.0,True,306,1,1,0,308,602.2
+15,in_muela__v0.wav,Paulina,in,muela,muela,done,True,0.0,True,265,0,1,0,266,623.1
+16,in_muela__v1.wav,Mónica,in,muela,mola,done,False,1.0,False,243,0,1,0,244,306.9
+17,in_muela__v2.wav,Eddy (Español (México)),in,muela,bueno,done,False,1.0,False,254,1,1,0,256,311.3
+18,in_mango__v0.wav,Paulina,in,mango,mango,done,True,0.0,True,249,1,0,1,251,301.4
+19,in_mango__v1.wav,Mónica,in,mango,mego,done,False,1.0,False,248,0,1,0,249,300.1
+20,in_mango__v2.wav,Eddy (Español (México)),in,mango,mago,done,False,1.0,False,273,1,1,0,275,326.4
+21,in_mentir__v0.wav,Paulina,in,mentir,mentir,done,True,0.0,True,257,0,1,0,258,308.5
+22,in_mentir__v1.wav,Mónica,in,mentir,mentir,done,True,0.0,True,254,0,1,0,255,303.3
+23,in_mentir__v2.wav,Eddy (Español (México)),in,mentir,mentir,done,True,0.0,True,675,0,1,0,676,731.2
+24,in_morir__v0.wav,Paulina,in,morir,morir,done,True,0.0,True,284,0,1,0,285,337.1
+25,in_morir__v1.wav,Mónica,in,morir,morir,done,True,0.0,True,274,1,1,0,276,545.1
+26,in_morir__v2.wav,Eddy (Español (México)),in,morir,morir,done,True,0.0,True,284,1,0,1,286,342.2
+27,in_mayor__v0.wav,Paulina,in,mayor,major,done,False,1.0,False,951,0,1,1,953,1003.7
+28,in_mayor__v1.wav,Mónica,in,mayor,mayor,done,True,0.0,True,259,0,1,0,260,311.8
+29,in_mayor__v2.wav,Eddy (Español (México)),in,mayor,mayor,done,True,0.0,True,288,1,0,1,290,338.0
+30,in_malo__v0.wav,Paulina,in,malo,malo,done,True,0.0,True,248,0,1,0,249,301.2
+31,in_malo__v1.wav,Mónica,in,malo,malo,done,True,0.0,True,245,1,0,1,247,298.7
+32,in_malo__v2.wav,Eddy (Español (México)),in,malo,malo,done,True,0.0,True,255,1,0,1,257,308.8
+33,in_millon__v0.wav,Paulina,in,millón,misione,done,False,1.0,False,810,1,1,1,813,863.2
+34,in_millon__v1.wav,Mónica,in,millón,misione,done,False,1.0,False,752,1,1,0,754,806.7
+35,in_millon__v2.wav,Eddy (Español (México)),in,millón,melón,done,False,1.0,False,785,0,1,1,787,840.0
+36,in_militar__v0.wav,Paulina,in,militar,militares,done,False,1.0,False,257,1,1,0,259,312.2
+37,in_militar__v1.wav,Mónica,in,militar,militar,done,True,0.0,True,260,1,0,1,262,309.5
+38,in_militar__v2.wav,Eddy (Español (México)),in,militar,militar,done,True,0.0,True,290,0,1,0,291,342.2
+39,in_mexico__v0.wav,Paulina,in,méxico,mexico,done,True,0.0,True,261,0,1,0,262,314.0
+40,in_mexico__v1.wav,Mónica,in,méxico,mexico,done,True,0.0,True,248,1,0,1,250,297.6
+41,in_mexico__v2.wav,Eddy (Español (México)),in,méxico,vejito,done,False,1.0,False,744,0,1,1,746,797.1
+42,in_mora__v0.wav,Paulina,in,mora,mora mora,done,False,1.0,False,270,0,1,0,271,323.3
+43,in_mora__v1.wav,Mónica,in,mora,mora,done,True,0.0,True,262,0,1,0,263,316.9
+44,in_mora__v2.wav,Eddy (Español (México)),in,mora,mora,done,True,0.0,True,282,1,0,1,284,334.5
+45,in_mancha__v0.wav,Paulina,in,mancha,mancha,done,True,0.0,True,338,1,1,0,340,391.2
+46,in_mancha__v1.wav,Mónica,in,mancha,mancha,done,True,0.0,True,266,1,0,1,268,324.7
+47,in_mancha__v2.wav,Eddy (Español (México)),in,mancha,vancha,done,False,1.0,False,281,0,1,1,283,332.5
+48,in_marcador__v0.wav,Paulina,in,marcador,marcador,done,True,0.0,True,258,0,1,0,259,313.0
+49,in_marcador__v1.wav,Mónica,in,marcador,marcador,done,True,0.0,True,280,1,0,1,282,335.7
+50,in_marcador__v2.wav,Eddy (Español (México)),in,marcador,marcador,done,True,0.0,True,280,0,1,0,281,335.8
+51,in_mareo__v0.wav,Paulina,in,mareo,mario,done,False,1.0,False,737,1,1,0,739,787.5
+52,in_mareo__v1.wav,Mónica,in,mareo,mareo,done,True,0.0,True,302,0,1,0,303,351.9
+53,in_mareo__v2.wav,Eddy (Español (México)),in,mareo,mareo,done,True,0.0,True,289,0,1,0,290,341.8
+54,in_merienda__v0.wav,Paulina,in,merienda,merienda,done,True,0.0,True,303,1,1,0,305,359.2
+55,in_merienda__v1.wav,Mónica,in,merienda,merienda,done,True,0.0,True,288,1,0,1,290,340.5
+56,in_merienda__v2.wav,Eddy (Español (México)),in,merienda,merienda,done,True,0.0,True,274,1,0,1,276,327.2
+57,in_grado__v0.wav,Paulina,in,grado,grado,done,True,0.0,True,248,1,0,1,250,301.3
+58,in_grado__v1.wav,Mónica,in,grado,grado,done,True,0.0,True,263,0,1,0,264,317.0
+59,in_grado__v2.wav,Eddy (Español (México)),in,grado,grado,done,True,0.0,True,280,1,0,0,281,333.1
+60,oov_casa__v0.wav,Paulina,oov,casa,grasa,done,False,1.0,False,840,1,1,0,842,891.4
+61,oov_casa__v1.wav,Mónica,oov,casa,en la casa,done,False,2.0,True,917,0,1,0,918,966.7
+62,oov_casa__v2.wav,Eddy (Español (México)),oov,casa,casa,done,True,0.0,True,281,0,1,0,282,330.5
+63,oov_perro__v0.wav,Paulina,oov,perro,bebe,done,False,1.0,False,263,1,0,1,265,313.9
+64,oov_perro__v1.wav,Mónica,oov,perro,bila,done,False,1.0,False,734,0,1,1,736,785.3
+65,oov_perro__v2.wav,Eddy (Español (México)),oov,perro,mero,done,False,1.0,False,917,1,1,0,919,972.8
+66,oov_gato__v0.wav,Paulina,oov,gato,gato,done,True,0.0,True,259,0,1,0,260,572.5
+67,oov_gato__v1.wav,Mónica,oov,gato,gato,done,True,0.0,True,269,0,1,0,270,322.3
+68,oov_gato__v2.wav,Eddy (Español (México)),oov,gato,grado,done,False,1.0,False,280,0,1,0,281,330.5
+69,oov_mesa__v0.wav,Paulina,oov,mesa,misa,done,False,1.0,False,814,0,1,0,815,867.7
+70,oov_mesa__v1.wav,Mónica,oov,mesa,me me me meto,done,False,4.0,False,877,0,2,0,879,928.7
+71,oov_mesa__v2.wav,Eddy (Español (México)),oov,mesa,besa,done,False,1.0,False,279,1,1,0,281,347.3
+72,oov_libro__v0.wav,Paulina,oov,libro,libro,done,True,0.0,True,253,1,1,0,255,304.7
+73,oov_libro__v1.wav,Mónica,oov,libro,libres,done,False,1.0,False,253,1,1,0,255,600.9
+74,oov_libro__v2.wav,Eddy (Español (México)),oov,libro,libro,done,True,0.0,True,293,0,1,1,295,346.3
+75,oov_comer__v0.wav,Paulina,oov,comer,comer,done,True,0.0,True,269,1,1,0,271,320.5
+76,oov_comer__v1.wav,Mónica,oov,comer,comer,done,True,0.0,True,899,0,1,1,901,950.4
+77,oov_comer__v2.wav,Eddy (Español (México)),oov,comer,mer,done,False,1.0,False,790,1,0,1,792,842.4
+78,oov_dormir__v0.wav,Paulina,oov,dormir,dormir,done,True,0.0,True,262,1,1,0,264,316.1
+79,oov_dormir__v1.wav,Mónica,oov,dormir,dormir,done,True,0.0,True,298,0,1,1,300,351.1
+80,oov_dormir__v2.wav,Eddy (Español (México)),oov,dormir,dormir,done,True,0.0,True,269,1,1,0,271,323.6
+81,oov_gracias__v0.wav,Paulina,oov,gracias,gracias,done,True,0.0,True,259,1,0,1,261,314.3
+82,oov_gracias__v1.wav,Mónica,oov,gracias,gracias,done,True,0.0,True,259,0,1,0,260,311.3
+83,oov_gracias__v2.wav,Eddy (Español (México)),oov,gracias,gracias,done,True,0.0,True,292,0,1,0,293,343.9
+84,oov_amigo__v0.wav,Paulina,oov,amigo,amigo,done,True,0.0,True,264,1,1,0,266,317.2
+85,oov_amigo__v1.wav,Mónica,oov,amigo,amigo,done,True,0.0,True,293,1,1,1,296,346.0
+86,oov_amigo__v2.wav,Eddy (Español (México)),oov,amigo,mía mía,done,False,2.0,False,1033,0,1,1,1035,1090.6
+87,oov_trabajo__v0.wav,Paulina,oov,trabajo,trabajo,done,True,0.0,True,264,1,0,1,266,319.9
+88,oov_trabajo__v1.wav,Mónica,oov,trabajo,trabajo,done,True,0.0,True,991,1,1,0,993,1043.1
+89,oov_trabajo__v2.wav,Eddy (Español (México)),oov,trabajo,lo que pasa es que la gente no es una persona que no es la persona que la persona no es su persona no no es tu persona,done,False,28.0,False,1225,0,2,1,1228,1277.9
+90,oov_escuela__v0.wav,Paulina,oov,escuela,esquela,done,False,1.0,False,275,0,2,0,277,329.0
+91,oov_escuela__v1.wav,Mónica,oov,escuela,espuela,done,False,1.0,False,787,0,1,1,789,839.8
+92,oov_escuela__v2.wav,Eddy (Español (México)),oov,escuela,de esquela,done,False,2.0,False,1055,1,1,1,1058,1107.4
+93,oov_familia__v0.wav,Paulina,oov,familia,familia,done,True,0.0,True,288,1,1,0,290,340.8
+94,oov_familia__v1.wav,Mónica,oov,familia,familia,done,True,0.0,True,245,1,1,0,247,299.0
+95,oov_familia__v2.wav,Eddy (Español (México)),oov,familia,familia,done,True,0.0,True,282,1,1,0,284,335.0
+96,oov_masa__v0.wav,Paulina,oov,masa,masa,done,True,0.0,True,807,0,1,0,808,858.3
+97,oov_masa__v1.wav,Mónica,oov,masa,mecha,done,False,1.0,False,798,0,1,1,800,852.2
+98,oov_masa__v2.wav,Eddy (Español (México)),oov,masa,vaso,done,False,1.0,False,248,1,1,0,250,309.0
+99,oov_mono__v0.wav,Paulina,oov,mono,mono,done,True,0.0,True,247,0,1,0,248,298.8
+100,oov_mono__v1.wav,Mónica,oov,mono,mono,done,True,0.0,True,245,0,1,0,246,299.2
+101,oov_mono__v2.wav,Eddy (Español (México)),oov,mono,mono,done,True,0.0,True,274,0,1,0,275,325.6
+102,oov_malla__v0.wav,Paulina,oov,malla,magia,done,False,1.0,False,247,1,1,0,249,298.7
+103,oov_malla__v1.wav,Mónica,oov,malla,maya,done,False,1.0,False,249,1,1,0,251,302.2
+104,oov_malla__v2.wav,Eddy (Español (México)),oov,malla,vaja,done,False,1.0,False,852,1,1,0,854,906.1
+105,oov_mina__v0.wav,Paulina,oov,mina,mina,done,True,0.0,True,259,1,1,0,261,309.9
+106,oov_mina__v1.wav,Mónica,oov,mina,mina,done,True,0.0,True,267,1,1,0,269,321.3
+107,oov_mina__v2.wav,Eddy (Español (México)),oov,mina,vina,done,False,1.0,False,278,1,1,0,280,331.0
+108,oov_mural__v0.wav,Paulina,oov,mural,moral,done,False,1.0,False,243,0,1,1,245,294.8
+109,oov_mural__v1.wav,Mónica,oov,mural,moral,done,False,1.0,False,650,1,1,0,652,705.6
+110,oov_mural__v2.wav,Eddy (Español (México)),oov,mural,muran,done,False,1.0,False,796,0,1,0,797,849.9
+111,oov_mirar__v0.wav,Paulina,oov,mirar,mirar,done,True,0.0,True,281,0,1,0,282,333.3
+112,oov_mirar__v1.wav,Mónica,oov,mirar,mirad,done,False,1.0,False,298,1,1,0,300,354.5
+113,oov_mirar__v2.wav,Eddy (Español (México)),oov,mirar,mirar,done,True,0.0,True,340,0,1,1,342,392.0
+114,oov_marzo__v0.wav,Paulina,oov,marzo,marzo,done,True,0.0,True,325,1,1,1,328,379.1
+115,oov_marzo__v1.wav,Mónica,oov,marzo,marzo,done,True,0.0,True,297,0,1,1,299,353.0
+116,oov_marzo__v2.wav,Eddy (Español (México)),oov,marzo,marzo,done,True,0.0,True,288,1,1,0,290,343.7
+117,oov_moto__v0.wav,Paulina,oov,moto,moto,done,True,0.0,True,263,0,1,0,264,314.8
+118,oov_moto__v1.wav,Mónica,oov,moto,mudo,done,False,1.0,False,248,1,1,0,250,301.4
+119,oov_moto__v2.wav,Eddy (Español (México)),oov,moto,moto,done,True,0.0,True,264,0,1,0,265,317.4

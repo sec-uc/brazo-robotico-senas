@@ -1,0 +1,495 @@
+{
+  "criterio": "Un archivo 'requiere_cambio' si implementar el cambio obliga a editarlo para que el sistema siga correcto; 'solo_mencion' si contiene el término pero no se edita; 'dudoso' si depende de una decisión (valor por defecto sobrescribible, código muerto, nombre de clave de configuración). Mismo criterio en ambos sistemas; incluye archivos no-código (requirements, Dockerfile, YAML, pubspec, assets) como falsos negativos.",
+  "nota_codigo_muerto": "robot_conection_app/lib/presentation/home/screens/sign_language_screen.dart (2565 líneas) no se referencia desde ningún archivo; la ruta /sign_language abre TranscriptionGesturesView. Se clasifica 'dudoso' donde aparece. Igual lib/debug/excel_*.dart.",
+  "escenarios": {
+    "Motor de voz": {
+      "definicion_cambio": "Sustituir el motor de reconocimiento (Whisper/Distil-Whisper en la API; speech_to_text nativo en el móvil) por otro.",
+      "actual": {
+        "detalle": [
+          {
+            "archivo": "kichwa-app-api/kichwa_translator/pipeline.py",
+            "veredicto": "requiere_cambio",
+            "justificacion": "importa y carga whisper/Distil directamente",
+            "lineas": "11, 45, 214-235"
+          },
+          {
+            "archivo": "kichwa-app-api/kichwa_translator/audio/distil_whisper_processor.py",
+            "veredicto": "requiere_cambio",
+            "justificacion": "módulo específico del motor; se sustituye",
+            "lineas": "150, 468-645"
+          },
+          {
+            "archivo": "kichwa-app-api/app/main.py",
+            "veredicto": "requiere_cambio",
+            "justificacion": "health y endpoint de estado leen la config 'whisper' y el estado de Distil",
+            "lineas": "264, 338-341, 428-436"
+          },
+          {
+            "archivo": "kichwa-app-api/config/device_config.py",
+            "veredicto": "requiere_cambio",
+            "justificacion": "calcula la config óptima específica de whisper (model_size)",
+            "lineas": "220-241"
+          },
+          {
+            "archivo": "kichwa-app-api/kichwa_translator/utils/config.py",
+            "veredicto": "dudoso",
+            "justificacion": "solo la clave 'whisper' de la config por defecto",
+            "lineas": "74"
+          },
+          {
+            "archivo": "kichwa-app-api/verify_cpu_gpu_config.py",
+            "veredicto": "solo_mencion",
+            "justificacion": "script auxiliar de verificación, fuera del runtime",
+            "lineas": "61-319"
+          },
+          {
+            "archivo": "kichwa-app-api/install_distil_whisper.py",
+            "veredicto": "solo_mencion",
+            "justificacion": "script de instalación, fuera del runtime",
+            "lineas": "39-177"
+          },
+          {
+            "archivo": "robot_conection_app/lib/infraestructure/service/speech_to_text_service.dart",
+            "veredicto": "requiere_cambio",
+            "justificacion": "implementación concreta sobre speech_to_text",
+            "lineas": "4-125"
+          },
+          {
+            "archivo": "robot_conection_app/lib/infraestructure/service/speech_service.dart",
+            "veredicto": "requiere_cambio",
+            "justificacion": "segundo envoltorio de speech_to_text, usado por el modelo",
+            "lineas": "2-33"
+          },
+          {
+            "archivo": "robot_conection_app/lib/presentation/home/screens/TranscripcionGestos/Transcription_gestures_model.dart",
+            "veredicto": "requiere_cambio",
+            "justificacion": "la capa de presentación construye SpeechToTextServiceImpl() y SpeechService() directamente",
+            "lineas": "12, 32, 114-115, 301"
+          },
+          {
+            "archivo": "robot_conection_app/lib/presentation/home/screens/sign_language_screen.dart",
+            "veredicto": "dudoso",
+            "justificacion": "código muerto",
+            "lineas": "10, 52, 453, 516"
+          }
+        ],
+        "falsos_negativos": [
+          {
+            "archivo": "kichwa-app-api/requirements.txt",
+            "veredicto": "requiere_cambio",
+            "justificacion": "dependencias openai-whisper y transformers",
+            "lineas": "4-5"
+          },
+          {
+            "archivo": "kichwa-app-api/config/config.yaml",
+            "veredicto": "requiere_cambio",
+            "justificacion": "sección whisper: (modelo, Distil, optimizaciones)",
+            "lineas": "34-60"
+          },
+          {
+            "archivo": "robot_conection_app/pubspec.yaml",
+            "veredicto": "requiere_cambio",
+            "justificacion": "dependencia speech_to_text",
+            "lineas": "39"
+          },
+          {
+            "archivo": "kichwa-app-api/Dockerfile.backend",
+            "veredicto": "dudoso",
+            "justificacion": "instala torch; depende del motor nuevo",
+            "lineas": "33"
+          }
+        ],
+        "unidades_desplegables": [
+          "kichwa-app-api",
+          "robot_conection_app"
+        ],
+        "archivos_regex": 11,
+        "verdaderos_positivos": 7,
+        "falsos_positivos": 2,
+        "dudosos": 2,
+        "falsos_negativos_n": 3,
+        "falsos_negativos_dudosos": 1,
+        "precision": 0.78,
+        "precision_estricta": 0.64,
+        "archivos_que_requieren_cambio": 10,
+        "rango_con_dudosos": [
+          10,
+          13
+        ],
+        "unidades_afectadas_n": 2
+      },
+      "propuesta": {
+        "detalle": [
+          {
+            "archivo": "robot-signs-platform/services/stt/app/providers.py",
+            "veredicto": "requiere_cambio",
+            "justificacion": "nueva clase proveedor + rama en build_provider",
+            "lineas": "54-84, 124-130"
+          }
+        ],
+        "falsos_negativos": [
+          {
+            "archivo": "robot-signs-platform/services/stt/requirements-<motor>.txt",
+            "veredicto": "requiere_cambio",
+            "justificacion": "dependencias del motor nuevo (para Whisper ya existía requirements-whisper.txt)",
+            "lineas": ""
+          },
+          {
+            "archivo": "robot-signs-platform/services/stt/Dockerfile",
+            "veredicto": "requiere_cambio",
+            "justificacion": "instalar las dependencias opcionales (argumento de build)",
+            "lineas": "11-14"
+          },
+          {
+            "archivo": "robot-signs-platform/docker-compose.whisper.yml (o .env)",
+            "veredicto": "dudoso",
+            "justificacion": "STT_PROVIDER=<motor> es configuración de despliegue, no código",
+            "lineas": "8"
+          }
+        ],
+        "unidades_desplegables": [
+          "stt"
+        ],
+        "nota": "El cambio medido echo→Whisper tocó solo Dockerfile (+3) y un override de compose porque el proveedor y sus dependencias ya existían; un motor nuevo toca 3 archivos del servicio stt.",
+        "archivos_regex": 1,
+        "verdaderos_positivos": 1,
+        "falsos_positivos": 0,
+        "dudosos": 0,
+        "falsos_negativos_n": 2,
+        "falsos_negativos_dudosos": 1,
+        "precision": 1.0,
+        "precision_estricta": 1.0,
+        "archivos_que_requieren_cambio": 3,
+        "rango_con_dudosos": [
+          3,
+          4
+        ],
+        "unidades_afectadas_n": 1
+      }
+    },
+    "Vocabulario": {
+      "definicion_cambio": "Añadir 10 señas nuevas.",
+      "actual": {
+        "detalle": [
+          {
+            "archivo": "robot_conection_app/lib/infraestructure/service/brazo/dataset/excel_dataset_service.dart",
+            "veredicto": "solo_mencion",
+            "justificacion": "lee el Excel; añadir filas no cambia el código",
+            "lineas": ""
+          },
+          {
+            "archivo": "robot_conection_app/lib/presentation/home/screens/sign_language_screen.dart",
+            "veredicto": "solo_mencion",
+            "justificacion": "consume el dataset (además, código muerto)",
+            "lineas": ""
+          },
+          {
+            "archivo": "robot_conection_app/lib/presentation/home/screens/ServoTestScreen.dart",
+            "veredicto": "solo_mencion",
+            "justificacion": "consume el dataset",
+            "lineas": ""
+          },
+          {
+            "archivo": "robot_conection_app/lib/presentation/home/screens/DictionaryScreen.dart",
+            "veredicto": "solo_mencion",
+            "justificacion": "consume el dataset",
+            "lineas": ""
+          },
+          {
+            "archivo": "robot_conection_app/lib/presentation/home/screens/ServoTestPanel.dart",
+            "veredicto": "solo_mencion",
+            "justificacion": "consume el dataset",
+            "lineas": ""
+          },
+          {
+            "archivo": "robot_conection_app/lib/presentation/home/screens/TranscripcionGestos/transcription_gestures_view.dart",
+            "veredicto": "solo_mencion",
+            "justificacion": "solo import",
+            "lineas": ""
+          },
+          {
+            "archivo": "robot_conection_app/lib/presentation/home/screens/TranscripcionGestos/Transcription_gestures_model.dart",
+            "veredicto": "solo_mencion",
+            "justificacion": "consume el dataset",
+            "lineas": ""
+          },
+          {
+            "archivo": "robot_conection_app/lib/debug/excel_analyzer_screen.dart",
+            "veredicto": "solo_mencion",
+            "justificacion": "depuración, sin referencias",
+            "lineas": ""
+          },
+          {
+            "archivo": "robot_conection_app/lib/debug/excel_debugger.dart",
+            "veredicto": "solo_mencion",
+            "justificacion": "depuración, sin referencias",
+            "lineas": ""
+          }
+        ],
+        "falsos_negativos": [
+          {
+            "archivo": "robot_conection_app/assets/abecedario.xlsx",
+            "veredicto": "requiere_cambio",
+            "justificacion": "las señas viven en este asset empaquetado: editar + recompilar y redistribuir la app",
+            "lineas": ""
+          },
+          {
+            "archivo": "robot_conection_app/assets/images/palabras/",
+            "veredicto": "dudoso",
+            "justificacion": "imágenes opcionales de las palabras nuevas",
+            "lineas": ""
+          }
+        ],
+        "unidades_desplegables": [
+          "robot_conection_app (recompilar y redistribuir el APK)"
+        ],
+        "archivos_regex": 9,
+        "verdaderos_positivos": 0,
+        "falsos_positivos": 9,
+        "dudosos": 0,
+        "falsos_negativos_n": 1,
+        "falsos_negativos_dudosos": 1,
+        "precision": 0.0,
+        "precision_estricta": 0.0,
+        "archivos_que_requieren_cambio": 1,
+        "rango_con_dudosos": [
+          1,
+          2
+        ],
+        "unidades_afectadas_n": 1
+      },
+      "propuesta": {
+        "detalle": [
+          {
+            "archivo": "robot-signs-platform/services/sign-translation/app/repository.py",
+            "veredicto": "solo_mencion",
+            "justificacion": "solo una docstring que menciona abecedario.xlsx",
+            "lineas": "4"
+          }
+        ],
+        "falsos_negativos": [
+          {
+            "archivo": "rsp-mobile-client/assets/images/palabras/",
+            "veredicto": "dudoso",
+            "justificacion": "imágenes opcionales de las palabras nuevas (mismo criterio que el actual)",
+            "lineas": ""
+          }
+        ],
+        "unidades_desplegables": [],
+        "nota": "0 archivos y 0 despliegues: las señas se crean por PUT /v1/signs (consistente con results/qa04_vocabulary.json).",
+        "archivos_regex": 1,
+        "verdaderos_positivos": 0,
+        "falsos_positivos": 1,
+        "dudosos": 0,
+        "falsos_negativos_n": 0,
+        "falsos_negativos_dudosos": 1,
+        "precision": 0.0,
+        "precision_estricta": 0.0,
+        "archivos_que_requieren_cambio": 0,
+        "rango_con_dudosos": [
+          0,
+          1
+        ],
+        "unidades_afectadas_n": 0
+      }
+    },
+    "Límites de servos": {
+      "definicion_cambio": "Cambiar el rango permitido de un servo.",
+      "actual": {
+        "detalle": [
+          {
+            "archivo": "robot_conection_app/lib/infraestructure/service/brazo/servo_configuration.dart",
+            "veredicto": "requiere_cambio",
+            "justificacion": "tabla servoLimits",
+            "lineas": "8"
+          },
+          {
+            "archivo": "robot_conection_app/lib/presentation/home/screens/sign_language_screen.dart",
+            "veredicto": "dudoso",
+            "justificacion": "tabla propia _getServoLimits, pero código muerto",
+            "lineas": "116-131"
+          },
+          {
+            "archivo": "robot_conection_app/lib/infraestructure/service/brazo/UsbRobotConnectionService.dart",
+            "veredicto": "solo_mencion",
+            "justificacion": "deriva los límites de ServoConfiguration",
+            "lineas": "4, 168-176"
+          },
+          {
+            "archivo": "robot_conection_app/lib/infraestructure/service/brazo/dataset/excel_dataset_service.dart",
+            "veredicto": "solo_mencion",
+            "justificacion": "usa ServoConfiguration.restrictAngle",
+            "lineas": "4, 118, 214"
+          }
+        ],
+        "falsos_negativos": [
+          {
+            "archivo": "robot_conection_app/lib/infraestructure/service/brazo/RobotConnectionService.dart",
+            "veredicto": "requiere_cambio",
+            "justificacion": "tabla propia _getServoLimits (la regex distingue mayúsculas y no la detecta)",
+            "lineas": "31-47"
+          },
+          {
+            "archivo": "robot_conection_app/lib/presentation/home/screens/TranscripcionGestos/Transcription_gestures_model.dart",
+            "veredicto": "requiere_cambio",
+            "justificacion": "tabla propia en el modelo",
+            "lineas": "1307"
+          }
+        ],
+        "unidades_desplegables": [
+          "robot_conection_app"
+        ],
+        "nota": "Las '5 definiciones' del artículo son 5 copias textuales: 3 vivas + 1 en código muerto + 1 comentada (BluetoothRobotConnectionService.dart:151).",
+        "archivos_regex": 4,
+        "verdaderos_positivos": 1,
+        "falsos_positivos": 2,
+        "dudosos": 1,
+        "falsos_negativos_n": 2,
+        "falsos_negativos_dudosos": 0,
+        "precision": 0.33,
+        "precision_estricta": 0.25,
+        "archivos_que_requieren_cambio": 3,
+        "rango_con_dudosos": [
+          3,
+          4
+        ],
+        "unidades_afectadas_n": 1
+      },
+      "propuesta": {
+        "detalle": [
+          {
+            "archivo": "robot-signs-platform/services/actuator-control/app/hardware.py",
+            "veredicto": "requiere_cambio",
+            "justificacion": "tabla única ServoSpec (min_angle/max_angle)",
+            "lineas": "28-60"
+          }
+        ],
+        "falsos_negativos": [
+          {
+            "archivo": "rsp-mobile-client/lib/presentation/home/screens/ServoTestPanel.dart",
+            "veredicto": "resuelto",
+            "justificacion": "tenía tablas propias servoMins/servoMaxs; desde rsp-mobile-client fe063b7 lee los límites de GET /v1/actuator/servos (ADR-005), así que ya no se edita",
+            "lineas": "11-60, 335-338"
+          }
+        ],
+        "unidades_desplegables": [
+          "actuator-control"
+        ],
+        "nota": "Tras la auditoría, el cliente dejó de duplicar los rangos (lee GET /v1/actuator/servos): una sola definición, en hardware.py.",
+        "archivos_regex": 1,
+        "verdaderos_positivos": 1,
+        "falsos_positivos": 0,
+        "dudosos": 0,
+        "falsos_negativos_n": 0,
+        "falsos_negativos_dudosos": 0,
+        "precision": 1.0,
+        "precision_estricta": 1.0,
+        "archivos_que_requieren_cambio": 1,
+        "rango_con_dudosos": [
+          2,
+          2
+        ],
+        "unidades_afectadas_n": 1
+      }
+    },
+    "IP en el código": {
+      "definicion_cambio": "Cambiar la dirección del servidor que usa la app.",
+      "actual": {
+        "detalle": [
+          {
+            "archivo": "robot_conection_app/lib/infraestructure/service/app_settings_service.dart",
+            "veredicto": "dudoso",
+            "justificacion": "valor por defecto; se cambia desde Ajustes en tiempo de ejecución",
+            "lineas": "23"
+          },
+          {
+            "archivo": "robot_conection_app/lib/presentation/home/screens/TranscripcionGestos/Transcription_gestures_model.dart",
+            "veredicto": "dudoso",
+            "justificacion": "valor inicial temporal; initializeEverything lo sustituye por AppSettingsService.getServerIp()",
+            "lineas": "118, 147-148"
+          },
+          {
+            "archivo": "robot_conection_app/lib/presentation/home/screens/sign_language_screen.dart",
+            "veredicto": "dudoso",
+            "justificacion": "constante que ignora los ajustes, pero código muerto",
+            "lineas": "31, 454"
+          },
+          {
+            "archivo": "robot_conection_app/lib/presentation/home/screens/settings_screen.dart",
+            "veredicto": "solo_mencion",
+            "justificacion": "texto de ayuda del campo",
+            "lineas": "782"
+          },
+          {
+            "archivo": "kichwa-app-api/app/config.py",
+            "veredicto": "solo_mencion",
+            "justificacion": "orígenes CORS del servidor, no la dirección que usa el cliente",
+            "lineas": "28-30"
+          }
+        ],
+        "falsos_negativos": [],
+        "unidades_desplegables": [],
+        "archivos_regex": 5,
+        "verdaderos_positivos": 0,
+        "falsos_positivos": 2,
+        "dudosos": 3,
+        "falsos_negativos_n": 0,
+        "falsos_negativos_dudosos": 0,
+        "precision": 0.0,
+        "precision_estricta": 0.0,
+        "archivos_que_requieren_cambio": 0,
+        "rango_con_dudosos": [
+          0,
+          3
+        ],
+        "unidades_afectadas_n": 0
+      },
+      "propuesta": {
+        "detalle": [
+          {
+            "archivo": "rsp-mobile-client/lib/infraestructure/service/rsp_client.dart",
+            "veredicto": "solo_mencion",
+            "justificacion": "comentario de ejemplo al final de línea",
+            "lineas": "107"
+          },
+          {
+            "archivo": "rsp-mobile-client/lib/presentation/home/screens/settings_screen.dart",
+            "veredicto": "solo_mencion",
+            "justificacion": "texto de ayuda del campo",
+            "lineas": "253"
+          }
+        ],
+        "falsos_negativos": [
+          {
+            "archivo": "rsp-mobile-client/lib/infraestructure/service/app_settings_service.dart",
+            "veredicto": "dudoso",
+            "justificacion": "valor por defecto http://localhost:8080 (la regex no detecta 'localhost'); se cambia desde Ajustes",
+            "lineas": "27"
+          }
+        ],
+        "unidades_desplegables": [],
+        "archivos_regex": 2,
+        "verdaderos_positivos": 0,
+        "falsos_positivos": 2,
+        "dudosos": 0,
+        "falsos_negativos_n": 0,
+        "falsos_negativos_dudosos": 1,
+        "precision": 0.0,
+        "precision_estricta": 0.0,
+        "archivos_que_requieren_cambio": 0,
+        "rango_con_dudosos": [
+          0,
+          1
+        ],
+        "unidades_afectadas_n": 0
+      }
+    }
+  },
+  "auditado_sobre": {
+    "robot-signs-platform": "44139e5",
+    "rsp-mobile-client": "fe063b7",
+    "kichwa-app-api": "3dc0738",
+    "robot_conection_app": "682b2b7"
+  },
+  "asimetria_stt_nativo": "En la arquitectura actual, el motor de voz existe en dos caminos (Whisper en la API y speech_to_text nativo en el móvil) que implementan la misma función; sustituir el motor obliga a cambiar ambos. Contando solo la API: 6 archivos."
+}

@@ -1,0 +1,273 @@
+{
+  "experiment": "qa06_availability_final_crash",
+  "environment": {
+    "timestamp_utc": "2026-11-12T01:49:37+00:00",
+    "host": "macOS-26.5.2-arm64-arm-64bit",
+    "cpu": "Apple M4 Pro",
+    "cpus": 12,
+    "docker": "28.1.1",
+    "git_commit": "5c03c8b",
+    "git_dirty": false,
+    "stt_provider": "echo"
+  },
+  "summary": {
+    "mode": "crash",
+    "t_fail_s": 10.0,
+    "stt_down_detected_s": 10.38,
+    "stt_healthy_again_s": 10.98,
+    "recovery_s": 0.98,
+    "others_ok_during_outage": true,
+    "sessions": {
+      "text": {
+        "total": 68,
+        "ok": 67,
+        "ok_during_outage": 3,
+        "total_during_outage": 3,
+        "first_ok_after_fail_s": 10.18
+      },
+      "audio": {
+        "total": 50,
+        "ok": 49,
+        "ok_during_outage": 1,
+        "total_during_outage": 1,
+        "first_ok_after_fail_s": 10.31
+      }
+    },
+    "audio_during_outage_processed_after_recovery": {
+      "sent": 0,
+      "done_later": 0
+    }
+  },
+  "health": [
+    {
+      "t": 0.03,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 0.55,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 1.06,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 1.58,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 2.09,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 2.61,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 3.13,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 3.64,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 4.16,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 4.69,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 5.2,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 5.71,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 6.24,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 6.75,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 7.27,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 7.8,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 8.31,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 8.82,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 9.34,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 9.85,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 10.38,
+      "stt": "down",
+      "others_ok": true
+    },
+    {
+      "t": 10.98,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 11.49,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 12.0,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 12.52,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 13.03,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 13.56,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 14.07,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 14.58,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 15.1,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 15.61,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 16.12,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 16.64,
+      "stt": "gateway_down",
+      "others_ok": false
+    },
+    {
+      "t": 21.14,
+      "stt": "gateway_down",
+      "others_ok": false
+    },
+    {
+      "t": 25.65,
+      "stt": "gateway_down",
+      "others_ok": false
+    },
+    {
+      "t": 30.16,
+      "stt": "gateway_down",
+      "others_ok": false
+    },
+    {
+      "t": 34.67,
+      "stt": "gateway_down",
+      "others_ok": false
+    },
+    {
+      "t": 39.17,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 41.24,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 41.76,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 42.27,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 42.79,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 43.35,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 43.87,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 44.39,
+      "stt": "ok",
+      "others_ok": true
+    },
+    {
+      "t": 44.92,
+      "stt": "ok",
+      "others_ok": true
+    }
+  ]
+}

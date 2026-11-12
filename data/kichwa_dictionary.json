@@ -1,0 +1,16 @@
+{
+ "basic_words": {
+  "yaku": "agua",
+  "wasi": "casa",
+  "mama": "mamá"
+ },
+ "numbers": {
+  "shuk": "uno",
+  "ishkay": "dos",
+  "kimsa": "tres"
+ },
+ "variations": {
+  "yaco": "agua",
+  "huasi": "casa"
+ }
+}

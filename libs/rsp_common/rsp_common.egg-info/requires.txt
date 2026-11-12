@@ -1,0 +1,5 @@
+fastapi>=0.110
+pydantic>=2.5
+nats-py>=2.7
+prometheus-client>=0.19
+PyJWT>=2.8

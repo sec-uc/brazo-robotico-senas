@@ -1,0 +1,68 @@
+{
+  "experiment": "qa01_asr_ctrl_sin_tope",
+  "environment": {
+    "timestamp_utc": "2026-11-12T18:44:41+00:00",
+    "host": "macOS-26.5.2-arm64-arm-64bit",
+    "cpu": "Apple M4 Pro",
+    "cpus": 12,
+    "docker": "28.1.1",
+    "git_commit": "1fd015d",
+    "git_dirty": false,
+    "stt_provider": "whisper"
+  },
+  "label": "ctrl_sin_tope",
+  "corpus": "audio_ctrl",
+  "n": 120,
+  "done": 120,
+  "empty_transcripts": 2,
+  "by_set": {
+    "in": {
+      "gloss": 28,
+      "n": 60
+    },
+    "oov": {
+      "gloss": 33,
+      "n": 60
+    }
+  },
+  "software_ms": {
+    "n": 120,
+    "mean": 375.31666666666666,
+    "median": 230.0,
+    "p95": 677.0999999999999,
+    "sd": 301.3498199860127,
+    "min": 209,
+    "max": 2600
+  },
+  "stt_ms": {
+    "n": 120,
+    "mean": 372.76666666666665,
+    "median": 227.0,
+    "p95": 674.15,
+    "sd": 301.28268457116644,
+    "min": 207,
+    "max": 2598
+  },
+  "exact_match_rate": 0.49166666666666664,
+  "mean_wer": 0.6083333333333333,
+  "gloss_match_rate": 0.5083333333333333,
+  "qa01_target_ms": 1500,
+  "meets_target_p95": true,
+  "by_voice": {
+    "Paulina": {
+      "exact": 26,
+      "gloss": 26,
+      "n": 40
+    },
+    "Mónica": {
+      "exact": 20,
+      "gloss": 22,
+      "n": 40
+    },
+    "Eddy (Español (México))": {
+      "exact": 13,
+      "gloss": 13,
+      "n": 40
+    }
+  }
+}

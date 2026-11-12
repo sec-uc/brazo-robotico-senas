@@ -1,0 +1,39 @@
+{
+  "experiment": "qa04_vocabulary",
+  "environment": {
+    "timestamp_utc": "2026-11-12T18:39:41+00:00",
+    "host": "macOS-26.5.2-arm64-arm-64bit",
+    "cpu": "Apple M4 Pro",
+    "cpus": 12,
+    "docker": "28.1.1",
+    "git_commit": "1fd015d",
+    "git_dirty": false,
+    "stt_provider": "echo"
+  },
+  "signs_added": 10,
+  "existed_before": 0,
+  "add_time_ms_total": 24.649124999996275,
+  "planned_as_sign_immediately": 10,
+  "unknown_after": [],
+  "rebuilds": 0,
+  "redeploys": 0,
+  "services_running_for": [
+    "actuator-control 5 minutes ago",
+    "actuator-db 4 hours ago",
+    "auth 5 minutes ago",
+    "auth-db 4 hours ago",
+    "gateway 5 minutes ago",
+    "grafana 40 minutes ago",
+    "nats 4 hours ago",
+    "nlp 5 minutes ago",
+    "nlp-db 4 hours ago",
+    "prometheus 4 hours ago",
+    "sign-translation 5 minutes ago",
+    "signs-db 4 hours ago",
+    "stt 5 minutes ago",
+    "telemetry 5 minutes ago",
+    "telemetry-db 4 hours ago",
+    "voice-capture 5 minutes ago"
+  ],
+  "client_changes": "ninguno: la app consume /v1/signs y /v1/nlp/dictionary"
+}

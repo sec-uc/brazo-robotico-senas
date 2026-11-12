@@ -1,0 +1,64 @@
+{
+  "experiment": "qa01_asr_whisper_openai",
+  "environment": {
+    "timestamp_utc": "2026-11-12T19:03:57+00:00",
+    "host": "macOS-26.5.2-arm64-arm-64bit",
+    "cpu": "Apple M4 Pro",
+    "cpus": 12,
+    "docker": "28.1.1",
+    "git_commit": "1fd015d",
+    "git_dirty": false,
+    "stt_provider": "whisper-openai"
+  },
+  "label": "whisper_openai",
+  "corpus": "audio_tts",
+  "n": 60,
+  "done": 60,
+  "empty_transcripts": 5,
+  "by_set": {
+    "corpus": {
+      "gloss": 28,
+      "n": 60
+    }
+  },
+  "software_ms": {
+    "n": 60,
+    "mean": 1588.8833333333334,
+    "median": 421.5,
+    "p95": 3592.6999999999925,
+    "sd": 2254.7606291206985,
+    "min": 338,
+    "max": 14922
+  },
+  "stt_ms": {
+    "n": 60,
+    "mean": 1585.0833333333333,
+    "median": 420.0,
+    "p95": 3573.7499999999927,
+    "sd": 2251.9246103200194,
+    "min": 337,
+    "max": 14918
+  },
+  "exact_match_rate": 0.45,
+  "mean_wer": 3.25,
+  "gloss_match_rate": 0.4666666666666667,
+  "qa01_target_ms": 1500,
+  "meets_target_p95": false,
+  "by_voice": {
+    "Mónica": {
+      "exact": 14,
+      "gloss": 14,
+      "n": 20
+    },
+    "Eddy (Español (México))": {
+      "exact": 2,
+      "gloss": 2,
+      "n": 20
+    },
+    "Paulina": {
+      "exact": 11,
+      "gloss": 12,
+      "n": 20
+    }
+  }
+}

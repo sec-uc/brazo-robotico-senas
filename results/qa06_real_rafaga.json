@@ -1,0 +1,39 @@
+{
+  "experiment": "qa06_real_rafaga",
+  "environment": {
+    "timestamp_utc": "2026-11-12T18:57:42+00:00",
+    "host": "macOS-26.5.2-arm64-arm-64bit",
+    "cpu": "Apple M4 Pro",
+    "cpus": 12,
+    "docker": "28.1.1",
+    "git_commit": "1fd015d",
+    "git_dirty": false,
+    "stt_provider": "whisper"
+  },
+  "mode": "rafaga",
+  "reps": 3,
+  "burst": 30,
+  "audio_sent": 90,
+  "audio_processed": 90,
+  "by_status": {
+    "done": 90
+  },
+  "outage_s": {
+    "n": 90,
+    "mean": 15.763333333333334,
+    "median": 15.76,
+    "p95": 15.78,
+    "sd": 0.01254206405606789,
+    "min": 15.75,
+    "max": 15.78
+  },
+  "audio_done_s": {
+    "n": 90,
+    "mean": 14.695888888888888,
+    "median": 14.725,
+    "p95": 17.2655,
+    "sd": 1.6748462243310742,
+    "min": 11.26,
+    "max": 18.13
+  }
+}

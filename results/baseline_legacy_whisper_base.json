@@ -1,0 +1,42 @@
+{
+  "experiment": "baseline_legacy_whisper_base",
+  "environment": {
+    "timestamp_utc": "2026-11-12T13:01:00+00:00",
+    "host": "macOS-26.5.2-arm64-arm-64bit",
+    "cpu": "Apple M4 Pro",
+    "cpus": 12,
+    "docker": "28.1.1",
+    "git_commit": "2ab310c",
+    "git_dirty": false,
+    "stt_provider": "echo",
+    "sut_dir": "legacy-wt",
+    "sut_commit": "3dc0738",
+    "sut_dirty": true,
+    "sut_diff": "config/config.yaml | 4 ++--\n 1 file changed, 2 insertions(+), 2 deletions(-)",
+    "sut_note": "kichwa-app-api; único cambio: config.yaml con fp16=false y use_distil_whisper=false (Whisper base en CPU)"
+  },
+  "label": "whisper_base",
+  "system": "kichwa-app-api (arquitectura actual)",
+  "model": "openai-whisper base, CPU, fp32",
+  "n": 60,
+  "completed": 60,
+  "wall_ms": {
+    "n": 60,
+    "mean": 754.5683333333333,
+    "median": 439.5,
+    "p95": 1020.0599999999848,
+    "sd": 1703.9207109837032,
+    "min": 79.3,
+    "max": 9206.2
+  },
+  "polls": {
+    "n": 60,
+    "mean": 1.0,
+    "median": 1.0,
+    "p95": 1.0,
+    "sd": 0.0,
+    "min": 1,
+    "max": 1
+  },
+  "exact_match_rate": 0.4666666666666667
+}

@@ -1,0 +1,132 @@
+{
+  "actual": {
+    "code_files": 67,
+    "largest_module": [
+      "robot_conection_app/lib/presentation/home/screens/sign_language_screen.dart",
+      2565
+    ],
+    "modules_over_400_lines": 14,
+    "scenarios": {
+      "QA-03 motor de reconocimiento": {
+        "files": 11,
+        "deployable_units": 2,
+        "where": {
+          "kichwa-app-api": [
+            "kichwa-app-api/verify_cpu_gpu_config.py",
+            "kichwa-app-api/install_distil_whisper.py",
+            "kichwa-app-api/app/main.py",
+            "kichwa-app-api/kichwa_translator/pipeline.py",
+            "kichwa-app-api/kichwa_translator/utils/config.py",
+            "kichwa-app-api/kichwa_translator/audio/distil_whisper_processor.py",
+            "kichwa-app-api/config/device_config.py"
+          ],
+          "robot_conection_app": [
+            "robot_conection_app/lib/infraestructure/service/speech_service.dart",
+            "robot_conection_app/lib/infraestructure/service/speech_to_text_service.dart",
+            "robot_conection_app/lib/presentation/home/screens/sign_language_screen.dart",
+            "robot_conection_app/lib/presentation/home/screens/TranscripcionGestos/Transcription_gestures_model.dart"
+          ]
+        }
+      },
+      "QA-04 vocabulario incrustado": {
+        "files": 9,
+        "deployable_units": 1,
+        "where": {
+          "kichwa-app-api": [],
+          "robot_conection_app": [
+            "robot_conection_app/lib/infraestructure/service/brazo/dataset/excel_dataset_service.dart",
+            "robot_conection_app/lib/presentation/home/screens/sign_language_screen.dart",
+            "robot_conection_app/lib/presentation/home/screens/ServoTestScreen.dart",
+            "robot_conection_app/lib/presentation/home/screens/DictionaryScreen.dart",
+            "robot_conection_app/lib/presentation/home/screens/ServoTestPanel.dart",
+            "robot_conection_app/lib/presentation/home/screens/TranscripcionGestos/transcription_gestures_view.dart",
+            "robot_conection_app/lib/presentation/home/screens/TranscripcionGestos/Transcription_gestures_model.dart",
+            "robot_conection_app/lib/debug/excel_analyzer_screen.dart",
+            "robot_conection_app/lib/debug/excel_debugger.dart"
+          ]
+        }
+      },
+      "QA-05 límites de servos": {
+        "files": 4,
+        "deployable_units": 1,
+        "where": {
+          "kichwa-app-api": [],
+          "robot_conection_app": [
+            "robot_conection_app/lib/infraestructure/service/brazo/UsbRobotConnectionService.dart",
+            "robot_conection_app/lib/infraestructure/service/brazo/servo_configuration.dart",
+            "robot_conection_app/lib/infraestructure/service/brazo/dataset/excel_dataset_service.dart",
+            "robot_conection_app/lib/presentation/home/screens/sign_language_screen.dart"
+          ]
+        }
+      },
+      "Direcciones de servidor en código": {
+        "files": 5,
+        "deployable_units": 2,
+        "where": {
+          "kichwa-app-api": [
+            "kichwa-app-api/app/config.py"
+          ],
+          "robot_conection_app": [
+            "robot_conection_app/lib/infraestructure/service/app_settings_service.dart",
+            "robot_conection_app/lib/presentation/home/screens/settings_screen.dart",
+            "robot_conection_app/lib/presentation/home/screens/sign_language_screen.dart",
+            "robot_conection_app/lib/presentation/home/screens/TranscripcionGestos/Transcription_gestures_model.dart"
+          ]
+        }
+      }
+    }
+  },
+  "propuesta": {
+    "code_files": 62,
+    "largest_module": [
+      "rsp-mobile-client/lib/presentation/home/screens/TranscripcionGestos/Transcription_gestures_model.dart",
+      398
+    ],
+    "modules_over_400_lines": 0,
+    "scenarios": {
+      "QA-03 motor de reconocimiento": {
+        "files": 1,
+        "deployable_units": 1,
+        "where": {
+          "robot-signs-platform": [
+            "robot-signs-platform/services/stt/app/providers.py"
+          ],
+          "rsp-mobile-client": []
+        }
+      },
+      "QA-04 vocabulario incrustado": {
+        "files": 1,
+        "deployable_units": 1,
+        "where": {
+          "robot-signs-platform": [
+            "robot-signs-platform/services/sign-translation/app/repository.py"
+          ],
+          "rsp-mobile-client": []
+        }
+      },
+      "QA-05 límites de servos": {
+        "files": 2,
+        "deployable_units": 2,
+        "where": {
+          "robot-signs-platform": [
+            "robot-signs-platform/services/actuator-control/app/hardware.py"
+          ],
+          "rsp-mobile-client": [
+            "rsp-mobile-client/lib/infraestructure/service/rsp_client.dart"
+          ]
+        }
+      },
+      "Direcciones de servidor en código": {
+        "files": 2,
+        "deployable_units": 1,
+        "where": {
+          "robot-signs-platform": [],
+          "rsp-mobile-client": [
+            "rsp-mobile-client/lib/infraestructure/service/rsp_client.dart",
+            "rsp-mobile-client/lib/presentation/home/screens/settings_screen.dart"
+          ]
+        }
+      }
+    }
+  }
+}
