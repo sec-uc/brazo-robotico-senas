@@ -1,5 +1,5 @@
 #!/bin/bash
-# QA-02 en el brazo real: 60 sesiones de texto desde Makia en la tablet; tiempos del envío en logcat (RSP_ARM).
+# QA-02 en el brazo real: 60 sesiones de texto desde el cliente móvil en la tableta; tiempos del envío en logcat (RSP_ARM).
 T=${T:-172.18.78.192:5555}; S=$(dirname "$0"); OUT=$S/qa02_logcat.txt
 WORDS="abajo agua arriba bien cuatro hola mal mama manana mano manzana mas%so%smenos mejor mesero miel mil moneda ocho un%sratito uno"
 adb -s $T logcat -c
