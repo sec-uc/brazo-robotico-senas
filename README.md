@@ -74,7 +74,7 @@ curl -s -X POST $API/v1/sessions/$SID/audio -H "authorization: Bearer $TOKEN" -F
 
 ## Resultados de la evaluación
 
-La plataforma se evaluó con doce escenarios de atributos de calidad, ejecutados como experimentos reproducibles en un solo equipo. Resultados principales:
+La plataforma se evaluó con once escenarios de atributos de calidad, más uno exploratorio de escalabilidad, ejecutados como experimentos reproducibles en un solo equipo. Resultados principales:
 
 | Escenario | Resultado |
 |---|---|

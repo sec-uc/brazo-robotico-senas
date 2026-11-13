@@ -1,6 +1,6 @@
 # Evaluación
 
-Resultados de los doce escenarios de calidad definidos en [escenarios-de-calidad.md](escenarios-de-calidad.md). Todas las mediciones se hicieron en un solo equipo (Apple M4 Pro, 12 núcleos) con los guiones de [`scripts/`](../scripts); los datos crudos están en [`results/`](../results), y cada archivo registra el *commit* del sistema medido y de los instrumentos.
+Resultados de los escenarios de calidad definidos en [escenarios-de-calidad.md](escenarios-de-calidad.md). Todas las mediciones se hicieron en un solo equipo (Apple M4 Pro, 12 núcleos) con los guiones de [`scripts/`](../scripts); los datos crudos están en [`results/`](../results), y cada archivo registra el *commit* del sistema medido y de los instrumentos.
 
 ## Contenido
 
@@ -13,7 +13,7 @@ Resultados de los doce escenarios de calidad definidos en [escenarios-de-calidad
 
 ## 1. Resumen por escenario
 
-De los doce escenarios, siete se cumplieron, tres se cumplieron parcialmente, uno no se cumplió y uno no pudo evaluarse en su medida de respuesta.
+De los once escenarios del alcance aprobado, siete se cumplieron, dos se cumplieron parcialmente, uno no se cumplió y uno no pudo evaluarse con su medida de respuesta (con ella, no se cumpliría). QA-07, de escalabilidad, quedó fuera del alcance aprobado y se reporta como exploratorio.
 
 | ID | Atributo | Resultado | Veredicto |
 |---|---|---|---|
@@ -23,7 +23,7 @@ De los doce escenarios, siete se cumplieron, tres se cumplieron parcialmente, un
 | QA-04 | Modificabilidad | 10 señas añadidas por API en 25 ms; 0 recompilaciones y 0 despliegues | Cumple |
 | QA-05 | Modificabilidad | *Driver* nuevo del brazo: 2 archivos del servicio (+32/−3); límites del hardware en 1 archivo, frente a 3 | Cumple |
 | QA-06 | Disponibilidad | Reinicio del reconocimiento en 1,0 s con 260/260 sesiones; corte de 16 s con texto 52/52. Con el reconocedor real: texto 30/30 y audio 27/30 | Parcial |
-| QA-07 | Escalabilidad | Texto: 32 sesiones simultáneas sin fallos, hasta 423 sesiones/s. Voz: 3,8 sesiones/s; una segunda réplica no mejora en un equipo | Parcial (exploratorio) |
+| QA-07 | Escalabilidad | Meta: p95 al menos un 40 % menor con 3 réplicas. No se midió con 3; con 2, sin ganancia (voz: 3,8 frente a 3,6 sesiones/s). Texto: 32 sesiones simultáneas sin fallos, hasta 423 sesiones/s | Exploratorio (fuera del alcance); meta no alcanzada |
 | QA-08 | Observabilidad | Siete marcas en las sesiones con ejecución; cinco en vista previa, por diseño | Parcial |
 | QA-09 | Seguridad | 60/60 peticiones sin credencial válida rechazadas (401); 8/8 sin rol (403); 7 servicios internos inaccesibles; 0 claves en clientes | Cumple |
 | QA-10 | Interoperabilidad | Un cliente de línea de comandos usa la plataforma por HTTP y SSE sin cambios en el servidor | Cumple |
@@ -62,7 +62,7 @@ Con el reconocedor real, en 30 ciclos de caída y recuperación, el modo texto r
 
 <p align="center"><img src="img/grafica-concurrencia.png" alt="Rendimiento con sesiones de texto simultáneas" width="100%"></p>
 
-La [ADR-009](adr/ADR-009-consumo-concurrente.md) hizo concurrente el consumo del bus y llevó la inferencia a hilos. Medidos con el mismo instrumento, en un solo equipo el cambio no mejoró el rendimiento de forma consistente, y una segunda réplica del reconocimiento tampoco, porque ambas compiten por la misma CPU. El escenario se cumple en lo que mide —sin fallos y réplicas sin cambiar código—, pero no demuestra escalabilidad horizontal.
+La [ADR-009](adr/ADR-009-consumo-concurrente.md) hizo concurrente el consumo del bus y llevó la inferencia a hilos. Medidos con el mismo instrumento, en un solo equipo el cambio no mejoró el rendimiento de forma consistente, y una segunda réplica del reconocimiento tampoco, porque ambas compiten por la misma CPU. El escenario es exploratorio, porque el anteproyecto dejó la escalabilidad fuera del alcance, y su meta no se alcanzó; no hubo fallos y añadir réplicas no exigió cambiar código. No demuestra escalabilidad horizontal.
 
 ## 6. Límites de la evaluación
 
@@ -71,4 +71,4 @@ La [ADR-009](adr/ADR-009-consumo-concurrente.md) hizo concurrente el consumo del
 - **Brazo real.** Se midió el envío de cada configuración, no su ejecución física, porque el protocolo serie no la confirma. Por eso QA-02 no puede evaluarse: comparar tiempos de envío entre un perfil de saltos y uno suave no dice cuál termina antes la seña; hace falta medir el movimiento, por ejemplo con vídeo de alta velocidad.
 - **Vocabulario.** La mayoría de las señas no está validada por intérpretes; la evaluación mide atributos del software, no la calidad de la traducción ni su utilidad para la comunidad sorda.
 - **Una instancia.** La arquitectura de referencia se evaluó en un solo robot; su reutilización en otros es una hipótesis.
-- **Sin comparación con un monolito modular.** Los resultados no aíslan el efecto del estilo de microservicios: la mayoría de los escenarios dependen de dónde se trazan las fronteras y no del número de procesos.
+- **Sin comparación con un monolito modular.** La arquitectura propuesta es de microservicios; la evaluación no la comparó con un monolito modular de las mismas fronteras, de modo que la mayoría de los resultados se atribuyen a dónde se trazan las fronteras y no al número de procesos.
