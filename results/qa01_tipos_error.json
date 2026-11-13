@@ -1,0 +1,28 @@
+{
+  "corpus": {
+    "coincide": 36,
+    "deletreo": 15,
+    "sena_erronea": 6,
+    "vacio": 3
+  },
+  "control": {
+    "deletreo": 51,
+    "coincide": 64,
+    "sena_erronea": 3,
+    "vacio": 2
+  },
+  "control_por_conjunto": {
+    "in": {
+      "deletreo": 29,
+      "coincide": 29,
+      "sena_erronea": 2
+    },
+    "oov": {
+      "coincide": 35,
+      "deletreo": 22,
+      "sena_erronea": 1,
+      "vacio": 2
+    }
+  },
+  "vocabulario": 148
+}
