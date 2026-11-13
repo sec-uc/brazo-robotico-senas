@@ -3,7 +3,10 @@
 Cada etapa del pipeline publica UN tipo de evento en UN asunto (subject) NATS.
 El contrato es la única dependencia entre servicios: un servicio puede
 reescribirse en otro lenguaje o cambiar de proveedor (Whisper → Vosk,
-diccionario → modelo neuronal, USB → ROS 2) sin que los demás lo noten.
+diccionario → modelo neuronal) sin que los demás lo noten. El driver de
+actuadores puede pasar de USB a ROS 2 solo si el robot respeta el contrato
+de articulaciones; con otro número de articulaciones hace falta una versión
+nueva de los contratos.
 
 Convención de asuntos:  <dominio>.<entidad>.<hecho>
     voice.audio.chunk         captura de voz  → STT
