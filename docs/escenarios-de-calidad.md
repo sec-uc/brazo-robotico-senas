@@ -1,5 +1,7 @@
 # Escenarios de calidad
 
+> Versión inicial de los escenarios (12 de septiembre de 2026). Dos medidas de respuesta cambiaron después: QA-02 pasó de la latencia mecánica en el simulador al tiempo de envío en el brazo real y, tras suavizar el movimiento, se declaró no evaluable; QA-03 retiró el criterio de tiempo (≤ 2 h), porque los cambios se implementaron con asistencia de un modelo de lenguaje. Los veredictos finales están en [evaluacion.md](evaluacion.md).
+
 Formato de seis partes (Bass, Clements & Kazman). Cada escenario tiene un método de medición reproducible con los scripts del repositorio. Línea base as‑is = sistema heredado (`kichwa-app-api` + `robot_conection_app`); cuando el as‑is no permite medir, se indica.
 
 | ID | Atributo | Fuente | Estímulo | Artefacto | Entorno | Respuesta esperada | Medida de respuesta | Cómo medir |
