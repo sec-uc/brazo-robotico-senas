@@ -19,6 +19,6 @@ Descomponer el sistema en ocho microservicios por capacidad (captura, STT, PLN, 
 Solo QA-06 (disponibilidad ante la caída del reconocimiento) dependió del despliegue separado; QA-07 no mostró ganancia de las réplicas en un equipo. La referencia mantiene los microservicios, que fija el objetivo aprobado del trabajo: una unidad desplegable por capacidad. Lo que varía entre instancias es el orquestador, el número de réplicas y los nodos. La evaluación no comparó la propuesta con un monolito modular de las mismas fronteras, y esa comparación queda como trabajo futuro.
 
 ## Consecuencias
-+ Cada etapa se sustituye/escala/observa por separado; el pipeline Kichwa se reutiliza como proveedor.
++ Cada etapa se sustituye y observa por separado, y puede escalarse por separado (no demostrado en un equipo, QA-07); el pipeline Kichwa se reutiliza como proveedor.
 − Más piezas que operar (16 contenedores en la instancia final: 8 servicios, bus, Prometheus, Grafana y 5 bases de datos); mitigado con Docker Compose y `Service` común.
 − Latencia añadida: las etapas propias suman unos 2 ms en la mediana; frente al sistema anterior, con el mismo código de reconocimiento, la latencia típica fue 66 ms mayor, casi toda en el protocolo HTTP de la sesión (QA‑01).

@@ -32,7 +32,7 @@ De los once escenarios del alcance aprobado, siete se cumplieron, dos se cumplie
 
 ## 2. Latencia frente a la arquitectura anterior
 
-La comparación ejecuta en ambas arquitecturas el mismo código de reconocimiento, de modo que la diferencia es atribuible a la arquitectura. Se replicó con un plan registrado antes de medir ([plan-replica-qa01.md](plan-replica-qa01.md)): cinco repeticiones de los 60 audios, con el orden de los audios y de los sistemas al azar, 600 mediciones en total.
+La comparación ejecuta en ambas arquitecturas el mismo código de reconocimiento, de modo que la diferencia es atribuible a la arquitectura en esta configuración, con el reconocimiento fuera de contenedores. Se replicó con un plan registrado antes de medir ([plan-replica-qa01.md](plan-replica-qa01.md)): cinco repeticiones de los 60 audios, con el orden de los audios y de los sistemas al azar, 600 mediciones en total.
 
 <p align="center"><img src="img/grafica-replicacion.png" alt="Diferencia de latencia entre arquitecturas" width="100%"></p>
 
@@ -44,7 +44,7 @@ La propuesta fue 66 ms más lenta en la mediana de las diferencias pareadas (IC 
 | Glosado, plan y aceptación | 5 ms |
 | Fuera de la traza: creación de la sesión, flujo SSE, subida por la pasarela, normalización y entrega del evento final | 62 ms |
 
-El costo procede de las idas y vueltas HTTP de la sesión, no del bus ni de las etapas añadidas. La equivalencia se refiere a la latencia típica (mediana), no a las colas.
+El costo, obtenido por diferencia y no medido directamente, parece proceder de las idas y vueltas HTTP de la sesión, no del bus ni de las etapas añadidas. La equivalencia se refiere a la latencia típica (mediana), no a las colas: en el p95, sin contraste, la propuesta dio 4 072 ms frente a 2 168 ms.
 
 ## 3. Reconocimiento de voz
 
