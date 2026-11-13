@@ -21,7 +21,7 @@ De los once escenarios del alcance aprobado, siete se cumplieron, dos se cumplie
 | QA-02 | Rendimiento | En el brazo real, envío de cada configuración en 1 106 ms (mediana) frente a 1 008 ms del envío servo a servo anterior (+10 %). El envío anterior manda el ángulo final de cada servo de una vez y termina mientras el brazo aún se mueve a saltos; la trayectoria suave reparte el envío a lo largo del movimiento. La medida compara envíos, no la duración de la seña | No evaluable |
 | QA-03 | Modificabilidad | Motor de reconocimiento nuevo: 3 archivos de un servicio (+43 líneas), frente a 10 archivos en dos unidades; el límite era 2 archivos | No cumple |
 | QA-04 | Modificabilidad | 10 señas añadidas por API en 25 ms; 0 recompilaciones y 0 despliegues | Cumple |
-| QA-05 | Modificabilidad | *Driver* nuevo del brazo: 2 archivos del servicio (+32/−3); límites del hardware en 1 archivo, frente a 3 | Cumple |
+| QA-05 | Modificabilidad | *Driver* nuevo del brazo, en simulador: 2 archivos del servicio (+32/−3); límites del hardware en 1 archivo, frente a 3 | Cumple |
 | QA-06 | Disponibilidad | Reinicio del reconocimiento en 1,0 s con 260/260 sesiones; corte de 16 s con texto 52/52. Con el reconocedor real: texto 30/30 y audio 27/30 | Parcial |
 | QA-07 | Escalabilidad | Meta: p95 al menos un 40 % menor con 3 réplicas. No se midió con 3; con 2, sin ganancia (voz: 3,8 frente a 3,6 sesiones/s). Texto: 32 sesiones simultáneas sin fallos, hasta 423 sesiones/s | Exploratorio (fuera del alcance); meta no alcanzada |
 | QA-08 | Observabilidad | Siete marcas en las sesiones con ejecución; cinco en vista previa, por diseño | Parcial |

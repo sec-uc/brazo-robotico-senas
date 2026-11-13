@@ -11,7 +11,7 @@ Descomponer el sistema en ocho microservicios por capacidad (captura, STT, PLN, 
 ## Alternativas consideradas
 - **Monolito modular** (un proceso, módulos con las mismas fronteras por capacidad y los mismos contratos): el más simple de operar y el que cumpliría la mayoría de los escenarios de modificabilidad, seguridad, mantenibilidad y fiabilidad, porque dependen de dónde se trazan las fronteras y no del número de procesos. No aísla los fallos del modelo de reconocimiento ni permite escalarlo por separado (P5, P6).
 - **Monolito modular con el reconocimiento en un proceso aparte**: conserva casi toda la simplicidad del anterior y aísla los fallos del reconocimiento, que es lo único que la evaluación mostró dependiente del despliegue separado (QA-06); es la alternativa más fuerte.
-- **Microservicios** (la elegida): además de lo anterior, permite desplegar, escalar y observar cada capacidad por separado, a cambio de más piezas que operar. Se eligió también porque el tema aprobado del trabajo exigía una arquitectura de este estilo; la evaluación separa por eso lo que aportan las fronteras de lo que aporta el despliegue.
+- **Microservicios** (la elegida): además de lo anterior, permite desplegar, escalar y observar cada capacidad por separado, a cambio de más piezas que operar. Se eligió también porque el tema aprobado del trabajo exigía una arquitectura de este estilo; la evaluación distingue por eso, de forma analítica y sin aislarlos experimentalmente, lo que aportan las fronteras de lo que aporta el despliegue.
 - **Políglota (Python IA + .NET gateway/auth)**: demuestra heterogeneidad, pero duplica tooling y no aporta a los atributos evaluados; la referencia lo permite (los contratos son JSON), la instancia no lo necesita.
 - **ROS 2 como marco integrador**: natural para robótica, pero impone su middleware (DDS) a servicios que no son robóticos (auth, gateway, PLN) y complica el despliegue en un mini‑PC; se deja como driver del servicio de actuadores.
 
@@ -21,4 +21,4 @@ Solo QA-06 (disponibilidad ante la caída del reconocimiento) dependió del desp
 ## Consecuencias
 + Cada etapa se sustituye y observa por separado, y puede escalarse por separado (no demostrado en un equipo, QA-07); el pipeline Kichwa se reutiliza como proveedor.
 − Más piezas que operar (16 contenedores en la instancia final: 8 servicios, bus, Prometheus, Grafana y 5 bases de datos); mitigado con Docker Compose y `Service` común.
-− Latencia añadida: las etapas propias suman unos 2 ms en la mediana; frente al sistema anterior, con el mismo código de reconocimiento, la latencia típica fue 66 ms mayor, casi toda en el protocolo HTTP de la sesión (QA‑01).
+− Latencia añadida: las etapas propias suman unos 2 ms en la mediana; frente al sistema anterior, con el mismo código de reconocimiento, la latencia típica fue 66 ms mayor, la mayor parte, obtenida por diferencia, presumiblemente en el protocolo HTTP de la sesión (QA‑01).
