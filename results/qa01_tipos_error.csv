@@ -1,181 +1,181 @@
-grupo,conjunto,archivo,referencia,transcripcion,glosas_ref,glosas_hyp,tipo
-corpus,corpus,hola__v0.wav,hola,Hola.,HOLA,HOLA,coincide
-corpus,corpus,bien__v0.wav,bien,Bien.,BIEN,BIEN,coincide
-corpus,corpus,mama__v0.wav,mamá,¡Mama!,MADRE,MADRE,coincide
-corpus,corpus,agua__v0.wav,agua,¡Egüe!,AGUA,EGUE,deletrea_otra_palabra
-corpus,corpus,arriba__v0.wav,arriba,arriba.,ARRIBA,ARRIBA,coincide
-corpus,corpus,abajo__v0.wav,abajo,Abajo.,ABAJO,ABAJO,coincide
-corpus,corpus,manana__v0.wav,mañana,Manllana.,MAÑANA,MANLLANA,deletrea_otra_palabra
-corpus,corpus,manzana__v0.wav,manzana,¡Mensana!,MANZANA,MENSANA,deletrea_otra_palabra
-corpus,corpus,mano__v0.wav,mano,Mano.,MANO,MANO,coincide
-corpus,corpus,mejor__v0.wav,mejor,mejor.,MEJOR,MEJOR,coincide
-corpus,corpus,uno__v0.wav,uno,Una,UNO,,nada_ejecutado
-corpus,corpus,cuatro__v0.wav,cuatro,4.,CUATRO,CUATRO,coincide
-corpus,corpus,ocho__v0.wav,ocho,¡Ocho!,OCHO,OCHO,coincide
-corpus,corpus,un_ratito__v0.wav,un ratito,un ratito.,UN RATITO,UN RATITO,coincide
-corpus,corpus,mas_o_menos__v0.wav,más o menos,más o menos.,MAS O MENOS,MAS O MENOS,coincide
-corpus,corpus,mal__v0.wav,mal,Mal,MAL,MAL,coincide
-corpus,corpus,miel__v0.wav,miel,Miel.,MIEL,MIEL,coincide
-corpus,corpus,moneda__v0.wav,moneda,¡Muenida!,MONEDA,MUENIDA,deletrea_otra_palabra
-corpus,corpus,mesero__v0.wav,mesero,Mecero.,MESERO,MECERO,deletrea_otra_palabra
-corpus,corpus,mil__v0.wav,mil,Mil,MIL,MIL,coincide
-corpus,corpus,hola__v1.wav,hola,Hola,HOLA,HOLA,coincide
-corpus,corpus,bien__v1.wav,bien,Bien.,BIEN,BIEN,coincide
-corpus,corpus,mama__v1.wav,mamá,¡Mama!,MADRE,MADRE,coincide
-corpus,corpus,agua__v1.wav,agua,Agua.,AGUA,AGUA,coincide
-corpus,corpus,arriba__v1.wav,arriba,arriba,ARRIBA,ARRIBA,coincide
-corpus,corpus,abajo__v1.wav,abajo,¡Adiós!,ABAJO,ADIOS,sena_erronea
-corpus,corpus,manana__v1.wav,mañana,mañana,MAÑANA,MAÑANA,coincide
-corpus,corpus,manzana__v1.wav,manzana,Manzana,MANZANA,MANZANA,coincide
-corpus,corpus,mano__v1.wav,mano,Mano.,MANO,MANO,coincide
-corpus,corpus,mejor__v1.wav,mejor,Mejor.,MEJOR,MEJOR,coincide
-corpus,corpus,uno__v1.wav,uno,Una,UNO,,nada_ejecutado
-corpus,corpus,cuatro__v1.wav,cuatro,4.,CUATRO,CUATRO,coincide
-corpus,corpus,ocho__v1.wav,ocho,Ocho,OCHO,OCHO,coincide
-corpus,corpus,un_ratito__v1.wav,un ratito,Un ratito.,UN RATITO,UN RATITO,coincide
-corpus,corpus,mas_o_menos__v1.wav,más o menos,más o menos.,MAS O MENOS,MAS O MENOS,coincide
-corpus,corpus,mal__v1.wav,mal,Mal.,MAL,MAL,coincide
-corpus,corpus,miel__v1.wav,miel,Miel.,MIEL,MIEL,coincide
-corpus,corpus,moneda__v1.wav,moneda,moneda,MONEDA,MONEDA,coincide
-corpus,corpus,mesero__v1.wav,mesero,Me siro.,MESERO,ME SIRO,deletrea_otra_palabra
-corpus,corpus,mil__v1.wav,mil,Mil,MIL,MIL,coincide
-corpus,corpus,hola__v2.wav,hola,una,HOLA,,nada_ejecutado
-corpus,corpus,bien__v2.wav,bien,bien,BIEN,BIEN,coincide
-corpus,corpus,mama__v2.wav,mamá,¡Mama!,MADRE,MADRE,coincide
-corpus,corpus,agua__v2.wav,agua,,AGUA,,nada_ejecutado
-corpus,corpus,arriba__v2.wav,arriba,¡Ariba!,ARRIBA,ARIBA,deletrea_otra_palabra
-corpus,corpus,abajo__v2.wav,abajo,¡Adiós!,ABAJO,ADIOS,sena_erronea
-corpus,corpus,manana__v2.wav,mañana,vanyana,MAÑANA,VANYANA,deletrea_otra_palabra
-corpus,corpus,manzana__v2.wav,manzana,Manzana.,MANZANA,MANZANA,coincide
-corpus,corpus,mano__v2.wav,mano,,MANO,,nada_ejecutado
-corpus,corpus,mejor__v2.wav,mejor,de color.,MEJOR,COLOR,deletrea_otra_palabra
-corpus,corpus,uno__v2.wav,uno,no,UNO,NO,sena_erronea
-corpus,corpus,cuatro__v2.wav,cuatro,cuatro,CUATRO,CUATRO,coincide
-corpus,corpus,ocho__v2.wav,ocho,,OCHO,,nada_ejecutado
-corpus,corpus,un_ratito__v2.wav,un ratito,un platito.,UN RATITO,PLATITO,deletrea_otra_palabra
-corpus,corpus,mas_o_menos__v2.wav,más o menos,más o menos.,MAS O MENOS,MAS O MENOS,coincide
-corpus,corpus,mal__v2.wav,mal,1,MAL,UNO,sena_erronea
-corpus,corpus,miel__v2.wav,miel,bien,MIEL,BIEN,sena_erronea
-corpus,corpus,moneda__v2.wav,moneda,¡Muen de edad!,MONEDA,MUEN EDAD,deletrea_otra_palabra
-corpus,corpus,mesero__v2.wav,mesero,Miserro.,MESERO,MISERRO,deletrea_otra_palabra
-corpus,corpus,mil__v2.wav,mil,bien,MIL,BIEN,sena_erronea
-control,in,in_martes__v0.wav,martes,Mértice.,MARTES,MERTICE,deletrea_otra_palabra
-control,in,in_martes__v1.wav,martes,Marte.,MARTES,MARTE,deletrea_otra_palabra
-control,in,in_martes__v2.wav,martes,Vartes.,MARTES,VARTES,deletrea_otra_palabra
-control,in,in_miercoles__v0.wav,miércoles,Mircolés.,MIERCOLES,MIRCOLES,deletrea_otra_palabra
-control,in,in_miercoles__v1.wav,miércoles,Mircolés.,MIERCOLES,MIRCOLES,deletrea_otra_palabra
-control,in,in_miercoles__v2.wav,miércoles,con el,MIERCOLES,,nada_ejecutado
-control,in,in_mujer__v0.wav,mujer,mujer,MUJER,MUJER,coincide
-control,in,in_mujer__v1.wav,mujer,Mujer.,MUJER,MUJER,coincide
-control,in,in_mujer__v2.wav,mujer,el buer.,MUJER,BUER,deletrea_otra_palabra
-control,in,in_mosca__v0.wav,mosca,Mosque,MOSCA,MOSQUE,deletrea_otra_palabra
-control,in,in_mosca__v1.wav,mosca,Moshka.,MOSCA,MOSHKA,deletrea_otra_palabra
-control,in,in_mosca__v2.wav,mosca,Bosca.,MOSCA,BOSCA,deletrea_otra_palabra
-control,in,in_morado__v0.wav,morado,Morado.,MORADO,MORADO,coincide
-control,in,in_morado__v1.wav,morado,Morado.,MORADO,MORADO,coincide
-control,in,in_morado__v2.wav,morado,Amorado.,MORADO,AMORADO,deletrea_otra_palabra
-control,in,in_muela__v0.wav,muela,¡Muy la!,MUELA,MUY,deletrea_otra_palabra
-control,in,in_muela__v1.wav,muela,Mula.,MUELA,MULA,deletrea_otra_palabra
-control,in,in_muela__v2.wav,muela,Bueno.,MUELA,BUENO,deletrea_otra_palabra
-control,in,in_mango__v0.wav,mango,mango,MANGO,MANGO,coincide
-control,in,in_mango__v1.wav,mango,Mago.,MANGO,MAGO,deletrea_otra_palabra
-control,in,in_mango__v2.wav,mango,Mago,MANGO,MAGO,deletrea_otra_palabra
-control,in,in_mentir__v0.wav,mentir,mentir.,MENTIR,MENTIR,coincide
-control,in,in_mentir__v1.wav,mentir,mentira,MENTIR,MENTIRA,deletrea_otra_palabra
-control,in,in_mentir__v2.wav,mentir,aquí,MENTIR,AQUI,deletrea_otra_palabra
-control,in,in_morir__v0.wav,morir,morir.,MORIR,MORIR,coincide
-control,in,in_morir__v1.wav,morir,morir.,MORIR,MORIR,coincide
-control,in,in_morir__v2.wav,morir,barir,MORIR,BARIR,deletrea_otra_palabra
-control,in,in_mayor__v0.wav,mayor,Mayor,MAYOR,MAYOR,coincide
-control,in,in_mayor__v1.wav,mayor,mayor,MAYOR,MAYOR,coincide
-control,in,in_mayor__v2.wav,mayor,mayor.,MAYOR,MAYOR,coincide
-control,in,in_malo__v0.wav,malo,Malo.,MALO,MALO,coincide
-control,in,in_malo__v1.wav,malo,Malo.,MALO,MALO,coincide
-control,in,in_malo__v2.wav,malo,bueno,MALO,BUENO,deletrea_otra_palabra
-control,in,in_millon__v0.wav,millón,Mi John.,MILLON,MI JOHN,sena_erronea
-control,in,in_millon__v1.wav,millón,Millón.,MILLON,MILLON,coincide
-control,in,in_millon__v2.wav,millón,que no me llamo.,MILLON,NO ME LLAMO,sena_erronea
-control,in,in_militar__v0.wav,militar,Militar,MILITAR,MILITAR,coincide
-control,in,in_militar__v1.wav,militar,Militar.,MILITAR,MILITAR,coincide
-control,in,in_militar__v2.wav,militar,militar.,MILITAR,MILITAR,coincide
-control,in,in_mexico__v0.wav,méxico,México.,MEXICO,MEXICO,coincide
-control,in,in_mexico__v1.wav,méxico,México.,MEXICO,MEXICO,coincide
-control,in,in_mexico__v2.wav,méxico,¡Vejito!,MEXICO,VEJITO,deletrea_otra_palabra
-control,in,in_mora__v0.wav,mora,Mora,MORA,MORA,coincide
-control,in,in_mora__v1.wav,mora,Mora.,MORA,MORA,coincide
-control,in,in_mora__v2.wav,mora,¡Bora!,MORA,BORA,deletrea_otra_palabra
-control,in,in_mancha__v0.wav,mancha,¡Mancho!,MANCHA,MANCHO,deletrea_otra_palabra
-control,in,in_mancha__v1.wav,mancha,mancha,MANCHA,MANCHA,coincide
-control,in,in_mancha__v2.wav,mancha,¡Vancha!,MANCHA,VANCHA,deletrea_otra_palabra
-control,in,in_marcador__v0.wav,marcador,marcador,MARCADOR,MARCADOR,coincide
-control,in,in_marcador__v1.wav,marcador,marcador,MARCADOR,MARCADOR,coincide
-control,in,in_marcador__v2.wav,marcador,marcador,MARCADOR,MARCADOR,coincide
-control,in,in_mareo__v0.wav,mareo,¡Mario!,MAREO,MARIO,deletrea_otra_palabra
-control,in,in_mareo__v1.wav,mareo,¡Mario!,MAREO,MARIO,deletrea_otra_palabra
-control,in,in_mareo__v2.wav,mareo,¡Mareo!,MAREO,MAREO,coincide
-control,in,in_merienda__v0.wav,merienda,Miranda,MERIENDA,MIRANDA,deletrea_otra_palabra
-control,in,in_merienda__v1.wav,merienda,Melinda.,MERIENDA,MELINDA,deletrea_otra_palabra
-control,in,in_merienda__v2.wav,merienda,verienda.,MERIENDA,VERIENDA,deletrea_otra_palabra
-control,in,in_grado__v0.wav,grado,grado,GRADO,GRADO,coincide
-control,in,in_grado__v1.wav,grado,un grado.,GRADO,GRADO,coincide
-control,in,in_grado__v2.wav,grado,grado,GRADO,GRADO,coincide
-control,oov,oov_casa__v0.wav,casa,de la casa.,CASA,CASA,coincide
-control,oov,oov_casa__v1.wav,casa,que haces.,CASA,HACES,deletrea_otra_palabra
-control,oov,oov_casa__v2.wav,casa,Gracias.,CASA,GRACIAS,sena_erronea
-control,oov,oov_perro__v0.wav,perro,¡Pero!,PERRO,PERO,deletrea_otra_palabra
-control,oov,oov_perro__v1.wav,perro,,PERRO,,nada_ejecutado
-control,oov,oov_perro__v2.wav,perro,¡Lero!,PERRO,LERO,deletrea_otra_palabra
-control,oov,oov_gato__v0.wav,gato,gato,GATO,GATO,coincide
-control,oov,oov_gato__v1.wav,gato,en gato,GATO,GATO,coincide
-control,oov,oov_gato__v2.wav,gato,¡Gato!,GATO,GATO,coincide
-control,oov,oov_mesa__v0.wav,mesa,Meza,MESA,MEZA,deletrea_otra_palabra
-control,oov,oov_mesa__v1.wav,mesa,Mezca.,MESA,MEZCA,deletrea_otra_palabra
-control,oov,oov_mesa__v2.wav,mesa,Vesa!,MESA,VESA,deletrea_otra_palabra
-control,oov,oov_libro__v0.wav,libro,Libro,LIBRO,LIBRO,coincide
-control,oov,oov_libro__v1.wav,libro,Libra,LIBRO,LIBRA,deletrea_otra_palabra
-control,oov,oov_libro__v2.wav,libro,libro.,LIBRO,LIBRO,coincide
-control,oov,oov_comer__v0.wav,comer,comer.,COMER,COMER,coincide
-control,oov,oov_comer__v1.wav,comer,comer,COMER,COMER,coincide
-control,oov,oov_comer__v2.wav,comer,comer.,COMER,COMER,coincide
-control,oov,oov_dormir__v0.wav,dormir,dormir.,DORMIR,DORMIR,coincide
-control,oov,oov_dormir__v1.wav,dormir,Dormir.,DORMIR,DORMIR,coincide
-control,oov,oov_dormir__v2.wav,dormir,dormir.,DORMIR,DORMIR,coincide
-control,oov,oov_gracias__v0.wav,gracias,Gracias.,GRACIAS,GRACIAS,coincide
-control,oov,oov_gracias__v1.wav,gracias,Gracias.,GRACIAS,GRACIAS,coincide
-control,oov,oov_gracias__v2.wav,gracias,Gracias.,GRACIAS,GRACIAS,coincide
-control,oov,oov_amigo__v0.wav,amigo,Amigo.,AMIGO,AMIGO,coincide
-control,oov,oov_amigo__v1.wav,amigo,Amigo.,AMIGO,AMIGO,coincide
-control,oov,oov_amigo__v2.wav,amigo,¡Mira mío!,AMIGO,MIRA MIO,deletrea_otra_palabra
-control,oov,oov_trabajo__v0.wav,trabajo,trabajo,TRABAJO,TRABAJO,coincide
-control,oov,oov_trabajo__v1.wav,trabajo,trabajo.,TRABAJO,TRABAJO,coincide
-control,oov,oov_trabajo__v2.wav,trabajo,¿Qué pasa?,TRABAJO,PASA,deletrea_otra_palabra
-control,oov,oov_escuela__v0.wav,escuela,Escuela,ESCUELA,ESCUELA,coincide
-control,oov,oov_escuela__v1.wav,escuela,y después la,ESCUELA,DESPUES,deletrea_otra_palabra
-control,oov,oov_escuela__v2.wav,escuela,escuela,ESCUELA,ESCUELA,coincide
-control,oov,oov_familia__v0.wav,familia,familia,FAMILIA,FAMILIA,coincide
-control,oov,oov_familia__v1.wav,familia,Familia,FAMILIA,FAMILIA,coincide
-control,oov,oov_familia__v2.wav,familia,familia,FAMILIA,FAMILIA,coincide
-control,oov,oov_masa__v0.wav,masa,Más...,MASA,MAS,deletrea_otra_palabra
-control,oov,oov_masa__v1.wav,masa,¡Masa!,MASA,MASA,coincide
-control,oov,oov_masa__v2.wav,masa,Vasa!,MASA,VASA,deletrea_otra_palabra
-control,oov,oov_mono__v0.wav,mono,mono,MONO,MONO,coincide
-control,oov,oov_mono__v1.wav,mono,Mono.,MONO,MONO,coincide
-control,oov,oov_mono__v2.wav,mono,bueno,MONO,BUENO,deletrea_otra_palabra
-control,oov,oov_malla__v0.wav,malla,Májate.,MALLA,MAJATE,deletrea_otra_palabra
-control,oov,oov_malla__v1.wav,malla,Maya,MALLA,MAYA,deletrea_otra_palabra
-control,oov,oov_malla__v2.wav,malla,¡Vaya!,MALLA,VAYA,deletrea_otra_palabra
-control,oov,oov_mina__v0.wav,mina,Míneo.,MINA,MINEO,deletrea_otra_palabra
-control,oov,oov_mina__v1.wav,mina,Mina,MINA,MINA,coincide
-control,oov,oov_mina__v2.wav,mina,¡Venga!,MINA,VENGA,deletrea_otra_palabra
-control,oov,oov_mural__v0.wav,mural,mural,MURAL,MURAL,coincide
-control,oov,oov_mural__v1.wav,mural,Mural,MURAL,MURAL,coincide
-control,oov,oov_mural__v2.wav,mural,,MURAL,,nada_ejecutado
-control,oov,oov_mirar__v0.wav,mirar,Mirar,MIRAR,MIRAR,coincide
-control,oov,oov_mirar__v1.wav,mirar,Mirad.,MIRAR,MIRAD,deletrea_otra_palabra
-control,oov,oov_mirar__v2.wav,mirar,mirar.,MIRAR,MIRAR,coincide
-control,oov,oov_marzo__v0.wav,marzo,marzo,MARZO,MARZO,coincide
-control,oov,oov_marzo__v1.wav,marzo,marzo,MARZO,MARZO,coincide
-control,oov,oov_marzo__v2.wav,marzo,VARSO,MARZO,VARSO,deletrea_otra_palabra
-control,oov,oov_moto__v0.wav,moto,moto,MOTO,MOTO,coincide
-control,oov,oov_moto__v1.wav,moto,modo,MOTO,MODO,deletrea_otra_palabra
-control,oov,oov_moto__v2.wav,moto,motor,MOTO,MOTOR,deletrea_otra_palabra
+grupo,conjunto,archivo,referencia,transcripcion,glosas_ref,glosas_hyp,tipo,palabra_real
+corpus,corpus,hola__v0.wav,hola,Hola.,HOLA,HOLA,coincide,
+corpus,corpus,bien__v0.wav,bien,Bien.,BIEN,BIEN,coincide,
+corpus,corpus,mama__v0.wav,mamá,¡Mama!,MADRE,MADRE,coincide,
+corpus,corpus,agua__v0.wav,agua,¡Egüe!,AGUA,EGUE,deletrea_otra_palabra,no
+corpus,corpus,arriba__v0.wav,arriba,arriba.,ARRIBA,ARRIBA,coincide,
+corpus,corpus,abajo__v0.wav,abajo,Abajo.,ABAJO,ABAJO,coincide,
+corpus,corpus,manana__v0.wav,mañana,Manllana.,MAÑANA,MANLLANA,deletrea_otra_palabra,no
+corpus,corpus,manzana__v0.wav,manzana,¡Mensana!,MANZANA,MENSANA,deletrea_otra_palabra,no
+corpus,corpus,mano__v0.wav,mano,Mano.,MANO,MANO,coincide,
+corpus,corpus,mejor__v0.wav,mejor,mejor.,MEJOR,MEJOR,coincide,
+corpus,corpus,uno__v0.wav,uno,Una,UNO,,nada_ejecutado,
+corpus,corpus,cuatro__v0.wav,cuatro,4.,CUATRO,CUATRO,coincide,
+corpus,corpus,ocho__v0.wav,ocho,¡Ocho!,OCHO,OCHO,coincide,
+corpus,corpus,un_ratito__v0.wav,un ratito,un ratito.,UN RATITO,UN RATITO,coincide,
+corpus,corpus,mas_o_menos__v0.wav,más o menos,más o menos.,MAS O MENOS,MAS O MENOS,coincide,
+corpus,corpus,mal__v0.wav,mal,Mal,MAL,MAL,coincide,
+corpus,corpus,miel__v0.wav,miel,Miel.,MIEL,MIEL,coincide,
+corpus,corpus,moneda__v0.wav,moneda,¡Muenida!,MONEDA,MUENIDA,deletrea_otra_palabra,no
+corpus,corpus,mesero__v0.wav,mesero,Mecero.,MESERO,MECERO,deletrea_otra_palabra,no
+corpus,corpus,mil__v0.wav,mil,Mil,MIL,MIL,coincide,
+corpus,corpus,hola__v1.wav,hola,Hola,HOLA,HOLA,coincide,
+corpus,corpus,bien__v1.wav,bien,Bien.,BIEN,BIEN,coincide,
+corpus,corpus,mama__v1.wav,mamá,¡Mama!,MADRE,MADRE,coincide,
+corpus,corpus,agua__v1.wav,agua,Agua.,AGUA,AGUA,coincide,
+corpus,corpus,arriba__v1.wav,arriba,arriba,ARRIBA,ARRIBA,coincide,
+corpus,corpus,abajo__v1.wav,abajo,¡Adiós!,ABAJO,ADIOS,sena_erronea,
+corpus,corpus,manana__v1.wav,mañana,mañana,MAÑANA,MAÑANA,coincide,
+corpus,corpus,manzana__v1.wav,manzana,Manzana,MANZANA,MANZANA,coincide,
+corpus,corpus,mano__v1.wav,mano,Mano.,MANO,MANO,coincide,
+corpus,corpus,mejor__v1.wav,mejor,Mejor.,MEJOR,MEJOR,coincide,
+corpus,corpus,uno__v1.wav,uno,Una,UNO,,nada_ejecutado,
+corpus,corpus,cuatro__v1.wav,cuatro,4.,CUATRO,CUATRO,coincide,
+corpus,corpus,ocho__v1.wav,ocho,Ocho,OCHO,OCHO,coincide,
+corpus,corpus,un_ratito__v1.wav,un ratito,Un ratito.,UN RATITO,UN RATITO,coincide,
+corpus,corpus,mas_o_menos__v1.wav,más o menos,más o menos.,MAS O MENOS,MAS O MENOS,coincide,
+corpus,corpus,mal__v1.wav,mal,Mal.,MAL,MAL,coincide,
+corpus,corpus,miel__v1.wav,miel,Miel.,MIEL,MIEL,coincide,
+corpus,corpus,moneda__v1.wav,moneda,moneda,MONEDA,MONEDA,coincide,
+corpus,corpus,mesero__v1.wav,mesero,Me siro.,MESERO,ME SIRO,deletrea_otra_palabra,no
+corpus,corpus,mil__v1.wav,mil,Mil,MIL,MIL,coincide,
+corpus,corpus,hola__v2.wav,hola,una,HOLA,,nada_ejecutado,
+corpus,corpus,bien__v2.wav,bien,bien,BIEN,BIEN,coincide,
+corpus,corpus,mama__v2.wav,mamá,¡Mama!,MADRE,MADRE,coincide,
+corpus,corpus,agua__v2.wav,agua,,AGUA,,nada_ejecutado,
+corpus,corpus,arriba__v2.wav,arriba,¡Ariba!,ARRIBA,ARIBA,deletrea_otra_palabra,no
+corpus,corpus,abajo__v2.wav,abajo,¡Adiós!,ABAJO,ADIOS,sena_erronea,
+corpus,corpus,manana__v2.wav,mañana,vanyana,MAÑANA,VANYANA,deletrea_otra_palabra,no
+corpus,corpus,manzana__v2.wav,manzana,Manzana.,MANZANA,MANZANA,coincide,
+corpus,corpus,mano__v2.wav,mano,,MANO,,nada_ejecutado,
+corpus,corpus,mejor__v2.wav,mejor,de color.,MEJOR,COLOR,deletrea_otra_palabra,si
+corpus,corpus,uno__v2.wav,uno,no,UNO,NO,sena_erronea,
+corpus,corpus,cuatro__v2.wav,cuatro,cuatro,CUATRO,CUATRO,coincide,
+corpus,corpus,ocho__v2.wav,ocho,,OCHO,,nada_ejecutado,
+corpus,corpus,un_ratito__v2.wav,un ratito,un platito.,UN RATITO,PLATITO,deletrea_otra_palabra,si
+corpus,corpus,mas_o_menos__v2.wav,más o menos,más o menos.,MAS O MENOS,MAS O MENOS,coincide,
+corpus,corpus,mal__v2.wav,mal,1,MAL,UNO,sena_erronea,
+corpus,corpus,miel__v2.wav,miel,bien,MIEL,BIEN,sena_erronea,
+corpus,corpus,moneda__v2.wav,moneda,¡Muen de edad!,MONEDA,MUEN EDAD,deletrea_otra_palabra,no
+corpus,corpus,mesero__v2.wav,mesero,Miserro.,MESERO,MISERRO,deletrea_otra_palabra,no
+corpus,corpus,mil__v2.wav,mil,bien,MIL,BIEN,sena_erronea,
+control,in,in_martes__v0.wav,martes,Mértice.,MARTES,MERTICE,deletrea_otra_palabra,no
+control,in,in_martes__v1.wav,martes,Marte.,MARTES,MARTE,deletrea_otra_palabra,si
+control,in,in_martes__v2.wav,martes,Vartes.,MARTES,VARTES,deletrea_otra_palabra,no
+control,in,in_miercoles__v0.wav,miércoles,Mircolés.,MIERCOLES,MIRCOLES,deletrea_otra_palabra,no
+control,in,in_miercoles__v1.wav,miércoles,Mircolés.,MIERCOLES,MIRCOLES,deletrea_otra_palabra,no
+control,in,in_miercoles__v2.wav,miércoles,con el,MIERCOLES,,nada_ejecutado,
+control,in,in_mujer__v0.wav,mujer,mujer,MUJER,MUJER,coincide,
+control,in,in_mujer__v1.wav,mujer,Mujer.,MUJER,MUJER,coincide,
+control,in,in_mujer__v2.wav,mujer,el buer.,MUJER,BUER,deletrea_otra_palabra,no
+control,in,in_mosca__v0.wav,mosca,Mosque,MOSCA,MOSQUE,deletrea_otra_palabra,no
+control,in,in_mosca__v1.wav,mosca,Moshka.,MOSCA,MOSHKA,deletrea_otra_palabra,no
+control,in,in_mosca__v2.wav,mosca,Bosca.,MOSCA,BOSCA,deletrea_otra_palabra,no
+control,in,in_morado__v0.wav,morado,Morado.,MORADO,MORADO,coincide,
+control,in,in_morado__v1.wav,morado,Morado.,MORADO,MORADO,coincide,
+control,in,in_morado__v2.wav,morado,Amorado.,MORADO,AMORADO,deletrea_otra_palabra,no
+control,in,in_muela__v0.wav,muela,¡Muy la!,MUELA,MUY,deletrea_otra_palabra,si
+control,in,in_muela__v1.wav,muela,Mula.,MUELA,MULA,deletrea_otra_palabra,si
+control,in,in_muela__v2.wav,muela,Bueno.,MUELA,BUENO,deletrea_otra_palabra,si
+control,in,in_mango__v0.wav,mango,mango,MANGO,MANGO,coincide,
+control,in,in_mango__v1.wav,mango,Mago.,MANGO,MAGO,deletrea_otra_palabra,si
+control,in,in_mango__v2.wav,mango,Mago,MANGO,MAGO,deletrea_otra_palabra,si
+control,in,in_mentir__v0.wav,mentir,mentir.,MENTIR,MENTIR,coincide,
+control,in,in_mentir__v1.wav,mentir,mentira,MENTIR,MENTIRA,deletrea_otra_palabra,si
+control,in,in_mentir__v2.wav,mentir,aquí,MENTIR,AQUI,deletrea_otra_palabra,si
+control,in,in_morir__v0.wav,morir,morir.,MORIR,MORIR,coincide,
+control,in,in_morir__v1.wav,morir,morir.,MORIR,MORIR,coincide,
+control,in,in_morir__v2.wav,morir,barir,MORIR,BARIR,deletrea_otra_palabra,no
+control,in,in_mayor__v0.wav,mayor,Mayor,MAYOR,MAYOR,coincide,
+control,in,in_mayor__v1.wav,mayor,mayor,MAYOR,MAYOR,coincide,
+control,in,in_mayor__v2.wav,mayor,mayor.,MAYOR,MAYOR,coincide,
+control,in,in_malo__v0.wav,malo,Malo.,MALO,MALO,coincide,
+control,in,in_malo__v1.wav,malo,Malo.,MALO,MALO,coincide,
+control,in,in_malo__v2.wav,malo,bueno,MALO,BUENO,deletrea_otra_palabra,si
+control,in,in_millon__v0.wav,millón,Mi John.,MILLON,MI JOHN,sena_erronea,
+control,in,in_millon__v1.wav,millón,Millón.,MILLON,MILLON,coincide,
+control,in,in_millon__v2.wav,millón,que no me llamo.,MILLON,NO ME LLAMO,sena_erronea,
+control,in,in_militar__v0.wav,militar,Militar,MILITAR,MILITAR,coincide,
+control,in,in_militar__v1.wav,militar,Militar.,MILITAR,MILITAR,coincide,
+control,in,in_militar__v2.wav,militar,militar.,MILITAR,MILITAR,coincide,
+control,in,in_mexico__v0.wav,méxico,México.,MEXICO,MEXICO,coincide,
+control,in,in_mexico__v1.wav,méxico,México.,MEXICO,MEXICO,coincide,
+control,in,in_mexico__v2.wav,méxico,¡Vejito!,MEXICO,VEJITO,deletrea_otra_palabra,no
+control,in,in_mora__v0.wav,mora,Mora,MORA,MORA,coincide,
+control,in,in_mora__v1.wav,mora,Mora.,MORA,MORA,coincide,
+control,in,in_mora__v2.wav,mora,¡Bora!,MORA,BORA,deletrea_otra_palabra,no
+control,in,in_mancha__v0.wav,mancha,¡Mancho!,MANCHA,MANCHO,deletrea_otra_palabra,si
+control,in,in_mancha__v1.wav,mancha,mancha,MANCHA,MANCHA,coincide,
+control,in,in_mancha__v2.wav,mancha,¡Vancha!,MANCHA,VANCHA,deletrea_otra_palabra,no
+control,in,in_marcador__v0.wav,marcador,marcador,MARCADOR,MARCADOR,coincide,
+control,in,in_marcador__v1.wav,marcador,marcador,MARCADOR,MARCADOR,coincide,
+control,in,in_marcador__v2.wav,marcador,marcador,MARCADOR,MARCADOR,coincide,
+control,in,in_mareo__v0.wav,mareo,¡Mario!,MAREO,MARIO,deletrea_otra_palabra,si
+control,in,in_mareo__v1.wav,mareo,¡Mario!,MAREO,MARIO,deletrea_otra_palabra,si
+control,in,in_mareo__v2.wav,mareo,¡Mareo!,MAREO,MAREO,coincide,
+control,in,in_merienda__v0.wav,merienda,Miranda,MERIENDA,MIRANDA,deletrea_otra_palabra,si
+control,in,in_merienda__v1.wav,merienda,Melinda.,MERIENDA,MELINDA,deletrea_otra_palabra,si
+control,in,in_merienda__v2.wav,merienda,verienda.,MERIENDA,VERIENDA,deletrea_otra_palabra,no
+control,in,in_grado__v0.wav,grado,grado,GRADO,GRADO,coincide,
+control,in,in_grado__v1.wav,grado,un grado.,GRADO,GRADO,coincide,
+control,in,in_grado__v2.wav,grado,grado,GRADO,GRADO,coincide,
+control,oov,oov_casa__v0.wav,casa,de la casa.,CASA,CASA,coincide,
+control,oov,oov_casa__v1.wav,casa,que haces.,CASA,HACES,deletrea_otra_palabra,si
+control,oov,oov_casa__v2.wav,casa,Gracias.,CASA,GRACIAS,sena_erronea,
+control,oov,oov_perro__v0.wav,perro,¡Pero!,PERRO,PERO,deletrea_otra_palabra,si
+control,oov,oov_perro__v1.wav,perro,,PERRO,,nada_ejecutado,
+control,oov,oov_perro__v2.wav,perro,¡Lero!,PERRO,LERO,deletrea_otra_palabra,no
+control,oov,oov_gato__v0.wav,gato,gato,GATO,GATO,coincide,
+control,oov,oov_gato__v1.wav,gato,en gato,GATO,GATO,coincide,
+control,oov,oov_gato__v2.wav,gato,¡Gato!,GATO,GATO,coincide,
+control,oov,oov_mesa__v0.wav,mesa,Meza,MESA,MEZA,deletrea_otra_palabra,si
+control,oov,oov_mesa__v1.wav,mesa,Mezca.,MESA,MEZCA,deletrea_otra_palabra,no
+control,oov,oov_mesa__v2.wav,mesa,Vesa!,MESA,VESA,deletrea_otra_palabra,no
+control,oov,oov_libro__v0.wav,libro,Libro,LIBRO,LIBRO,coincide,
+control,oov,oov_libro__v1.wav,libro,Libra,LIBRO,LIBRA,deletrea_otra_palabra,si
+control,oov,oov_libro__v2.wav,libro,libro.,LIBRO,LIBRO,coincide,
+control,oov,oov_comer__v0.wav,comer,comer.,COMER,COMER,coincide,
+control,oov,oov_comer__v1.wav,comer,comer,COMER,COMER,coincide,
+control,oov,oov_comer__v2.wav,comer,comer.,COMER,COMER,coincide,
+control,oov,oov_dormir__v0.wav,dormir,dormir.,DORMIR,DORMIR,coincide,
+control,oov,oov_dormir__v1.wav,dormir,Dormir.,DORMIR,DORMIR,coincide,
+control,oov,oov_dormir__v2.wav,dormir,dormir.,DORMIR,DORMIR,coincide,
+control,oov,oov_gracias__v0.wav,gracias,Gracias.,GRACIAS,GRACIAS,coincide,
+control,oov,oov_gracias__v1.wav,gracias,Gracias.,GRACIAS,GRACIAS,coincide,
+control,oov,oov_gracias__v2.wav,gracias,Gracias.,GRACIAS,GRACIAS,coincide,
+control,oov,oov_amigo__v0.wav,amigo,Amigo.,AMIGO,AMIGO,coincide,
+control,oov,oov_amigo__v1.wav,amigo,Amigo.,AMIGO,AMIGO,coincide,
+control,oov,oov_amigo__v2.wav,amigo,¡Mira mío!,AMIGO,MIRA MIO,deletrea_otra_palabra,si
+control,oov,oov_trabajo__v0.wav,trabajo,trabajo,TRABAJO,TRABAJO,coincide,
+control,oov,oov_trabajo__v1.wav,trabajo,trabajo.,TRABAJO,TRABAJO,coincide,
+control,oov,oov_trabajo__v2.wav,trabajo,¿Qué pasa?,TRABAJO,PASA,deletrea_otra_palabra,si
+control,oov,oov_escuela__v0.wav,escuela,Escuela,ESCUELA,ESCUELA,coincide,
+control,oov,oov_escuela__v1.wav,escuela,y después la,ESCUELA,DESPUES,deletrea_otra_palabra,si
+control,oov,oov_escuela__v2.wav,escuela,escuela,ESCUELA,ESCUELA,coincide,
+control,oov,oov_familia__v0.wav,familia,familia,FAMILIA,FAMILIA,coincide,
+control,oov,oov_familia__v1.wav,familia,Familia,FAMILIA,FAMILIA,coincide,
+control,oov,oov_familia__v2.wav,familia,familia,FAMILIA,FAMILIA,coincide,
+control,oov,oov_masa__v0.wav,masa,Más...,MASA,MAS,deletrea_otra_palabra,si
+control,oov,oov_masa__v1.wav,masa,¡Masa!,MASA,MASA,coincide,
+control,oov,oov_masa__v2.wav,masa,Vasa!,MASA,VASA,deletrea_otra_palabra,no
+control,oov,oov_mono__v0.wav,mono,mono,MONO,MONO,coincide,
+control,oov,oov_mono__v1.wav,mono,Mono.,MONO,MONO,coincide,
+control,oov,oov_mono__v2.wav,mono,bueno,MONO,BUENO,deletrea_otra_palabra,si
+control,oov,oov_malla__v0.wav,malla,Májate.,MALLA,MAJATE,deletrea_otra_palabra,no
+control,oov,oov_malla__v1.wav,malla,Maya,MALLA,MAYA,deletrea_otra_palabra,si
+control,oov,oov_malla__v2.wav,malla,¡Vaya!,MALLA,VAYA,deletrea_otra_palabra,si
+control,oov,oov_mina__v0.wav,mina,Míneo.,MINA,MINEO,deletrea_otra_palabra,no
+control,oov,oov_mina__v1.wav,mina,Mina,MINA,MINA,coincide,
+control,oov,oov_mina__v2.wav,mina,¡Venga!,MINA,VENGA,deletrea_otra_palabra,si
+control,oov,oov_mural__v0.wav,mural,mural,MURAL,MURAL,coincide,
+control,oov,oov_mural__v1.wav,mural,Mural,MURAL,MURAL,coincide,
+control,oov,oov_mural__v2.wav,mural,,MURAL,,nada_ejecutado,
+control,oov,oov_mirar__v0.wav,mirar,Mirar,MIRAR,MIRAR,coincide,
+control,oov,oov_mirar__v1.wav,mirar,Mirad.,MIRAR,MIRAD,deletrea_otra_palabra,si
+control,oov,oov_mirar__v2.wav,mirar,mirar.,MIRAR,MIRAR,coincide,
+control,oov,oov_marzo__v0.wav,marzo,marzo,MARZO,MARZO,coincide,
+control,oov,oov_marzo__v1.wav,marzo,marzo,MARZO,MARZO,coincide,
+control,oov,oov_marzo__v2.wav,marzo,VARSO,MARZO,VARSO,deletrea_otra_palabra,no
+control,oov,oov_moto__v0.wav,moto,moto,MOTO,MOTO,coincide,
+control,oov,oov_moto__v1.wav,moto,modo,MOTO,MODO,deletrea_otra_palabra,si
+control,oov,oov_moto__v2.wav,moto,motor,MOTO,MOTOR,deletrea_otra_palabra,si

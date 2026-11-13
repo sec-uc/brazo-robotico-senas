@@ -16,7 +16,7 @@ Descomponer el sistema en ocho microservicios por capacidad (captura, STT, PLN, 
 - **ROS 2 como marco integrador**: natural para robótica, pero impone su middleware (DDS) a servicios que no son robóticos (auth, gateway, PLN) y complica el despliegue en un mini‑PC; se deja como driver del servicio de actuadores.
 
 ## Revisión tras la evaluación
-Solo QA-06 (disponibilidad ante la caída del reconocimiento) dependió del despliegue separado; QA-07 no mostró ganancia de las réplicas en un equipo. El número de unidades desplegables queda, por tanto, como punto de variación de la arquitectura de referencia.
+Solo QA-06 (disponibilidad ante la caída del reconocimiento) dependió del despliegue separado; QA-07 no mostró ganancia de las réplicas en un equipo. La referencia mantiene los microservicios, que fija el objetivo aprobado del trabajo: una unidad desplegable por capacidad. Lo que varía entre instancias es el orquestador, el número de réplicas y los nodos. La evaluación no comparó la propuesta con un monolito modular de las mismas fronteras, y esa comparación queda como trabajo futuro.
 
 ## Consecuencias
 + Cada etapa se sustituye/escala/observa por separado; el pipeline Kichwa se reutiliza como proveedor.
