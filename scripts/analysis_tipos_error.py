@@ -3,19 +3,24 @@
 
 Para cada audio se glosan la referencia y la transcripción con el servicio lingüístico de la plataforma,
 y cada glosa se clasifica como seña del vocabulario o deletreo. Tipos (por audio, el más grave):
-  coincide        — misma secuencia de glosas
-  sena_erronea    — aparece una seña del vocabulario que la referencia no tiene (el robot haría otra seña)
-  deletreo        — una seña de la referencia se deletrea o se pierde, sin señas nuevas
-  vacio           — la transcripción está vacía
+  coincide               — misma secuencia de glosas
+  sena_erronea           — aparece una seña del vocabulario que la referencia no tiene (el robot haría otra seña)
+  deletrea_otra_palabra  — se deletrea una palabra distinta de la referencia (no-palabra o palabra real)
+  pierde_sena            — falta una seña de la referencia, sin señas ni palabras nuevas
+  nada_ejecutado         — transcripción vacía o sin glosas
   python scripts/analysis_tipos_error.py      # requiere la plataforma levantada (GATEWAY)
 """
 from __future__ import annotations
-import csv, json, sys
+import csv, json, sys, unicodedata
 from collections import Counter
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 import httpx
 import experiments as e
+
+def _norm(w: str) -> str:
+    return "".join(c for c in unicodedata.normalize("NFD", w.upper()) if unicodedata.category(c) != "Mn")
+
 
 RES = Path(__file__).resolve().parents[1] / "results"
 FUENTES = {"corpus": ["qa01_asr_whisper_base.csv"], "control": ["qa01_asr_ctrl.csv"]}
@@ -33,10 +38,12 @@ def main() -> None:
             for nombre in archivos:
                 for r in csv.DictReader(open(RES / nombre, encoding="utf-8")):
                     gr, gh = glosas(r["reference"]), glosas(r["transcript"])
-                    if not r["transcript"].strip(): tipo = "vacio"
+                    ref_n = {_norm(x) for x in gr}
+                    if not r["transcript"].strip() or not gh: tipo = "nada_ejecutado"
                     elif gr == gh: tipo = "coincide"
                     elif {g for g in gh if g in vocab} - set(gr): tipo = "sena_erronea"
-                    else: tipo = "deletreo"
+                    elif any(g not in vocab and _norm(g) not in ref_n for g in gh): tipo = "deletrea_otra_palabra"
+                    else: tipo = "pierde_sena"
                     filas.append({"grupo": grupo, "conjunto": r.get("set", ""), "archivo": r["file"], "referencia": r["reference"],
                                   "transcripcion": r["transcript"], "glosas_ref": " ".join(gr), "glosas_hyp": " ".join(gh), "tipo": tipo})
     with open(RES / "qa01_tipos_error.csv", "w", newline="", encoding="utf-8") as f:

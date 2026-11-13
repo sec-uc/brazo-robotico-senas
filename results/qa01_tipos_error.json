@@ -1,27 +1,28 @@
 {
   "corpus": {
     "coincide": 36,
-    "deletreo": 15,
-    "sena_erronea": 6,
-    "vacio": 3
+    "deletrea_otra_palabra": 12,
+    "nada_ejecutado": 6,
+    "sena_erronea": 6
   },
   "control": {
-    "deletreo": 51,
+    "deletrea_otra_palabra": 50,
+    "nada_ejecutado": 3,
     "coincide": 64,
-    "sena_erronea": 3,
-    "vacio": 2
+    "sena_erronea": 3
   },
   "control_por_conjunto": {
     "in": {
-      "deletreo": 29,
+      "deletrea_otra_palabra": 28,
+      "nada_ejecutado": 1,
       "coincide": 29,
       "sena_erronea": 2
     },
     "oov": {
       "coincide": 35,
-      "deletreo": 22,
+      "deletrea_otra_palabra": 22,
       "sena_erronea": 1,
-      "vacio": 2
+      "nada_ejecutado": 2
     }
   },
   "vocabulario": 148
